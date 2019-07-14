@@ -1,6 +1,12 @@
-$green: #0f0;
+@import "_vars.scss";
+
 nav {
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+nav div {
+  margin-right: 10px;
 }
 
 a {
