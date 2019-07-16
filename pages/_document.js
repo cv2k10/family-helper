@@ -5,9 +5,7 @@ export default class MyDocument extends Document {
   render() {
     return (
     <Html>
-      <Head>
-        <title>Next JS Awesome kit 1</title>
-        
+      <Head>       
         <link rel="stylesheet" href=".next/static/css/style.css" />
       </Head>
       <Main />
