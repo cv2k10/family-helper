@@ -1,14 +1,14 @@
+import Head from 'next/head';
 import NavBar from '../components/NavBar';
-import Head from 'next/head'
-import "../scss/style.scss"
+import "../scss/style.scss";
 
 const Index = () => (
   <section>
     <Head>
-      <title>Home</title>
+      <title>Family Helper - Home</title>
     </Head>
     <NavBar />
-    <h1>Hellow World from Next JS</h1>
+    <h1>Hello World from Next JS</h1>
   </section>
 );
 
