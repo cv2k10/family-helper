@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 class Layout extends React.Component {
@@ -40,8 +41,8 @@ class Layout extends React.Component {
       <div className="overlay" onclick={() => this.setState({ burgerMenuOpen: false })}></div>
       <div className="sidebar-nav">
         <ul className="smenu">
-          <li className="sitem"><a className="stitle" href="/">Home</a></li>
-              <li className="sitem"><a className="stitle" href="/WhatIsFamilyHelper">What is Family Helper</a></li>
+          <li className="sitem"><Link href={'/'}><a className="stitle">Home</a></Link></li>
+              <li className="sitem"><Link href={'/whatIsFamilyHelper'}><a className="stitle">What is Family Helper 1</a></Link></li>
           <li className="sitem"><a className="stitle" href="#">How We Could Help You</a></li>
           <li className="sitem"><a className="stitle" href="#">Excellent Companionship Services</a></li>
           <li className="sitem"><a className="stitle" href="#">How It Works</a></li>
