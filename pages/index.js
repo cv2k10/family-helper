@@ -8,7 +8,6 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      burgerMenuOpen: false,
       currentSlide: 0
     } 
   }
@@ -22,16 +21,7 @@ class Index extends React.Component {
     var slides = document.querySelectorAll('.main-slider img.slide');
   
     this.state.currentSlide < slides.length - 1 ? this.setState({currentSlide: this.state.currentSlide + 1}) : this.setState({currentSlide: 0});
-
-
 }
-
-  onClickMenuBurger() {
-    this.setState({
-      burgerMenuOpen: !this.state.burgerMenuOpen
-    })
-
-  }
 
   render() {
     return (
@@ -39,20 +29,7 @@ class Index extends React.Component {
         <Head>
           <title>Home</title>
         </Head>
-        <Layout burgerMenu={this.state.burgerMenuOpen} onClickMenu={()=>this.onClickMenuBurger()}>        
-        <section id="menu-mobile" className={this.state.burgerMenuOpen ? "display-on" : null}>
-          <div className="overlay" onclick={() => this.setState({ burgerMenuOpen: false})}></div>
-            <div className="sidebar-nav">
-                <ul className="smenu">
-                    <li className="sitem"><a className="stitle" href="#">Home</a></li>
-                    <li className="sitem"><a className="stitle" href="#">What is Family Helper</a></li>
-                    <li className="sitem"><a className="stitle" href="#">How We Could Help You</a></li>
-                    <li className="sitem"><a className="stitle" href="#">Excellent Companionship Services</a></li>
-                    <li className="sitem"><a className="stitle" href="#">How It Works</a></li>
-                    <li className="sitem"><a className="stitle" href="#">Why Family Helper</a></li>
-                </ul>
-            </div>
-        </section>
+        <Layout>    
         
         <div id="main-centent">
             <section className="main-slider">

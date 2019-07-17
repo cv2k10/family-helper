@@ -1,10 +1,27 @@
+import React from 'react';
 
-const Layout = props => (
+class Layout extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      burgerMenuOpen: false,
+    }
+  }
+
+  onClickMenuBurger() {
+    this.setState({
+      burgerMenuOpen: !this.state.burgerMenuOpen
+    })
+
+  }
+
+  render() {
+    return (
   <div>
     <header className="header">
       <div className="header-left">
-        <div id="menu-burger" onClick={() => props.onClickMenu()}>
-          <div className={props.burgerMenu ? "burger burger-cross" : "burger"}></div>
+            <div id="menu-burger" onClick={() => this.onClickMenuBurger()}>
+          <div className={this.state.burgerMenuOpen ? "burger burger-cross" : "burger"}></div>
         </div>
         <svg className="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
           width="50" height="50"
@@ -19,13 +36,28 @@ const Layout = props => (
       </div>
     </header>
 
-    {props.children}
+    <section id="menu-mobile" className={this.state.burgerMenuOpen ? "display-on" : null}>
+      <div className="overlay" onclick={() => this.setState({ burgerMenuOpen: false })}></div>
+      <div className="sidebar-nav">
+        <ul className="smenu">
+          <li className="sitem"><a className="stitle" href="/">Home</a></li>
+              <li className="sitem"><a className="stitle" href="/WhatIsFamilyHelper">What is Family Helper</a></li>
+          <li className="sitem"><a className="stitle" href="#">How We Could Help You</a></li>
+          <li className="sitem"><a className="stitle" href="#">Excellent Companionship Services</a></li>
+          <li className="sitem"><a className="stitle" href="#">How It Works</a></li>
+          <li className="sitem"><a className="stitle" href="#">Why Family Helper</a></li>
+        </ul>
+      </div>
+    </section>
+
+    {this.props.children}
 
     <section className="footer">
       <div className="copyright">© 2019 Family Helper Sdn Bhd</div>
       <div className="info">Family Helper® The safer way to take care of your elderly™</div>
     </section>
   </div>
-);
+)}
+    }
 
 export default Layout;

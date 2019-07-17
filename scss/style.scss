@@ -55,8 +55,9 @@ header.header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: absolute; /* must set position: absolute for z-index to work */
+    position: relative; /* must set position: absolute for z-index to work */
     z-index: 10; /* higher than .menu-mobile (5) and the rest*/
+    top: 0;
 }
 
 #menu-burger {
