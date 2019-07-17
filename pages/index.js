@@ -1,17 +1,66 @@
 import Head from 'next/head';
+import React from 'react';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
+// TODO: add onlock click and slide timer events
+// TODO: font and image size adjustmentgit
 
-const Index = () => (
-  <div>
+class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      burgerMenuOpen: false,
+      currentSlide: 0
+    } 
+  }
+
+  componentDidMount() {
+    this.sliderControl();
+    setInterval(()=>this.sliderControl(), 5000);
+  }
+
+  componentWillMount() {
+   
+  }
+
+  sliderControl() {
+    var slides = document.querySelectorAll('.main-slider img.slide');
+
+  // for (var i = 0; i < slides.length; i++) {
+  //   if (i === this.state.currentSlide) {
+  //     slides[i].classList.add('current');
+  //   } else {
+  //     slides[i].classList.remove('current');
+  //   }
+  // }
+  
+    this.state.currentSlide < slides.length - 1 ? this.setState({currentSlide: this.state.currentSlide + 1}) : this.setState({currentSlide: 0});
+
+
+}
+
+  onClickMenuBurger() {
+    // var burger = document.querySelector('#menu-burger .burger');
+    // var menuMobile = document.querySelector('#menu-mobile');
+    // burger.classList.toggle('burger-cross');
+    // menuMobile.classList.toggle('display-on');
+    this.setState({
+      burgerMenuOpen: !this.state.burgerMenuOpen
+    })
+
+  }
+
+  render() {
+    return (
+      <div>
     <Head>
       <title>Home</title>
     </Head>
         <header className="header">
             <div className="header-left">
-                <div id="menu-burger">
-                  <div className="burger"></div>
+              <div id="menu-burger" onClick={() => this.onClickMenuBurger()}>
+                  <div className={this.state.burgerMenuOpen? "burger burger-cross": "burger"}></div>
                 </div>
                 <svg className="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="50" height="50"
@@ -26,8 +75,8 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
             </div>            
         </header>
         
-        <section id="menu-mobile">
-            <div className="overlay"></div>
+        <section id="menu-mobile" className={this.state.burgerMenuOpen ? "display-on" : null}>
+          <div className="overlay" onclick={() => this.setState({ burgerMenuOpen: false})}></div>
             <div className="sidebar-nav">
                 <ul className="smenu">
                     <li className="sitem"><a className="stitle" href="#">Home</a></li>
@@ -45,9 +94,9 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                 <div className="slides">
                     <span className="overlay">
                         <div className="frames">
-                          <img className="slide" src="./static/img/care-giver1.jpg" />
-                          <img className="slide" src="./static/img/care-giver2.jpg" />
-                          <img className="slide" src="./static/img/care-giver3.jpg" />
+                          <img className={this.state.currentSlide===0? "slide current": "slide"} src="./static/img/care-giver1.jpg" />
+                          <img className={this.state.currentSlide===1 ? "slide current" : "slide"} src="./static/img/care-giver2.jpg" />
+                          <img className={this.state.currentSlide===2 ? "slide current" : "slide"} src="./static/img/care-giver3.jpg" />
                         </div>
                     </span>
                 </div>
@@ -325,6 +374,8 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
         <div className="info">Family Helper® The safer way to take care of your elderly™</div>
     </section>
   </div>
-);
+    );
+  }
+}
 
 export default Index; 
