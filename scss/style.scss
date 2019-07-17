@@ -95,7 +95,7 @@ header.header {
     /*font-family: 'Museo Sans Cyrl 300';*/
     font-family: 'Poppins', sans-serif;
     /*width: 30%;*/
-    font-size: 1.5em;
+    font-size: 1em;
     margin-left: .5em;
     letter-spacing: .15em;
     font-weight: 700;
@@ -135,8 +135,8 @@ header.header {
 
 .header-right .profile,
 .header-right .search {
-    width: 2em;
-    height: 2em;
+    width: 1.3em;
+    height: 1.3em;
     margin-right: 2em;
     line-height: 1;
 }
@@ -168,7 +168,7 @@ header.header {
  
 .sidebar-nav .sitem .stitle {
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333;
     line-height: 1.5;
     padding: 12px 20px;
@@ -274,7 +274,7 @@ article#main-centent {
 
 .main-slider .slider-cta .cta-btn {
     padding: .5em 1em;
-    font-size: 1em;
+    font-size: .7em;
     line-height: 1.3333333;
     border-radius: 4px;
     font-weight: bold;
@@ -474,6 +474,10 @@ article#main-centent {
     flex-direction: row;
     align-items: center;
     margin-bottom: 1em;
+}
+
+.services img {
+    width: 3.8em;
 }
 
 .srv-img {

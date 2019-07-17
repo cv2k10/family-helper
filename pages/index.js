@@ -3,7 +3,6 @@ import React from 'react';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
-// TODO: add onlock click and slide timer events
 // TODO: font and image size adjustmentgit
 
 class Index extends React.Component {
@@ -18,10 +17,6 @@ class Index extends React.Component {
   componentDidMount() {
     this.sliderControl();
     setInterval(()=>this.sliderControl(), 5000);
-  }
-
-  componentWillMount() {
-   
   }
 
   sliderControl() {
