@@ -43,11 +43,12 @@ class Layout extends React.Component {
         <ul className="smenu">
           <li className="sitem"><Link href={"/"}><a className="stitle">Home</a></Link></li>
           <li className="sitem"><Link href={"/WhatIsFamilyHelper"}><a className="stitle">What is Family Helper</a></Link></li>
-          <li className="sitem"><Link href={"/HowWeHelpYou"}><a className="stitle" href="#">How We Could Help You</a></Link></li>
-          <li className="sitem"><Link href={"/ExcellentCompanionshipServices"}><a className="stitle" href="#">Excellent Companionship Services</a></Link></li>
-          <li className="sitem"><Link href={"/HowItWorks"}><a className="stitle" href="#">How It Works</a></Link></li>
-          <li className="sitem"><Link href={"/WhyFamilyHelper"}><a className="stitle" href="#">Why Family Helper</a></Link></li>
-              <li className="sitem"><Link href={"/CustomerComments"}><a className="stitle" href="#">Customer Comments About Our Services</a></Link></li>
+          <li className="sitem"><Link href={"/HowWeHelpYou"}><a className="stitle">How We Could Help You</a></Link></li>
+          <li className="sitem"><Link href={"/ExcellentCompanionshipServices"}><a className="stitle">Excellent Companionship Services</a></Link></li>
+          <li className="sitem"><Link href={"/HowItWorks"}><a className="stitle">How It Works</a></Link></li>
+          <li className="sitem"><Link href={"/WhyFamilyHelper"}><a className="stitle">Why Family Helper</a></Link></li>
+              <li className="sitem"><Link href={"/CustomerComments"}><a className="stitle">Customer Comments About Our Services</a></Link></li>
+          <li className="sitem"><Link href={"/contactUs"}><a className="stitle">Contact Us</a></Link></li>
         </ul>
       </div>
     </section>
