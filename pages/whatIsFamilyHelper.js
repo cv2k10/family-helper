@@ -4,6 +4,7 @@ import HeaderWithBg from '../components/HeaderWithBg';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
+import "../scss/page.scss";
 
 class WhatIsFamilyHelper extends React.Component {
   render() {
@@ -32,28 +33,7 @@ class WhatIsFamilyHelper extends React.Component {
                 <li>Read more..</li>
               </ul>
             </section>
-          </div>
-
-          <style jsx>{`
-            .container {
-              background: #fff;
-            }
-
-            .container h2 {
-              font-family: 'Museo Sans Cyrl 300';
-              font-size: 1.2em;
-              text-align: center;
-              color: #333;
-              margin: 30px 0 20px;
-            }
-
-            .container .content {
-              font-size: 1em;
-              margin: 0 0 24px;
-              padding: 0 20px;
-              padding-bottom: 20px;
-            }
-          `}</style>          
+          </div>      
         </Layout>
 
       </div>
