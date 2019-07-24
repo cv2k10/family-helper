@@ -49,6 +49,7 @@ class Layout extends React.Component {
           <li className="sitem"><Link href={"/WhyFamilyHelper"}><a className="stitle">Why Family Helper</a></Link></li>
           <li className="sitem"><Link href={"/CustomerComments"}><a className="stitle">Customer Comments About Our Services</a></Link></li>
           <li className="sitem"><Link href={"/Faq"}><a className="stitle">FAQ</a></Link></li>
+          <li className="sitem"><Link href={"/Pricing"}><a className="stitle">Pricing</a></Link></li>
           <li className="sitem"><Link href={"/ContactUs"}><a className="stitle">Contact Us</a></Link></li>
           <li className="sitem"><Link href={"/AboutUs"}><a className="stitle">About Us</a></Link></li>
           
