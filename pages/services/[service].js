@@ -6,111 +6,15 @@ import Layout from '../../components/Layout';
 import "../../scss/fonts.scss";
 import "../../scss/page.scss";
 import "../../scss/style.scss";
+import services from '../services/items.js'
 
 const Service = function() {
   const def = { // default contents
     title: 'Default title',
     main: 'Deault main content',
   };
-  
-  const initState = {
-    services: [ // setting all the services contents
-      {
-        service: 'DoctorAppointment',
-        title: 'Doctor Appointment',
-        main: 'You or your senior have a doctor appointment, children are busy with job works, no worry, contact us, our companion people will pick you from your house, send you to destination hospital or clinic, accompany you in doctor room until appointment finished, send you back home.',
-        details: [
-          {
-            icon: 'people-in-car-side.png',
-            text: 'Pick you from home'
-          },
-          {
-            icon: 'stethoscope-100.png',
-            text: 'Drives you to clinic or hospital'
-          },
-          {
-            icon: 'machine-100.png',
-            text: 'Accompany you in doctor room'
-          },     
-          {
-            icon: 'home-100.png',
-            text: 'Send you back home'
-          },               
-        ]
-      }, // DoctorAppointment
-      {
-        service: 'GroceryShopping',
-        title: 'Grocery Shopping',
-        main: 'You or your loved one want to buy some grrocery items for daily living, no transport, call us, we can assit you. We pick you from your home, drives you to shopping store, carry your plastic bag, accompany you do purchasing, drives you back home.',
-        details: [
-          {
-            icon: 'people-in-car-side.png',
-            text: 'Pick you from home'
-          },
-          {
-            icon: 'ingredients-100.png',
-            text: 'Drives you to grocery store'
-          },
-          {
-            icon: 'machine-100.png',
-            text: 'Carry bag for you'
-          },     
-          {
-            icon: 'home-100.png',
-            text: 'Send you back home'
-          },               
-        ]
-      }, // GroceryShopping    
-      {
-        service: 'RehabilationCenter',
-        title: 'Rehabilation Center',
-        main: 'You or your senior have regular treatment at rehabilation centre, fear of trouble working children, no problem, contact us, we deliver you ti the destination centre. We pick you to from your home, drive you to the rehabilation center, accompany you until treatment finished, send you back home.',
-        details: [
-          {
-            icon: 'people-in-car-side.png',
-            text: 'Pick you from home'
-          },
-          {
-            icon: 'physical-therapy-100.png',
-            text: 'Drives you to rehabilation centre'
-          },
-          {
-            icon: 'machine-100.png',
-            text: 'Accompany at rehabilation centre'
-          },     
-          {
-            icon: 'home-100.png',
-            text: 'Send you back home'
-          },               
-        ]
-      }, // RehabilationCenter         
-      {
-        service: 'common',
-        title: 'Family Helper Service',
-        main: 'You and your senior want to go some place, children are busy with job works, no problem, call us, our companion people will pick you from your house, send you to the destination and wait until your appointment finished, send you back home.',
-        details: [
-          {
-            icon: 'people-in-car-side.png',
-            text: 'Pick you from home'
-          },
-          {
-            icon: 'city-100.png',
-            text: 'Drives you to the place'
-          },
-          {
-            icon: 'machine-100.png',
-            text: 'Wait until you finished the task'
-          },
-          {
-            icon: 'home-100.png',
-            text: 'Send you back home'
-          },
-        ]
-      }, // common
-    ]
-  };
 
-  const [content, setContent] = useState(initState);
+  const [content, setContent] = useState(services);
 
   const router = useRouter(); 
    
@@ -121,7 +25,7 @@ const Service = function() {
 
   //useEffect(() => {
     const serviceId =  router.query.service;
-    const currentService = content.services.filter(s => s.service === serviceId);    
+    const currentService = content.items.filter(s => s.service === serviceId);    
     if(currentService.length!==0) serviceContent = currentService[0];
     // else serviceContent = {
     //   title: 'Page Not found',

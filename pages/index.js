@@ -236,7 +236,7 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <img src="./static/img/groups.png" />
                           <div className="title">Friends Reunion</div>
                         </a>
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/VisitRelativeorFriend">
                           <img src="./static/img/meeting.png" />
                           <div className="title">Relative Visits</div>
                         </a>
@@ -251,9 +251,9 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <div className="title">Old Folk Home</div>
                         </a>
 
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/DialysisCentre">
                           <img src="./static/img/dialysis-machine.png" />
-                          <div className="title">dialysis Center</div>
+                          <div className="title">Dialysis Centre</div>
                         </a>
 
                         <a className="service" href="/services/common">
@@ -266,7 +266,7 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <div className="title">Acupuncture</div>
                         </a>
 
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/CityTour">
                           <img src="./static/img/city.png" />
                           <div className="title">City Tour</div>
                         </a>
@@ -274,7 +274,7 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <img src="./static/img/lake.png" />
                           <div className="title">Lake Walking</div>
                         </a>                        
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/TachiPractising">
                           <img src="./static/img/functional-training.png" />
                           <div className="title">Tachi Practising</div>
                         </a>
@@ -284,7 +284,7 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <div className="title">Watch Movie</div>
                         </a>
                          
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/RunErrandsWork">
                           <img src="./static/img/front-desk.png" />
                           <div className="title">Errands Service</div>
                         </a>
