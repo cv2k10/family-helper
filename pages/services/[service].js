@@ -1,16 +1,11 @@
 import Head from 'next/head';
-import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-
+import React, { useState } from 'react';
 import HeaderWithBg from '../../components/HeaderWithBg';
 import Layout from '../../components/Layout';
-import Icon from '../../components/Icon';
-
 import "../../scss/fonts.scss";
-import "../../scss/style.scss";
 import "../../scss/page.scss";
-
-
+import "../../scss/style.scss";
 
 const Service = function() {
   const def = { // default contents
@@ -21,33 +16,97 @@ const Service = function() {
   const initState = {
     services: [ // setting all the services contents
       {
-        service: 'doctorAppointment',
+        service: 'DoctorAppointment',
         title: 'Doctor Appointment',
-        main: 'You and your senior have a doctor appointment, children are busy with job works, no problem, call us, our companion people will pick you from your house, send you to the destinationand wait until your appointment finished, send you back home.',
+        main: 'You or your senior have a doctor appointment, children are busy with job works, no worry, contact us, our companion people will pick you from your house, send you to destination hospital or clinic, accompany you in doctor room until appointment finished, send you back home.',
         details: [
           {
-            icon: 'car',
+            icon: 'people-in-car-side.png',
             text: 'Pick you from home'
           },
           {
-            icon: 'driver',
-            text: 'Drives you to clinic/hospital'
+            icon: 'stethoscope-100.png',
+            text: 'Drives you to clinic or hospital'
           },
           {
-            icon: 'time',
-            text: 'Wait until appointment finished'
+            icon: 'machine-100.png',
+            text: 'Accompany you in doctor room'
           },     
           {
-            icon: 'athome',
+            icon: 'home-100.png',
             text: 'Send you back home'
           },               
         ]
-      },
+      }, // DoctorAppointment
       {
-        service: 'relative',
-        title: 'Relative Appointment',
-        main: def.main,
-      },
+        service: 'GroceryShopping',
+        title: 'Grocery Shopping',
+        main: 'You or your loved one want to buy some grrocery items for daily living, no transport, call us, we can assit you. We pick you from your home, drives you to shopping store, carry your plastic bag, accompany you do purchasing, drives you back home.',
+        details: [
+          {
+            icon: 'people-in-car-side.png',
+            text: 'Pick you from home'
+          },
+          {
+            icon: 'ingredients-100.png',
+            text: 'Drives you to grocery store'
+          },
+          {
+            icon: 'machine-100.png',
+            text: 'Carry bag for you'
+          },     
+          {
+            icon: 'home-100.png',
+            text: 'Send you back home'
+          },               
+        ]
+      }, // GroceryShopping    
+      {
+        service: 'RehabilationCenter',
+        title: 'Rehabilation Center',
+        main: 'You or your senior have regular treatment at rehabilation centre, fear of trouble working children, no problem, contact us, we deliver you ti the destination centre. We pick you to from your home, drive you to the rehabilation center, accompany you until treatment finished, send you back home.',
+        details: [
+          {
+            icon: 'people-in-car-side.png',
+            text: 'Pick you from home'
+          },
+          {
+            icon: 'physical-therapy-100.png',
+            text: 'Drives you to rehabilation centre'
+          },
+          {
+            icon: 'machine-100.png',
+            text: 'Accompany at rehabilation centre'
+          },     
+          {
+            icon: 'home-100.png',
+            text: 'Send you back home'
+          },               
+        ]
+      }, // RehabilationCenter         
+      {
+        service: 'common',
+        title: 'Family Helper Service',
+        main: 'You and your senior want to go some place, children are busy with job works, no problem, call us, our companion people will pick you from your house, send you to the destination and wait until your appointment finished, send you back home.',
+        details: [
+          {
+            icon: 'people-in-car-side.png',
+            text: 'Pick you from home'
+          },
+          {
+            icon: 'city-100.png',
+            text: 'Drives you to the place'
+          },
+          {
+            icon: 'machine-100.png',
+            text: 'Wait until you finished the task'
+          },
+          {
+            icon: 'home-100.png',
+            text: 'Send you back home'
+          },
+        ]
+      }, // common
     ]
   };
 
@@ -64,10 +123,10 @@ const Service = function() {
     const serviceId =  router.query.service;
     const currentService = content.services.filter(s => s.service === serviceId);    
     if(currentService.length!==0) serviceContent = currentService[0];
-    else serviceContent = {
-      title: 'Page Not found',
-      main: 'Deault main content',
-    };
+    // else serviceContent = {
+    //   title: 'Page Not found',
+    //   main: 'Deault main content',
+    // };
   //});
 
   return (
@@ -84,34 +143,34 @@ const Service = function() {
               <p>{serviceContent.main}</p>
               <div className="details">
                 <div className="detail">
-                  <Icon img={serviceContent.details[0].icon} />
+                  <img src={'/static/img/' + serviceContent.details[0].icon} />
                   <p>{serviceContent.details[0].text}</p>
                 </div>
 
                 <div className="next-arrow">
-                  <Icon img='arrow' />
+                  <img src={'/static/img/down-arrow-100.png'} />
                 </div>
 
                 <div className="detail">
-                  <Icon img={serviceContent.details[1].icon} />
+                  <img src={'/static/img/' + serviceContent.details[1].icon} />
                   <p>{serviceContent.details[1].text}</p> 
                 </div>
 
                 <div className="next-arrow">
-                  <Icon img='arrow' />
+                  <img src={'/static/img/down-arrow-100.png'} />
                 </div>
  
                 <div className="detail">
-                  <Icon img={serviceContent.details[2].icon} />
+                  <img src={'/static/img/' + serviceContent.details[2].icon} />
                   <p>{serviceContent.details[2].text}</p> 
                 </div>
 
                 <div className="next-arrow">
-                  <Icon img='arrow' />
+                  <img src={'/static/img/down-arrow-100.png'} />
                 </div>
  
                 <div className="detail">
-                  <Icon img={serviceContent.details[3].icon} />
+                  <img src={'/static/img/' + serviceContent.details[3].icon} />
                   <p>{serviceContent.details[3].text}</p> 
                 </div> 
               </div>
@@ -122,18 +181,29 @@ const Service = function() {
       </Layout>
 
       <style jsx>{`
+        .details {
+          margin: 1em 1em;
+        }
         .details .detail {
           display: flex;
           flex-direction: row;
+          align-items: center;
           /* justify-content: center; */         
         }  
-        .details .detail p:before {
-          content: "- ";
+
+        .details .detail p {
           margin-left: 1em;
+          color: #3498DB;
         }
+
+        .details .detail img {
+          width: 5em;
+          height: auto;
+        }
+
         .next-arrow {
           display: flex;
-          width: 50px;
+          width: 5em;
           justify-content: center;
           margin-top: .2em;
           margin-bottom: .2em;

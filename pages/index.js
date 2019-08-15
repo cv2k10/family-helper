@@ -194,116 +194,116 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                 
                 
                 <div className="services">
-                        <a className="service" href="#">
-                            <img src="https://img.icons8.com/ios/100/3498db/stethoscope.png" />
+                  <a className="service" href="/services/DoctorAppointment">
+                            <img src="./static/img/stethoscope.png" />
                             <div className="title">Dortor Appointment</div>
                         </a>  
                         
-                        <a className="service" href="#">
-                            <img src="https://img.icons8.com/ios/100/3498db/choir.png" />
+                  <a className="service" href="/services/common">
+                            <img src="./static/img/choir.png" />
                             <div className="title">Singing/Dancing</div>
                         </a>    
                         
-                        <a className="service" href="#">
-                            <img src="https://img.icons8.com/ios/100/3498db/fish.png" />
+                        <a className="service" href="/services/common">
+                            <img src="./static/img/fish.png" />
                             <div className="title">Market Walk</div>
                         </a>  
                         
-                        <a className="service" href="#">
-                            <img src="https://img.icons8.com/ios/100/3498db/ingredients.png" />
+                  <a className="service" href="/services/GroceryShopping">
+                            <img src="./static/img/ingredients.png" />
                             <div className="title">Grocery Shopping</div>
                         </a>                          
                         
-                        <a className="service" href="#">
-                            <img src="https://img.icons8.com/ios/100/3498db/barbershop.png" />
+                        <a className="service" href="/services/common">
+                            <img src="./static/img/barbershop.png" />
                             <div className="title">Saloon</div>
                         </a>  
                         
-                        <a className="service" href="#">
-                            <img src="https://img.icons8.com/ios/100/3498db/headstone.png" />
+                        <a className="service" href="/services/common">
+                            <img src="./static/img/headstone.png" />
                             <div className="title">Funeral House</div>
                         </a>  
                         
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/physical-therapy.png" />
-                          <div className="title">Rehabilitation Treatment</div>
+                  <a className="service" href="/services/RehabilationCenter">
+                          <img src="./static/img/physical-therapy.png" />
+                          <div className="title">Rehabilitation Centre</div>
                         </a>
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/newlyweds.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/newlyweds.png" />
                           <div className="title">Wedding Ceremony</div>
                         </a>
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/groups.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/groups.png" />
                           <div className="title">Friends Reunion</div>
                         </a>
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/meeting.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/meeting.png" />
                           <div className="title">Relative Visits</div>
                         </a>
 
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/being-sick.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/being-sick.png" />
                           <div className="title">Patient Visit</div>
                         </a>
 
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/men-age-group-6.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/men-age-group-6.png" />
                           <div className="title">Old Folk Home</div>
                         </a>
 
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/dialysis-machine.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/dialysis-machine.png" />
                           <div className="title">dialysis Center</div>
                         </a>
 
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/restaurant.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/restaurant.png" />
                           <div className="title">Having Meal</div>
                         </a>
 
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/neck-and-shoulder-massage-area.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/neck-and-shoulder-massage-area.png" />
                           <div className="title">Acupuncture</div>
                         </a>
 
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/city.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/city.png" />
                           <div className="title">City Tour</div>
                         </a>
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/lake.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/lake.png" />
                           <div className="title">Lake Walking</div>
                         </a>                        
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/functional-training.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/functional-training.png" />
                           <div className="title">Tachi Practising</div>
                         </a>
                          
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/movie-projector.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/movie-projector.png" />
                           <div className="title">Watch Movie</div>
                         </a>
                          
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/front-desk.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/front-desk.png" />
                           <div className="title">Errands Service</div>
                         </a>
                          
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/contemporary-christian-music.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/contemporary-christian-music.png" />
                           <div className="title">Religious Activities</div>
                         </a>
                          
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/airplane-landing.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/airplane-landing.png" />
                           <div className="title">Welcome Friends</div>
                         </a>
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/massage.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/massage.png" />
                           <div className="title">Massage Centre</div>
                         </a>
-                        <a className="service" href="#">
-                          <img src="https://img.icons8.com/ios/100/3498db/trekking.png" />
+                        <a className="service" href="/services/common">
+                          <img src="./static/img/trekking.png" />
                           <div className="title">Outdoor Hiking</div>
                         </a>        
                 </div>
