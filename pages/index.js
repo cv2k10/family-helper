@@ -199,12 +199,12 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                             <div className="title">Dortor Appointment</div>
                         </a>  
                         
-                  <a className="service" href="/services/common">
+                  <a className="service" href="/services/SingingorDancingTraining">
                             <img src="./static/img/choir.png" />
                             <div className="title">Singing/Dancing</div>
                         </a>    
                         
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/MarketWalk">
                             <img src="./static/img/fish.png" />
                             <div className="title">Market Walk</div>
                         </a>  
@@ -214,13 +214,13 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                             <div className="title">Grocery Shopping</div>
                         </a>                          
                         
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/Saloon">
                             <img src="./static/img/barbershop.png" />
                             <div className="title">Saloon</div>
                         </a>  
                         
-                        <a className="service" href="/services/common">
-                            <img src="./static/img/headstone.png" />
+                        <a className="service" href="/services/AttendFuneralFunction">
+                          <img src="./static/img/pray.png" />
                             <div className="title">Funeral House</div>
                         </a>  
                         
@@ -228,11 +228,11 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <img src="./static/img/physical-therapy.png" />
                           <div className="title">Rehabilitation Centre</div>
                         </a>
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/AttendWeddingCeremony">
                           <img src="./static/img/newlyweds.png" />
                           <div className="title">Wedding Ceremony</div>
                         </a>
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/ReunionwithFriendRelative">
                           <img src="./static/img/groups.png" />
                           <div className="title">Friends Reunion</div>
                         </a>
@@ -241,12 +241,12 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <div className="title">Relative Visits</div>
                         </a>
 
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/VisitFriendRelativeatHospital">
                           <img src="./static/img/being-sick.png" />
                           <div className="title">Patient Visit</div>
                         </a>
 
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/VisitOldFolksHouse">
                           <img src="./static/img/men-age-group-6.png" />
                           <div className="title">Old Folk Home</div>
                         </a>
@@ -256,12 +256,12 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <div className="title">Dialysis Centre</div>
                         </a>
 
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/HavingMealatRestaurant">
                           <img src="./static/img/restaurant.png" />
                           <div className="title">Having Meal</div>
                         </a>
 
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/AcupunctureTreatment">
                           <img src="./static/img/neck-and-shoulder-massage-area.png" />
                           <div className="title">Acupuncture</div>
                         </a>
@@ -270,7 +270,7 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <img src="./static/img/city.png" />
                           <div className="title">City Tour</div>
                         </a>
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/LakeMorningWalk">
                           <img src="./static/img/lake.png" />
                           <div className="title">Lake Walking</div>
                         </a>                        
@@ -279,7 +279,7 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <div className="title">Tachi Practising</div>
                         </a>
                          
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/WatchMovie">
                           <img src="./static/img/movie-projector.png" />
                           <div className="title">Watch Movie</div>
                         </a>
@@ -289,20 +289,20 @@ Our term members, will ensure your senior feel happy, energirtic and reduce thei
                           <div className="title">Errands Service</div>
                         </a>
                          
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/ReligiousCharityActivities">
                           <img src="./static/img/contemporary-christian-music.png" />
                           <div className="title">Religious Activities</div>
                         </a>
                          
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/WelcomeRelativeorFriend">
                           <img src="./static/img/airplane-landing.png" />
                           <div className="title">Welcome Friends</div>
                         </a>
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/MassageCentre">
                           <img src="./static/img/massage.png" />
                           <div className="title">Massage Centre</div>
                         </a>
-                        <a className="service" href="/services/common">
+                        <a className="service" href="/services/OutdoorHiking">
                           <img src="./static/img/trekking.png" />
                           <div className="title">Outdoor Hiking</div>
                         </a>        
