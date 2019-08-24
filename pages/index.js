@@ -156,8 +156,8 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                 <form className="enq-form">
                     <select id="enq-service" name="service" data-default-value="" className="dropdown">
                         <option value="">Select Area</option>
-                        {this.state.areas.map(area => (
-                          <option value={area}>{area}</option>
+                        {this.state.areas.map((area,i) => (
+                          <option value={area} key={i}>{area}</option>
                         ))}
                     </select>
                     <input type="text" id="addr-from" name="addr-from" placeholder="FROM" />

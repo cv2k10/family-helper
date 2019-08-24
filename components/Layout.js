@@ -38,7 +38,7 @@ class Layout extends React.Component {
     </header>
 
     <section id="menu-mobile" className={this.state.burgerMenuOpen ? "display-on" : null}>
-      <div className="overlay" onclick={() => this.setState({ burgerMenuOpen: false })}></div>
+      <div className="overlay" onClick={() => this.setState({ burgerMenuOpen: false })}></div>
       <div className="sidebar-nav">
         <ul className="smenu">
           <li className="sitem"><Link href={"/"}><a className="stitle">Home</a></Link></li>
