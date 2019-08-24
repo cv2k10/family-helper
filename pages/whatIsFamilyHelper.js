@@ -3,8 +3,8 @@ import React from 'react';
 import HeaderWithBg from '../components/HeaderWithBg';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
-import "../scss/style.scss";
 import "../scss/page.scss";
+import "../scss/style.scss";
 
 class WhatIsFamilyHelper extends React.Component {
   render() {
@@ -18,10 +18,10 @@ class WhatIsFamilyHelper extends React.Component {
             <HeaderWithBg title="What Is Family Helper" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>Companion Works Services</h2>
             <section className="content">
-              <p>We provide companion works for seniors to carry out their daily living task activities.</p>
-              <p>Our term members, will ensure your senior feel happy, energetic and reduce their fear of loneliness or depression.  We are not a healthcare provider but merely providing services of accompanying assitent and without include any medical consultation in our services.</p>
-              <p>A platform provides companion assistance work for seniors like doctor appointment, acupuncture, rehabilitation treatment, dialyse treatment, grocery shopping, relative visit, city tour, message centre, garden or lake walk, religion or charity activities and more.</p>
-              <p>Our companion people will accompany you or your loved one to destination, wait until appointment finished and send you back home.</p>
+              <p>we provides companionship works for seniors to carry out their daily living task activities.</p>
+              <p>Our companion assistant services included market walk ,lake or morning walk,grocery shopping,dialyse treatment,relative visit,city tour,funeral house,acupuncture treatment,rehabilitation treatment,religious or charity events and more.</p>
+              <p>A platform merely provides accompanying assistant works for seniors without include any medical consultation in our services. Our companion teams will ensured your senior feel happy,energetic  and reduce their fear of loneliness or depression . </p>
+              <p>Our companion people pick you from home,send you to destination appointment ,send you back home after appointment finished.(-pick you from home- send you to grocery shopping-carry bag for you- drives you back home).</p>
 
               <ul>
                 <li>Doctor Appointment</li>

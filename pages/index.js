@@ -8,7 +8,8 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentSlide: 0
+      currentSlide: 0,
+      areas: ['Cheras', 'Ampang', 'Sri Petaling', 'Kuchai Lama', 'Petaling Jaya', 'Subang Jaya', 'Damansara', 'Kepong', 'Wangsa Maju', 'Kajang', 'Serdang', 'Puchong', 'Brickfield', 'Mont Kiara', 'Shah Alam', 'Klang', 'Kota Kemumting', 'Putrajaya', 'Bangi', 'Selayang']
     } 
   }
 
@@ -154,21 +155,10 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                 <div className="enq-header">Order our service now!</div>
                 <form className="enq-form">
                     <select id="enq-service" name="service" data-default-value="" className="dropdown">
-                        <option value="">Select State</option>
-                        <option value="Kuala Lumpur">Kuala Lumpur</option>
-                        <option value="Selangor">Selangor</option>
-                        <option value="Johor">Johor</option>
-                        <option value="Penang">Penang</option>
-                        <option value="Perak">Perak</option>
-                        <option value="Malacca">Malacca</option>
-                        <option value="Negeri Sembilan">Negeri Sembilan</option>
-                        <option value="Pahang">Pahang</option>
-                        <option value="Kedah">Kedah</option>
-                        <option value="Kelantan">Kelantan</option>
-                        <option value="Terengganu">Terengganu</option>
-                        <option value="Perlis">Perlis</option>
-                        <option value="Sabah">Sabah</option>
-                        <option value="Sarawak">Sarawak</option>
+                        <option value="">Select Area</option>
+                        {this.state.areas.map(area => (
+                          <option value={area}>{area}</option>
+                        ))}
                     </select>
                     <input type="text" id="addr-from" name="addr-from" placeholder="FROM" />
                     <input type="text" id="addr-to" name="addr-to" placeholder="TO" />
@@ -181,8 +171,7 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
             <section className="our-services section">
                 <header className="srv-header">What is Family Helper</header>
                 <p className="content">
-                    We provide companion works for seniors to carry out their daily living task activities.
-Our term members, will ensure your senior feel happy, energirtic and reduce their fear of loneliness or depression.  We aew not a healthcare provider but merely providing services of accompanying assitent and without include any medical consultation in our services.
+                    We provides can companion work for seniors to carry out their daily living activities like doctor appointment,city tour,saloon,massage centre,market walk,friend visit,grocery shopping,having meal and more.we are not a healthcare provider. Our services merely provide accompanying assistant work for senior and did not include any medical consultation. We pick you or your senior from home,drives you to destination appointment,accompany and wait you until your appointment finished,send you back home.
                 </p>
 
             </section>
