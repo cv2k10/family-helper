@@ -1,15 +1,25 @@
-const express = require('express')
-const next = require('next')
+const express = require('express');
+const next = require('next');
+const bodyParser = require('body-parser');
 
-const port = parseInt(process.env.PORT, 10) || 3000
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+const port = parseInt(process.env.PORT, 10) || 3000;
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  const server = express()
+  const server = express();
+  server.use(bodyParser.json());
 
-  server.get('/mail', function (req, res) {
+  server.post('/api/order', (req, res) => {
+    if (!req.body) {
+      return res.status(400).send({
+        message: "Order form data can not be empty"
+      });
+    }
+
+    console.log('received post order data: ' + req.body.form.name)
+
     const nodemailer = require("nodemailer");
 
     // async..await is not allowed in global scope, must use a wrapper
@@ -39,8 +49,8 @@ app.prepare().then(() => {
         from: '"Family Helper" <lfei2k@gmail.com>', // sender address
         to: "cv2k10@gmail.com", // list of receivers
         subject: "Mail from Family Helper", // Subject line
-        text: "This is a test mail content.", // plain text body
-        html: "<b>This is a test mail content.</b>" // html body
+        text: `Order from ${req.body.form.name} at ${req.body.form.email}`, // plain text body
+        html: `Order from <b>${req.body.form.name} at ${req.body.form.email}</b>` // html body
       });
 
       console.log("Message sent: %s", info.messageId);
@@ -49,6 +59,8 @@ app.prepare().then(() => {
       // Preview only available when sending through an Ethereal account
       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
       // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+
+      res.send('Mail succcesully sent.')
     }
 
     main().catch(console.error);
