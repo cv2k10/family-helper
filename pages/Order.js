@@ -8,17 +8,14 @@ import "../scss/style.scss";
 
 class Order extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      submitting: false,
-      submitted: false
+      submitted: false,
+      areas: ['Cheras', 'Ampang', 'Sri Petaling', 'Kuchai Lama', 'Petaling Jaya', 'Subang Jaya', 'Damansara', 'Kepong', 'Wangsa Maju', 'Kajang', 'Serdang', 'Puchong', 'Brickfield', 'Mont Kiara', 'Shah Alam', 'Klang', 'Kota Kemumting', 'Putrajaya', 'Bangi', 'Selayang']
     }
   }
 
   submitForm(formData) {
-
-    console.log("data: " + formData.name.value)
-    console.log("data: " + formData.email.value)
 
     const data = {
       form: {
@@ -46,6 +43,24 @@ class Order extends Component {
         <Head>
           <title>{title}</title>
         </Head>
+
+        <section className="enquiry section">
+          <div className="enq-header">Order our service now!</div>
+          <form className="enq-form">
+            <select id="enq-service" name="service" data-default-value="" className="dropdown">
+              <option value="">Select Area</option>
+              {this.state.areas.map((area, i) => (
+                <option value={area} key={i}>{area}</option>
+              ))}
+            </select>
+            <input type="text" id="addr-from" name="addr-from" placeholder="FROM" />
+            <input type="text" id="addr-to" name="addr-to" placeholder="TO" />
+            <input type="text" id="date" name="date" placeholder="DATE" />
+            <input type="text" id="time" name="time" placeholder="TIME" />
+            <input type="submit" value="Instant Quotation" />
+          </form>
+        </section>
+
         <div id='container' className='contact'>
           <form className="board-form" onSubmit={e => {
             e.preventDefault()

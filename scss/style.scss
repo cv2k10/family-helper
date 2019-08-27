@@ -426,7 +426,12 @@ article#main-centent {
     padding: 1em;
 }
 
-.enquiry input,
+.enquiry input[type="text"],
+.enquiry input[type="number"],
+.enquiry input[type="date"],
+.enquiry input[type="time"],
+.enquiry input[type="submit"],
+.enquiry textarea,
 .enquiry select {
   font-size: 1em;
    height: 2.375em; 
@@ -439,6 +444,18 @@ article#main-centent {
    color: #666;
     padding: 4px 10px;
     -webkit-appearance: none;
+    background: transparent;
+}
+
+.enquiry input[type="date"]:before,
+.enquiry input[type="time"]:before {
+    content: attr(placeholder) !important;
+    margin-right: 1em;
+}
+
+.enquiry textarea {
+    width: 100%;
+    height: 10em;
 }
 
 .enquiry input[type="submit"] {
@@ -542,6 +559,18 @@ article#main-centent {
     transition: color 1s;
 }
 
+.disp-none {
+    display: none;
+    max-height: 0;
+    height: 0;
+    transition: all 1s;
+}
+
+.disp-block {
+    display: block;
+    max-height: 4em;
+    transition: all 1s;
+}
 
 
 .footer {
