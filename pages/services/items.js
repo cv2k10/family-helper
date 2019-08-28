@@ -485,30 +485,6 @@ const services = {
     }, // AttendFuneralFunction
 
     {
-      service: '',
-      title: '',
-      main: '',
-      details: [
-        {
-          icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
-        },
-        {
-          icon: '',
-          text: 'Drives you to the place'
-        },
-        {
-          icon: 'machine-100.png',
-          text: 'Wait until you finished the task'
-        },
-        {
-          icon: 'home-100.png',
-          text: 'Send you back home'
-        },
-      ]
-    }, // common    
-
-    {
       service: 'ReunionwithFriendRelative',
       title: 'Reunion with Friend/Relative',
       main: 'You or your loved one accept invitation having gathering reunion ,children\'s busy with work job, contact us.We drives you to meet your relatives or friends, wait until your reunion time finished, send you back home. ',
@@ -603,36 +579,10 @@ const services = {
         },
       ]
     }, // OutdoorHiking
-
-
-
-    {
-      service: '',
-      title: '',
-      main: '',
-      details: [
-        {
-          icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
-        },
-        {
-          icon: '',
-          text: 'Drives you to the place'
-        },
-        {
-          icon: 'machine-100.png',
-          text: 'Wait until you finished the task'
-        },
-        {
-          icon: 'home-100.png',
-          text: 'Send you back home'
-        },
-      ]
-    }, // common
     
     {
-      service: 'common',
-      title: 'Family Helper Service',
+      service: 'OtherService',
+      title: 'Other Service',
       main: 'You and your senior want to go some place, children are busy with job works, no problem, call us, our companion people will pick you from your house, send you to the destination and wait until your appointment finished, send you back home.',
       details: [
         {

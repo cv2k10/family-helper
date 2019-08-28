@@ -5,14 +5,18 @@ import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
+import services from './services/items.js';
 
 class Order extends Component {
   constructor(props) {
     super(props);
     this.inputHealthStatus = React.createRef();
+    this.inputOtherService = React.createRef();
     this.state = {
       submitted: false,
-      areas: ['Cheras', 'Ampang', 'Sri Petaling', 'Kuchai Lama', 'Petaling Jaya', 'Subang Jaya', 'Damansara', 'Kepong', 'Wangsa Maju', 'Kajang', 'Serdang', 'Puchong', 'Brickfield', 'Mont Kiara', 'Shah Alam', 'Klang', 'Kota Kemumting', 'Putrajaya', 'Bangi', 'Selayang']
+      areas: ['Cheras', 'Ampang', 'Sri Petaling', 'Kuchai Lama', 'Petaling Jaya', 'Subang Jaya', 'Damansara', 'Kepong', 'Wangsa Maju', 'Kajang', 'Serdang', 'Puchong', 'Brickfield', 'Mont Kiara', 'Shah Alam', 'Klang', 'Kota Kemumting', 'Putrajaya', 'Bangi', 'Selayang'],
+
+      services: services.items
     }
   }
 
@@ -20,10 +24,27 @@ class Order extends Component {
 
     const data = {
       form: {
-        name: formData.name.value,
-        email: formData.email.value        
+        fullname: formData.fullname.value,
+        email: formData.email.value,
+        gender: formData.gender.gender,        
+        age: formData.age.value,
+        health: formData.health.value,
+        healthstatus: formData.healthstatus.value,
+        phone: formData.phone.value,
+        fulladdress: formData.fulladdress.gender,
+        urgent: formData.urgent.value,
+        service: formData.service.value,
+        otherservice: formData.otherservice.value,
+        date: formData.date.value,
+        timefrom: formData.timefrom.value,
+        price: formData.price.gender,
+        area: formData.area.value,
+        pickup: formData.pickup.value,
+        visit: formData.visit.value,
       }
     }
+
+    console.log(JSON.stringify(data, null, 2));
 
     fetch('/api/order', {
       method: 'post',
@@ -35,7 +56,9 @@ class Order extends Component {
     }).then((res) => {
       res.status === 200 ? this.setState({ submitted: true }) : ''
     })
+
   }
+
 
   render() {
     const title = 'Contact Page'
@@ -53,6 +76,7 @@ class Order extends Component {
           }}>
             
             <input type="text" id="fullname" name="fullname" placeholder="Full Name" required/>
+            <input type="email" id="email" name="email" placeholder="Email" required/>
 
             <p style={{marginBottom: 0}}>Gender: </p>
             <span style={{flex: 1}}>
@@ -92,18 +116,21 @@ class Order extends Component {
             
             <div className="form-title">Service Details</div>
 
-            <select id="enq-service" name="service" data-default-value="" className="dropdown">
+            <select id="enq-service" name="service" data-default-value="" className="dropdown"
+            onChange={(e)=>this.inputOtherService.current.className = e.target.value==='OtherService'? 'disp-block': 'disp-none'}
+            >
               <option value="">Select Service</option>
-              {this.state.areas.map((area, i) => (
-                <option value={area} key={i}>{area}</option>
+              {this.state.services.map((service, i) => (
+                <option value={service.service} key={i}>{service.title}</option>
               ))}
             </select>
-            <input type="text" id="other" name="other" placeholder="Other Service" disabled="disabled" />
+            <input type="text" id="other" name="otherservice" placeholder="Please specify other service" 
+            ref={this.inputOtherService}
+            />
 
-            <input type="date" id="date" name="date" placeholder="Date " />
+            <input type="date" id="date" name="date" placeholder="Date" />
 
-            <input type="time" id="time-from" name="timefrom" placeholder="From " />
-            <input type="time" id="time-to" name="timeto" placeholder="To " />
+            <input type="time" id="time-from" name="timefrom" placeholder="Start Time" />
 
             <p style={{marginBottom: 0}}>Price: </p>
             <div style={{flex: 1}}>
@@ -119,7 +146,7 @@ class Order extends Component {
               <label htmlFor="price3">5 Hours Services: Rm195.00</label>
             </div>
 
-            <select id="enq-service" name="service" data-default-value="" className="dropdown">
+            <select id="enq-service" name="area" data-default-value="" className="dropdown">
               <option value="">Select Area</option>
               {this.state.areas.map((area, i) => (
                 <option value={area} key={i}>{area}</option>

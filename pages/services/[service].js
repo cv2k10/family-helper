@@ -6,7 +6,7 @@ import Layout from '../../components/Layout';
 import "../../scss/fonts.scss";
 import "../../scss/page.scss";
 import "../../scss/style.scss";
-import services from '../services/items.js'
+import services from '../services/items.js';
 
 const Service = function() {
   const def = { // default contents
