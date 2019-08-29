@@ -4,12 +4,16 @@ import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
+import services from './services/items.js';
+
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       currentSlide: 0,
-      areas: ['Cheras', 'Ampang', 'Sri Petaling', 'Kuchai Lama', 'Petaling Jaya', 'Subang Jaya', 'Damansara', 'Kepong', 'Wangsa Maju', 'Kajang', 'Serdang', 'Puchong', 'Brickfield', 'Mont Kiara', 'Shah Alam', 'Klang', 'Kota Kemumting', 'Putrajaya', 'Bangi', 'Selayang']
+      areas: ['Cheras', 'Ampang', 'Sri Petaling', 'Kuchai Lama', 'Petaling Jaya', 'Subang Jaya', 'Damansara', 'Kepong', 'Wangsa Maju', 'Kajang', 'Serdang', 'Puchong', 'Brickfield', 'Mont Kiara', 'Shah Alam', 'Klang', 'Kota Kemumting', 'Putrajaya', 'Bangi', 'Selayang'],
+
+      services: services.items
     } 
   }
 
@@ -153,13 +157,16 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
             
             <section className="enquiry section">
                 <div className="enq-header">Order our service now!</div>
-                <form className="enq-form">
-                    <select id="enq-service" name="service" data-default-value="" className="dropdown">
-                        <option value="">Select Area</option>
-                        {this.state.areas.map((area,i) => (
-                          <option value={area} key={i}>{area}</option>
-                        ))}
-                    </select>
+                <form className="enq-form" onSubmit={e => {
+                  e.preventDefault();
+                  this.submitForm(e.target)
+                }}>
+                  <select id="enq-service" name="service" data-default-value="" className="dropdown">
+                    <option value="">Select Service</option>
+                    {this.state.services.map((service, i) => (
+                      <option value={service.service} key={i}>{service.title}</option>
+                    ))}
+                  </select>
                     <input type="text" id="addr-from" name="addr-from" placeholder="FROM" />
                     <input type="text" id="addr-to" name="addr-to" placeholder="TO" />
                     <input type="text" id="date" name="date" placeholder="DATE" />

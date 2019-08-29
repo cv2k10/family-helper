@@ -2,6 +2,8 @@ import 'isomorphic-fetch';
 import Head from 'next/head';
 import React, { Component } from 'react';
 import Layout from '../components/Layout';
+import Router from 'next/router';
+
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
@@ -54,7 +56,12 @@ class Order extends Component {
       },
       body: JSON.stringify(data)
     }).then((res) => {
-      res.status === 200 ? this.setState({ submitted: true }) : ''
+      // res.status === 200 ? this.setState({ submitted: true }) : ''
+      if(res.status === 200) 
+        Router.push({
+          pathname: '/OrderCompleted',
+          query: data.form
+        })
     })
 
   }

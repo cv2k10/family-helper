@@ -28,7 +28,7 @@ const mailCustomer = ({fullname, email, gender, age, health, healthstatus, phone
     </div>
     <div>Full&nbsp;Name: <b>${fullname}</b></div>
     <div>Email Address: <b><a href="mailto:${email}" target="_blank">${email}</a></b></div>
-    <div>Geender: <b>${gender}</b></div>
+    <div>Gender: <b>${gender}</b></div>
     <div>Age: <b>${age}</b></div>
     <div>
         <br>
