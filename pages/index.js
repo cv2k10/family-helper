@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
 import Layout from '../components/Layout';
-import Router from 'next/router';
-
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
@@ -161,7 +159,7 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                 <div className="enq-header">Order our service now!</div>
                 <form className="enq-form" onSubmit={e => {
                   e.preventDefault();
-                  Router.push('/OrderForm');
+                  this.submitForm(e.target)
                 }}>
                   <select id="enq-service" name="service" data-default-value="" className="dropdown">
                     <option value="">Select Service</option>
@@ -171,8 +169,8 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                   </select>
                     <input type="text" id="addr-from" name="addr-from" placeholder="FROM" />
                     <input type="text" id="addr-to" name="addr-to" placeholder="TO" />
-                    <input type="date" id="date" name="date" placeholder="DATE" />
-                    <input type="time" id="time" name="time" placeholder="TIME" /> 
+                    <input type="text" id="date" name="date" placeholder="DATE" />
+                    <input type="text" id="time" name="time" placeholder="TIME" /> 
                     <input type="submit" value="Instant Quotation" />
                 </form>
             </section>
