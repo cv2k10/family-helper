@@ -11,6 +11,7 @@ const mailCustomer = require('./components/mailCustomer');
 
 app.prepare().then(() => {
   const server = express();
+  server.use(express.static('public'));
   server.use(bodyParser.json());
 
   server.post('/api/order', (req, res) => {
