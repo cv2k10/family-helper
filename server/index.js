@@ -7,6 +7,8 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+const mailCustomer = require('./components/mailCustomer');
+
 app.prepare().then(() => {
   const server = express();
   server.use(bodyParser.json());
@@ -43,15 +45,11 @@ app.prepare().then(() => {
           rejectUnauthorized: false
         }       
       });
-
+      
       // send mail with defined transport object
-      let info = await transporter.sendMail({
-        from: '"Family Helper" <lfei2k@gmail.com>', // sender address
-        to: "cv2k10@gmail.com", // list of receivers
-        subject: "Mail from Family Helper", // Subject line
-        text: `Order from ${req.body.form.name} at ${req.body.form.email}`, // plain text body
-        html: `Order from <b>${req.body.form.name} at ${req.body.form.email}</b>` // html body
-      });
+      let info = await transporter.sendMail(
+        mailCustomer(req.body.form)
+      );
 
       console.log("Message sent: %s", info.messageId);
       // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
