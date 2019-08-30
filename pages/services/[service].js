@@ -10,6 +10,8 @@ import "../../scss/style.scss";
 
 
 
+
+
 const Service = function() {
   const def = { // default contents
     title: 'Default title',
@@ -83,6 +85,14 @@ const Service = function() {
             </section>
           ): null}
 
+          <div className="enquiry">
+            <form className="enq-form" onSubmit={e => {
+              e.preventDefault();
+              router.push('/OrderForm');
+            }}>
+              <input type="submit" value="Instant Quotation" />
+            </form>
+          </div>
         </div>
       </Layout>
 

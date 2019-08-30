@@ -114,8 +114,8 @@ Family Helper <https://familyhelper.com.com> | admin@familyhelper.com.my |
 
   return {
     from: '"Family Helper" <lfei2k@gmail.com>', // sender address
-    to: "cv2k10@gmail.com", // list of receivers
-    subject: "Mail from Family Helper", // Subject line
+      to: `${email}`, // list of receivers
+    subject: "Order invoice from Family Helper", // Subject line
     text, // plain text body
     html // html body      
   };
