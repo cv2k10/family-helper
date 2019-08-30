@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Router from 'next/router';
 import React from 'react';
+import services from '../components/items.js';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
-import services from './services/items.js';
 
 
 class Index extends React.Component {

@@ -2,11 +2,11 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import HeaderWithBg from '../../components/HeaderWithBg';
+import services from '../../components/items.js';
 import Layout from '../../components/Layout';
 import "../../scss/fonts.scss";
 import "../../scss/page.scss";
 import "../../scss/style.scss";
-import services from '../services/items.js';
 
 
 

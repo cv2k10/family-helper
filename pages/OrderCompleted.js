@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import React, { Component } from 'react';
+import { useRouter } from 'next/router';
+import React from 'react';
 import Layout from '../components/Layout';
-import { useRouter } from 'next/router'
-
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
-import services from './services/items.js';
+
+// import services from '../services/items.js';
 
 const OrderCompleted = () => {
   const router = useRouter()

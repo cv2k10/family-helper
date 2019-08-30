@@ -1,13 +1,13 @@
 import 'isomorphic-fetch';
 import Head from 'next/head';
-import React, { Component } from 'react';
-import Layout from '../components/Layout';
 import Router from 'next/router';
-
+import React, { Component } from 'react';
+import services from '../components/items.js';
+import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
-import services from './services/items.js';
+
 
 class Order extends Component {
   constructor(props) {

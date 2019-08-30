@@ -3,7 +3,6 @@
   "alias": "cv-project",
   "name": "family-helper",
   "builds": [
-    { "src": "next.config.js", "use": "@now/next" },
-    { "src": "package.json", "use": "@now/node-server" }
+    { "src": "package.json", "use": "@now/next" }
   ]
 }
