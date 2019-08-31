@@ -451,6 +451,10 @@ article#main-centent {
     background: transparent;
 }
 
+.enquiry select option:disabled {
+    color: #aaa;
+}
+
 .enquiry input[type="date"]:before,
 .enquiry input[type="time"]:before {
     content: attr(placeholder) !important;

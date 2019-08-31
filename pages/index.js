@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import React from 'react';
 import services from '../components/items.js';
+import areas from '../components/areas.js';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
@@ -11,10 +12,9 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentSlide: 0,
-      areas: ['Cheras', 'Ampang', 'Sri Petaling', 'Kuchai Lama', 'Petaling Jaya', 'Subang Jaya', 'Damansara', 'Kepong', 'Wangsa Maju', 'Kajang', 'Serdang', 'Puchong', 'Brickfield', 'Mont Kiara', 'Shah Alam', 'Klang', 'Kota Kemumting', 'Putrajaya', 'Bangi', 'Selayang'],
-
-      services: services.items
+      currentSlide: 0,    
+      services: services.items,
+      areas: areas.klangValley,
     } 
   }
 
@@ -171,7 +171,7 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                   <select id="enq-area" name="service" data-default-value="" className="dropdown">
                     <option value="">Select Area</option>
                     {this.state.areas.map((area, i) => (
-                      <option value={area} key={i}>{area}</option>
+                      <option value={area.name} disabled={!area.select} key={i}>{area.name}</option>
                     ))}
                   </select>
                     <input type="date" id="date" name="date" placeholder="DATE" />

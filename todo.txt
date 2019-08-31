@@ -8,7 +8,7 @@ main page
 
 instant quotation 
 DONE * add select service, select area, date and time only
-* Enable only first 4 area option only
+DONE * Enable only first 4 area option only
 
 DONE * Change What is Family Helepr to Family Helper
 

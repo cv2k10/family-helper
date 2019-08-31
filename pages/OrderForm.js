@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import React, { Component } from 'react';
 import services from '../components/items.js';
+import areas from '../components/areas.js';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
@@ -18,7 +19,8 @@ class Order extends Component {
       submitted: false,
       areas: ['Cheras', 'Ampang', 'Sri Petaling', 'Kuchai Lama', 'Petaling Jaya', 'Subang Jaya', 'Damansara', 'Kepong', 'Wangsa Maju', 'Kajang', 'Serdang', 'Puchong', 'Brickfield', 'Mont Kiara', 'Shah Alam', 'Klang', 'Kota Kemumting', 'Putrajaya', 'Bangi', 'Selayang'],
 
-      services: services.items
+      services: services.items,
+      areas: areas.klangValley,
     }
   }
 
@@ -39,7 +41,7 @@ class Order extends Component {
         otherservice: formData.otherservice.value,
         date: formData.date.value,
         timefrom: formData.timefrom.value,
-        price: formData.price.gender,
+        price: formData.price.value,
         area: formData.area.value,
         pickup: formData.pickup.value,
         visit: formData.visit.value,
@@ -153,10 +155,10 @@ class Order extends Component {
               <label htmlFor="price3">5 Hours Services: Rm195.00</label>
             </div>
 
-            <select id="enq-service" name="area" data-default-value="" className="dropdown">
+            <select id="enq-area" name="service" data-default-value="" className="dropdown">
               <option value="">Select Area</option>
               {this.state.areas.map((area, i) => (
-                <option value={area} key={i}>{area}</option>
+                <option value={area.name} disabled={!area.select} key={i}>{area.name}</option>
               ))}
             </select>
             <textarea id="pickup" name="pickup" placeholder="Pickup Location"></textarea>
