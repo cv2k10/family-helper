@@ -1,6 +1,9 @@
 const express = require('express');
 const next = require('next');
 const bodyParser = require('body-parser');
+// const favicon = require('serve-favicon');
+// const path = require('path');
+const logger = require('morgan');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
@@ -11,6 +14,9 @@ const mailCustomer = require('./components/mailCustomer');
 
 app.prepare().then(() => {
   const server = express();
+  // server.use(express.static(path.join(__dirname, 'public')));
+  // server.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+  server.use(logger('dev'));
   server.use(bodyParser.json());
 
   server.use(function (req, res, next) {

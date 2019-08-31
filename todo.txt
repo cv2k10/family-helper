@@ -1,0 +1,53 @@
+TODO:
+* orderComplated: item missing
+at post req, total price and period
+
+Menu 
+* FAQ not clickable
+add Order our service now menu item
+
+main page
+* add extra 4 services
+
+instant quotation 
+* add select service, select area, date and time only
+
+* Change What is Family Helepr to Family Helper
+
+* instant quotation passing form fill in items to OrderForm
+* selected service passing to orderForm
+
+OrderForm
+* limit max and min time input
+* limit date to tomorrow date onwards
+* set express status and extra charge RM50 for order date less or equal to 7 days
+* extra hour, 1, 2, 3 hours selected, each extra hour add rm35 charge.
+* time period start to finished time
+
+nodemailer
+* add order notify to admin email
+
+Term and Condition
+* all items
+
+Contact Us
+* add contact and email link
+* add contact form
+
+Admin page
+* login page
+* order list
+* user page, 3 roles: admin, worker, customer roles.
+* user sign up from admin
+* user particular: customer contact
+* filterring for worker page
+* customer own order page
+
+
+
+
+
+
+
+
+
