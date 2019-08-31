@@ -43,7 +43,7 @@ const OrderCompleted = () => {
         <br/>
     </div>
     <div>Health Status: <b>{health}</b></div>
-    <div>Phone&nbsp;Number: <b>${phone}</b></div>
+    <div>Phone&nbsp;Number: <b>{phone}</b></div>
     <div><b><br/></b></div>
     <div>Full Address:&nbsp;</div>
     <div><b>{fulladdress}</b></div>

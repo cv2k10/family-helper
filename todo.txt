@@ -1,18 +1,16 @@
 TODO:
-* orderComplated: item missing
-at post req, total price and period
-
 Menu 
-* FAQ not clickable
-add Order our service now menu item
+DONE * FAQ not clickable 
+DONE * add Order our service now menu item
 
 main page
 * add extra 4 services
 
 instant quotation 
-* add select service, select area, date and time only
+DONE * add select service, select area, date and time only
+* Enable only first 4 area option only
 
-* Change What is Family Helepr to Family Helper
+DONE * Change What is Family Helepr to Family Helper
 
 * instant quotation passing form fill in items to OrderForm
 * selected service passing to orderForm
@@ -23,6 +21,9 @@ OrderForm
 * set express status and extra charge RM50 for order date less or equal to 7 days
 * extra hour, 1, 2, 3 hours selected, each extra hour add rm35 charge.
 * time period start to finished time
+
+* orderComplated: item missing
+at post req, total price and period
 
 nodemailer
 * add order notify to admin email

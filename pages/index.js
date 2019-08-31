@@ -168,8 +168,12 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                       <option value={service.service} key={i}>{service.title}</option>
                     ))}
                   </select>
-                    <input type="text" id="addr-from" name="addr-from" placeholder="FROM" />
-                    <input type="text" id="addr-to" name="addr-to" placeholder="TO" />
+                  <select id="enq-area" name="service" data-default-value="" className="dropdown">
+                    <option value="">Select Area</option>
+                    {this.state.areas.map((area, i) => (
+                      <option value={area} key={i}>{area}</option>
+                    ))}
+                  </select>
                     <input type="date" id="date" name="date" placeholder="DATE" />
                     <input type="time" id="time" name="time" placeholder="TIME" /> 
                     <input type="submit" value="Instant Quotation" />
@@ -177,7 +181,7 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
             </section>
             
             <section className="our-services section">
-                <header className="srv-header">What is Family Helper</header>
+                <header className="srv-header">Family Helper</header>
                 <p className="content">
                     We provides can companion work for seniors to carry out their daily living activities like doctor appointment,city tour,saloon,massage centre,market walk,friend visit,grocery shopping,having meal and more.we are not a healthcare provider. Our services merely provide accompanying assistant work for senior and did not include any medical consultation. We pick you or your senior from home,drives you to destination appointment,accompany and wait you until your appointment finished,send you back home.
                 </p>

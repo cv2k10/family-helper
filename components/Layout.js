@@ -42,14 +42,15 @@ class Layout extends React.Component {
       <div className="sidebar-nav">
         <ul className="smenu">
           <li className="sitem"><Link href={"/"}><a className="stitle">Home</a></Link></li>
+          <li className="sitem"><Link href={"/OrderForm"}><a className="stitle"><strong>Order our service now!</strong></a></Link></li>
           <li className="sitem"><Link href={"/WhatIsFamilyHelper"}><a className="stitle">What is Family Helper</a></Link></li>
           <li className="sitem"><Link href={"/HowWeHelpYou"}><a className="stitle">How We Could Help You</a></Link></li>
           <li className="sitem"><Link href={"/ExcellentCompanionshipServices"}><a className="stitle">Excellent Companionship Services</a></Link></li>
           <li className="sitem"><Link href={"/HowItWorks"}><a className="stitle">How It Works</a></Link></li>
           <li className="sitem"><Link href={"/WhyFamilyHelper"}><a className="stitle">Why Family Helper</a></Link></li>
-          <li className="sitem"><Link href={"/CustomerComments"}><a className="stitle">Customer Comments About Our Services</a></Link></li>
-          <li className="sitem"><Link href={"/Faq"}><a className="stitle">FAQ</a></Link></li>
+          <li className="sitem"><Link href={"/CustomerComments"}><a className="stitle">Customer Comments About Our Services</a></Link></li>          
           <li className="sitem"><Link href={"/Pricing"}><a className="stitle">Pricing</a></Link></li>
+          <li className="sitem"><Link href={"/Faq"}><a className="stitle">FAQ</a></Link></li>
           <li className="sitem"><Link href={"/ContactUs"}><a className="stitle">Contact Us</a></Link></li>
           <li className="sitem"><Link href={"/AboutUs"}><a className="stitle">About Us</a></Link></li>
           <li className="sitem"><Link href={"/TermsAndConditions"}><a className="stitle">Terms And Conditions</a></Link></li>
