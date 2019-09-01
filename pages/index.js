@@ -159,8 +159,20 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
             <section className="enquiry section">
                 <div className="enq-header">Order our service now!</div>
                 <form className="enq-form" onSubmit={e => {
+                  var form = e.target;
+
                   e.preventDefault();
-                  Router.push('/OrderForm');
+                  Router.push(
+                    {
+                      pathname: '/OrderForm',
+                      query: {
+                        service: form.service.value,
+                        area: form.area.value,
+                        date: form.date.value,
+                        time: form.time.value
+                      }
+                    }
+                  );
                 }}>
                   <select id="enq-service" name="service" data-default-value="" className="dropdown">
                     <option value="">Select Service</option>
@@ -168,7 +180,7 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                       <option value={service.service} key={i}>{service.title}</option>
                     ))}
                   </select>
-                  <select id="enq-area" name="service" data-default-value="" className="dropdown">
+                  <select id="enq-area" name="area" data-default-value="" className="dropdown">
                     <option value="">Select Area</option>
                     {this.state.areas.map((area, i) => (
                       <option value={area.name} disabled={!area.select} key={i}>{area.name}</option>
