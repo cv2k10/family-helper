@@ -134,7 +134,7 @@ return (
         <div className="form-title">Service Details</div>
 
         <select id="enq-service" name="service" 
-        data-default-value=""
+        value={queryInput.service || ""}
         className="dropdown"
         onChange={(e)=>inputOtherService.current.className = e.target.value==='OtherService'? 'disp-block': 'disp-none'}
         >
@@ -169,7 +169,9 @@ return (
           <label htmlFor="price3">5 Hours Services: Rm195.00</label>
         </div>
 
-        <select id="enq-area" name="service" data-default-value="" className="dropdown">
+        <select id="enq-area" name="service" 
+        value={queryInput.area || ""}
+        className="dropdown">
           <option value="">Select Area</option>
           {selection.areas.map((area, i) => (
             <option value={area.name} disabled={!area.select} key={i}>{area.name}</option>

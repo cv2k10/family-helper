@@ -88,7 +88,12 @@ const Service = function() {
           <div className="enquiry">
             <form className="enq-form" onSubmit={e => {
               e.preventDefault();
-              router.push('/OrderForm');
+              router.push(
+                {
+                  pathname: '/OrderForm',
+                  query: {service: serviceId}
+                }
+              );
             }}>
               <input type="submit" value="Instant Quotation" />
             </form>
