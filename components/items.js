@@ -1,4 +1,6 @@
 const services = {
+  hourStart: 7,
+  hourEnd: 20,
   items: [ // setting all the services contents
     {
       service: 'DoctorAppointment',

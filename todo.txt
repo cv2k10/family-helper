@@ -12,8 +12,8 @@ DONE * Enable only first 4 area option only
 
 DONE * Change What is Family Helepr to Family Helper
 
-* instant quotation passing form fill in items to OrderForm
-* selected service passing to orderForm
+DONE * instant quotation passing form fill in items to OrderForm
+DONE * selected service passing to orderForm
 
 OrderForm
 * limit max and min time input

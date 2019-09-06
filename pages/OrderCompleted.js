@@ -51,7 +51,7 @@ const OrderCompleted = () => {
         <br/>
     </div>
     <div>Urgent Phone Number: <b>{urgent}</b></div>
-    <div>Date: <b>${date}</b></div>
+    <div>Date: <b>{date}</b></div>
     <div>Start Time: <b>{timefrom}</b></div>
     <div>Period: <b>{price}</b></div>
     <div>

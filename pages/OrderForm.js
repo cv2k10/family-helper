@@ -1,10 +1,9 @@
 import 'isomorphic-fetch';
 import Head from 'next/head';
-import Router from 'next/router';
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import services from '../components/items.js';
+import Router, { useRouter } from 'next/router';
+import React, { useEffect, useRef, useState } from 'react';
 import areas from '../components/areas.js';
+import services from '../components/items.js';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
@@ -57,6 +56,8 @@ const Order = () => {
     services: services.items,
     areas: areas.klangValley,
   }
+
+
   
 const inputHealthStatus = useRef();
 const inputOtherService = useRef();
@@ -79,6 +80,7 @@ useEffect(
 
 
 const title = 'Contact Page'
+  console.log("Service: " + queryInput.service)
 return (
   <Layout>
     <Head>
@@ -136,8 +138,12 @@ return (
         <select id="enq-service" name="service" 
         value={queryInput.service || ""}
         className="dropdown"
-        onChange={(e)=>inputOtherService.current.className = e.target.value==='OtherService'? 'disp-block': 'disp-none'}
-        >
+        onChange={e=>{
+          console.log('e: ' + e.target.value)
+          inputOtherService.current.className = e.target.value==='OtherService'? 'disp-block': 'disp-none';
+          setQueryInput({ ...queryInput, service: e.target.value});
+          }
+        }>
           <option value="">Select Service</option>
           {selection.services.map((service, i) => (
             <option value={service.service} key={i}>{service.title}</option>
@@ -148,12 +154,19 @@ return (
         />
 
         <input type="date" id="date" name="date" placeholder="Date" 
-        value={queryInput.date || ""}
+          value={queryInput.date || ""}
+          onChange={e => setQueryInput({ ...queryInput, date: e.target.value })}
         />
 
-        <input type="time" id="time-from" name="timefrom" placeholder="Start Time" 
-        value={queryInput.time || ""}
-        />
+        <select id="enq-service" name="time"
+          value={queryInput.time || ""}
+          onChange={e => setQueryInput({ ...queryInput, time: e.target.value })}
+          className="dropdown">
+          <option value="">Select start time</option>
+          {[...new Array(services.hourEnd - services.hourStart + 1)].map((_, i) => (
+            <option value={ (services.hourStart + i).toString() + ':00' } key={i}>{ (services.hourStart  + i).toString() + ':00' }</option>
+          ))}
+        </select>
 
         <p style={{marginBottom: 0}}>Price: </p>
         <div style={{flex: 1}}>
@@ -169,8 +182,9 @@ return (
           <label htmlFor="price3">5 Hours Services: Rm195.00</label>
         </div>
 
-        <select id="enq-area" name="service" 
+        <select id="enq-area" name="area" 
         value={queryInput.area || ""}
+        onChange={e => setQueryInput({ ...queryInput, area: e.target.value })}
         className="dropdown">
           <option value="">Select Area</option>
           {selection.areas.map((area, i) => (
