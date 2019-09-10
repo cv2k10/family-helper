@@ -127,7 +127,9 @@ return (
         ref={inputHealthStatus}
         />
 
-        <input type="text" id="phone" name="phone" placeholder="Phone Contact" required/>
+        <input type="tel" id="phone" name="phone" placeholder="Hand Phone Contact" required/>
+
+        <input type="tel" id="phone" name="phonehome" placeholder="House Phone Contact"/>
 
         <textarea id="fulladdress" name="fulladdress" placeholder="Full Address"></textarea>
 
@@ -153,7 +155,7 @@ return (
         ref={inputOtherService}
         />
 
-        <input type="date" id="date" name="date" placeholder="Date" 
+        <input type="date" id="date" name="date" placeholder="Date Service Needed" 
           value={queryInput.date || ""}
           onChange={e => setQueryInput({ ...queryInput, date: e.target.value })}
         />

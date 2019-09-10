@@ -1,5 +1,5 @@
 const services = {
-  hourStart: 7,
+  hourStart: 6,
   hourEnd: 20,
   items: [ // setting all the services contents
     {
@@ -9,7 +9,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'stethoscope-100.png',
@@ -33,7 +33,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'ingredients-100.png',
@@ -52,20 +52,20 @@ const services = {
 
     {
       service: 'RehabilationCenter',
-      title: 'Rehabilation Center',
-      main: 'You or your senior have regular treatment at rehabilation centre, fear of trouble working children, no problem, contact us, we deliver you ti the destination centre. We pick you to from your home, drive you to the rehabilation center, accompany you until treatment finished, send you back home.',
+      title: 'Rehabilitation Center',
+      main: 'You or your senior have regular treatment at rehabilitation centre, fear of trouble working children, no problem, contact us, we deliver you ti the destination centre. We pick you to from your home, drive you to the rehabilitation center, accompany you until treatment finished, send you back home.',
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'physical-therapy-100.png',
-          text: 'Drives you to rehabilation centre'
+          text: 'Drives you to rehabilitation centre'
         },
         {
           icon: 'machine-100.png',
-          text: 'Accompany at rehabilation centre'
+          text: 'Accompany at rehabilitation centre'
         },
         {
           icon: 'home-100.png',
@@ -81,7 +81,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'meeting-100.png',
@@ -105,7 +105,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'dialysis-100.png',
@@ -129,7 +129,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'city-100.png',
@@ -153,7 +153,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'warm-up-100.png',
@@ -177,7 +177,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'front-desk-100.png',
@@ -201,7 +201,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'airplane-landing-100.png',
@@ -225,7 +225,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'choir-100.png',
@@ -250,7 +250,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'barbershop-100.png',
@@ -274,7 +274,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'wedding-100.png',
@@ -282,7 +282,7 @@ const services = {
         },
         {
           icon: 'machine-100.png',
-          text: 'Wait until you unitl wedding ceremony finished'
+          text: 'Wait until wedding ceremony finished'
         },
         {
           icon: 'home-100.png',
@@ -298,7 +298,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'hospital-3-100.png',
@@ -322,7 +322,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'restaurant-100.png',
@@ -346,7 +346,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'lake-100.png',
@@ -370,7 +370,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'star-wars-100.png',
@@ -394,7 +394,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'welfare-100.png',
@@ -414,11 +414,11 @@ const services = {
     {
       service: 'MassageCentre',
       title: 'Massage Centre',
-      main: 'You or your loved book for body massage,fear of lost way home and risk driving alone,no problem,contact us. Our companion person pick you from home,drives you to massage centre,accompany you until appointment finished ,send you back home.',
+      main: 'You or your loved one book for body massage,fear of lost way home and risk driving alone,no problem,contact us. Our companion person pick you from home,drives you to massage centre,accompany you until appointment finished ,send you back home.',
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'massage-100.png',
@@ -445,7 +445,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'fish-100.png',
@@ -469,7 +469,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'pray-100.png',
@@ -493,7 +493,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'user-groups-100.png',
@@ -517,7 +517,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'grandfather-100.png',
@@ -541,7 +541,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'neck-and-shoulder-massage-area-100.png',
@@ -565,7 +565,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'trekking-100.png',
@@ -589,7 +589,7 @@ const services = {
       details: [
         {
           icon: 'people-in-car-side.png',
-          text: 'Pick you from home'
+          text: 'We pick you from home'
         },
         {
           icon: 'city-100.png',

@@ -18,7 +18,13 @@ class HowItWorks extends React.Component {
             <HeaderWithBg title="Excellent Companionship Services" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>Ensure you live independently and happily</h2>
             <section className="content">
-              <p>Our companionship service ensure you or your loved one can live indepandantly, happily and securily.</p>              
+              <p>Our companionship service ensure you or your loved one can live indepandantly, happily and securily.</p>   
+
+              <ol>
+               <li>Call us for more info or consultation about our services ,and discuss how we can assist you or your love d one.</li>                  
+               <li>Choose your need Service,Date,Time,Visit location,submit your application to us</li>
+               <li>Book service,we will  call you back as soon for some detail verification. And will forward our companion people detail to you two day prior date service.</li>     <li>Payment fee, Currently we only accept  cash payment,bank in directly to company account ,email or whatspp your bank slip to us.</li>
+              </ol>           
             </section>
           </div>
         </Layout>

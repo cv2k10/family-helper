@@ -27,7 +27,7 @@ class CustomerComments extends React.Component {
               <blockquote><p>Thanks for Family Helper professional companion assistance work, my son always outstation of business, my daily living task and hang out activities. Fully take care by your guys, I feel safe and secure.</p>
                 <footer>Mohd bin Sadin</footer>
               </blockquote>
-              <blockquote><p>I regular send my senior for acubunture treatment, but due to busy work schedule, sometime my senior have to take public transport alone. But now with your companion work, I feel released and grateful to all yours worker.</p>
+              <blockquote><p>I regular send my senior for acupuncture treatment, but due to busy work schedule, sometime my senior have to take public transport alone. But now with your companion work, I feel released and grateful to all yours worker.</p>
                 <footer>John Leong</footer>
               </blockquote>               
                            

@@ -32,7 +32,7 @@ class Faq extends React.Component {
       },
       {
         q: "I have completed my booking with payment done, what is next?",
-        a: "Currently, we only accept payment cash drect bank into company account. Email or Whatsapp bank slip to us, we call back you as soon.  Thanks for your trust of our company, we will call you back for some detail verification as soon.We will send our companion person detail to yo, two days before date service."
+        a: "Currently, we only accept payment cash direct bank into company account. Email or Whatsapp bank slip to us. Thanks for your trust of our company, we will call you back for some detail verification as soon.We will send our companion person detail to you, two days before date service."
       },
       {
         q: "Can I change some my booking detail?",
@@ -44,7 +44,7 @@ class Faq extends React.Component {
       },
       {
         q: "Will any your staff call me before the pick up day?",
-        a: "Yes, one day prior pick up day, our stuff contact and reminds you about the appointment, no worry."
+        a: "Yes, one day prior pick up day, our staff contact and reminds you about the appointment, no worry."
       },
       {
         q: "I must with senior on the pick up day?",
@@ -60,7 +60,7 @@ class Faq extends React.Component {
       },
       {
         q: "What is your company cancellation policy?",
-        a: "Cancellation notice should be reached us 72 hours before date service (by phone call, email or Whatsapp), 50% price service or Rm100 be forfeited, whichever is higher. Refund will be done on 14 days working. No refund for cancellation service less than 72 hours."
+        a: "Cancellation notice should be reached us 72 hours before date service (by phone call, email or Whatsapp), 50% price service or Rm100 be forfeited, whichever is higher. Refund will be done on 14 working days. No refund for cancellation service less than 72 hours."
       }, 
       {
         q: "Can I request for deferment appointment?",
@@ -68,7 +68,7 @@ class Faq extends React.Component {
       },
       {
         q: "Did your company accept ‘express booking’?",
-        a: "Yes, service request less than 72 hours, consider as ‘express booking’.  We will charge extra RM50.00 in usual normal book price."
+        a: "Yes, service request less than 7 days, consider as ‘express booking’.  We will charge extra RM50.00 in usual normal book price."
       },
       {
         q: "How does your company calculate service price?",
@@ -80,11 +80,11 @@ class Faq extends React.Component {
       },
       {
         q: "My Senior need extra assistant, can your company provide it?",
-        a: "Do let us know early, what kind extra assistant needed, wee try to fulfill your request, but not guaranteed."
+        a: "Do let us know early, what kind extra assistant needed, we try to fulfill your request, but not guaranteed."
       },
       {
         q: "Can I book this service for only 2 hours?",
-        a: "Sorry, our company companionship service time minimum is 2 hours."
+        a: "Sorry, our company companionship service time minimum is 3 hours."
       },
       {
         q: "Does your company offer home care service for senior?",

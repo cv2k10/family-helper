@@ -18,7 +18,7 @@ class Pricing extends React.Component {
             <HeaderWithBg title="Pricing" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>Pricing of Our Services</h2>
             <section className="content">
-              <p>Out servicing price are transparent, calculated based on per-trip basis.</p>
+              <p>Our servicing price are transparent, calculated based on per-trip basis.</p>
               <p>We offer three categories of pricing.</p>
               <ul>
                 <li>Three hours of companionship service: Rm150.00</li>
@@ -30,7 +30,7 @@ class Pricing extends React.Component {
                 <li>Additional: one hour charge: Rm35.00</li>
                 <li>Additional: two hour charge: Rm60.00</li>
                 <li>Additional: one location visit: Rm50.00</li>
-                <li>Additional: onr hour and one location visit: Rm70.00</li>
+                <li>Additional: one hour and one location visit: Rm70.00</li>
               </ul>
               <p>Important: Book service must with payment done 7 days advance prior date service.</p>
               <ul>

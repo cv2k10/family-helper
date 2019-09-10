@@ -3,26 +3,31 @@ import React from 'react';
 import HeaderWithBg from '../components/HeaderWithBg';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
-import "../scss/style.scss";
 import "../scss/page.scss";
+import "../scss/style.scss";
 
 class TermsAndConditions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       tnc: [
-        'To abuse, harass, threaten, impersonate or intimidate any person;',
-        'To post or transmit, or cause to be posted or transmitted, any Content that is libelous, defamatory, obscene, pornographic, abusive, offensive, profane, or that infringes any copyright or other right of any person;',
-        'To communicate with 500px representatives or other users in an abusive or offensive manner;',
-      'For any purpose(including posting or viewing Content) that is not permitted under the laws of the jurisdiction where you use the Services;',
-      'To post or transmit, or cause to be posted or transmitted, any Communication designed or intended to obtain password, account, or private information from any 500px user;',
-      'To create or transmit unwanted ‘spam’ to any person or any URL;',
-      'To create multiple accounts for the purpose of voting for or against users’ Visual Content;',
-      'To post copyrighted Content that does not belong to you, unless you are commenting on Visual Content in Blogs, where you may post such Content subject to providing appropriate attribution to the copyright owner and a link to the source of the Content;',
-      'With the exception of accessing RSS feeds, you agree not to use any robot, spider, scraper or other automated means to access the Site for any purpose without our express written permission.Additionally, you agree that you will not: (i) take any action that imposes, or may impose in our sole discretion an unreasonable or disproportionately large load on our infrastructure; (ii) interfere or attempt to interfere with the proper working of the Site or any activities conducted on the Site; or(iii) bypass any measures we may use to prevent or restrict access to the Site;',
-    'To artificially inﬂate or alter vote counts, blog counts, comments, or any other Service or for the purpose of giving or receiving money or other compensation in exchange for votes and / or in an attempt to alter the result of any contest or promotion, or for participating in any other organized effort that in any way artificially alters the results of Services;',
-    'To advertise to, or solicit, any user to buy or sell any third party products or services, or to use any information obtained from the Services in order to contact, advertise to, solicit, or sell to any user without their prior explicit consent;',
-    'To promote or sell Visual Content of another person unless you are expressly authorized to do so; or To sell, assign or otherwise transfer your profile.'       
+        'By accessing,browsing ,down loading using our platform service,you knowledge that you are liable comply with and bound by company Terms and Regulation .You must immediately discontinue your access use the services if disagree any part of term.',
+        'Our company have absolute right suspend ,discontinue,and restrict you access to our platform services temporarily or permanently without notice to you or liability to us. Our platform may revise,update even change this terms anytime,you are binding acceptance any updated or change terms.',
+        'When dealing with our company,you must provide accurate,completed or current information,all the time comply any instruction to use our services. You solely responsible for all cost and expenses may incur access to this platform.',
+      'We may immediately terminate or suspend your access to our services,if you breach these Terms or Regulation ,like provide false information or do direct negotiation price with our companion person.',
+      'We are not responsible nor liable for any direct,indirect,economic,consequential loss,damage,expenses that you may suffer of or in connection with the"Act",omission or negligence of this companion person. We make no warranties of the quality,sustantability ,safety or ability of this companion people.',
+      'You are in your own risk by using our platform services. Any form of risk shall pass to yourself,we merely performed  a service delivery,and not liable of any lost,damage or casualties due to untoward incident happened.',
+      'You agreed to indemnify our platform and companion people against all cost ,losses,damages,expenses and liabilities,and any claims arising from your own action in anywhere connection with the services,or breach your obligation as set in these terms and conditions.',
+      'Exclusive of liability,except or any legal responsibility in law such as death or personal injury .We are not legally responsible for losses that foreseeable to you when this contract was formed,and not cause by any breach,negligent of company.',
+      'All price listed are in Malaysia Ringgit. The price of each services listed merely and indicative price and it subject to change due to change of detail service. We will inform you the actual price and obtain your consent before proceed services.',
+    'Arrival time of picking point or deliver time to destination appointment,merely estimate on estimate time and shall not taken as a binding commitment  of company,it will depend on myriad factor such as traffic condition,road accident,bad weather ,heavy rain pour and more. Waiting time 15 minutes of companion people upon arrival at pick up point.',
+    'All information,data,graphics,artwork,photo graphic,video,software programmes make available through our platform,consider the owner of property right company. You are straightly prohibited to access and use this platform for own personal and non commercial use.',
+    'Confirmation booking of companionship service must with payment done 7 days prior date service. Our company only provide this companion job work after received your bank slip payment.',
+    'Cancellation   booking,notice of cancellation service must reach to our company 72 hours prior date service(by email,whatspp),50% of  price  service or Rm100 whichever higher be forfeited .No refund for cancellation less then 72 hours. Any decision  are in our sole and absolute discretion.',
+    'In the event our companion people having been arrived you pick up location (after waiting time 30 minutes), but we did not get any response from you or your senior,and we do not  received any notice deferment or cancellation of service,your payment are 100% forfeited.',
+    'Your location visit should be done within boundary limit area of Klang valley. Each booking service only include one pick up and one location visit for single senior . Extra charge will imposed for additional time or location visit.',
+    'You agreed that you access to or use of link site is entirely at your own risk subject to terms and condition. Our company is not responsible nor shall liable for the contents of any link site.',
+    'These terms and our privacy policy constitute entire agreement between you and our company,it supersedes any prior agreement,statement and understanding between you and our company. These terms shall be governed by the laws of Malaysia and each party agrees to submit to the non exclusion jurisdiction of court Malaysia.',  
       ]
     }
   }
