@@ -609,7 +609,7 @@ const services = {
       title: 'Outdoor Hiking',
       stitle: 'Outdoor Hiking',
       icon: 'trekking.png',
-      main: 'You or loved one like doing outdoor hiking,fear  loneliness and risk of life,contact us,we can assist you. Pick you from home,drives you to destination hiking,doing hiking together with you,send you back home.',
+      main: 'You or loved one like doing outdoor hiking,fear  loneliness and risk of life,contact us,we can assist you. Pick you from home,drives you to destination hiking,doing hiking together with you, send you back home.',
       details: [
         {
           icon: 'people-in-car-side.png',
@@ -629,6 +629,110 @@ const services = {
         },
       ]
     }, // OutdoorHiking
+
+    {
+      service: 'SportsGame',
+      title: 'Sports Game',
+      stitle: 'Sports Game',
+      icon: 'badminton.png',
+      main: 'You or your senior like doing indoor/outdoor sports activities,children\'s busy with work job,call us, we can helps you. Pick you from home, drives you to sport centre destination, wait until you finished exercise training,send you back home.',
+      details: [
+        {
+          icon: 'people-in-car-side.png',
+          text: 'We pick you from home'
+        },
+        {
+          icon: 'badminton-100.png',
+          text: 'Drives you to sports game center'
+        },
+        {
+          icon: 'machine-100.png',
+          text: 'Wait until you finished exercise'
+        },
+        {
+          icon: 'home-100.png',
+          text: 'Send you back home'
+        },
+      ]
+    }, // SportsGame
+
+    {
+      service: 'Breakfast',
+      title: 'Breakfast',
+      stitle: 'Breakfast',
+      icon: 'cafe.png',
+      main: 'Having breakfast with friends is fun, need our companionship service?  Contact us. We pick you from home, drives you meet your friends at restaurant, wait until your breakfast finished, send you back home.',
+      details: [
+        {
+          icon: 'people-in-car-side.png',
+          text: 'We pick you from home'
+        },
+        {
+          icon: 'cafe-100.png',
+          text: 'Drives you to restaurant'
+        },
+        {
+          icon: 'machine-100.png',
+          text: 'Wait until you finished breakfast'
+        },
+        {
+          icon: 'home-100.png',
+          text: 'Send you back home'
+        },
+      ]
+    }, // Breakfast
+
+    {
+      service: 'AttendCourse',
+      title: 'Attend Course',
+      stitle: 'Attend Course',
+      icon: 'classroom.png',
+      main: 'Want attend courses at tuition centre upgrade knowledge, family member busy with business, need our assistant? Contact us. Pick you from home, drives you to the learning center, wait until your study course finished, send you back home.',
+      details: [
+        {
+          icon: 'people-in-car-side.png',
+          text: 'We pick you from home'
+        },
+        {
+          icon: 'classroom-100.png',
+          text: 'Drives you to learning center'
+        },
+        {
+          icon: 'machine-100.png',
+          text: 'Wait until your course finished'
+        },
+        {
+          icon: 'home-100.png',
+          text: 'Send you back home'
+        },
+      ]
+    }, // AttendCourse        
+
+    {
+      service: 'KaraokeEntertainment',
+      title: 'Karaoke Entertainment',
+      stitle: 'Karaoke',
+      icon: 'micro.png',
+      main: 'you or your loved one like enjoyed song singing at karaoke room, children\'s are busy,no worry,contact us. We pick you from home,drives you to the entertainment center,accompany and with you until your happy hours finished,send you back home.',
+      details: [
+        {
+          icon: 'people-in-car-side.png',
+          text: 'We pick you from home'
+        },
+        {
+          icon: 'micro-100.png',
+          text: 'Drives you to entertainment center'
+        },
+        {
+          icon: 'machine-100.png',
+          text: 'Wait until you finished song singing'
+        },
+        {
+          icon: 'home-100.png',
+          text: 'Send you back home'
+        },
+      ]
+    }, // KaraokeEntertainment
 
     {
       service: 'OtherService',
