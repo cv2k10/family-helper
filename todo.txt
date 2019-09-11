@@ -1,23 +1,27 @@
 TODO:
 Menu 
-DONE * FAQ not clickable 
-DONE * add Order our service now menu item
+DONE: * FAQ not clickable 
+DONE: * add Order our service now menu item
 
 main page
+* change anchor a tag to Link tag
 * add extra 4 services
 
 instant quotation 
-DONE * add select service, select area, date and time only
-DONE * Enable only first 4 area option only
+DONE: * add select service, select area, date and time only
+DONE: * Enable only first 4 area option only
 
-DONE * Change What is Family Helepr to Family Helper
+DONE: * Change What is Family Helepr to Family Helper
 
-DONE * instant quotation passing form fill in items to OrderForm
-DONE * selected service passing to orderForm
+DONE: * instant quotation passing form fill in items to OrderForm
+DONE: * selected service passing to orderForm
+
+DONE: correction followed Kaw's whatsapp messages
 
 OrderForm
 * limit max and min time input
 * limit date to tomorrow date onwards
+
 * set express status and extra charge RM50 for order date less or equal to 7 days
 * extra hour, 1, 2, 3 hours selected, each extra hour add rm35 charge.
 * time period start to finished time
@@ -29,7 +33,7 @@ nodemailer
 * add order notify to admin email
 
 Term and Condition
-* all items
+DONE: * all items
 
 Contact Us
 * add contact and email link
