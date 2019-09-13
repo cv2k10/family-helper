@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Router from 'next/router';
 import Link from 'next/link';
+import Router from 'next/router';
 import React from 'react';
-import services from '../components/items.js';
 import areas from '../components/areas.js';
+import services from '../components/items.js';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
@@ -15,6 +15,7 @@ class Index extends React.Component {
     this.state = {
       currentSlide: 0,    
       services: services.items,
+      allServices: services,
       areas: areas.klangValley,
     } 
   }
@@ -28,7 +29,20 @@ class Index extends React.Component {
     var slides = document.querySelectorAll('.main-slider img.slide');
   
     this.state.currentSlide < slides.length - 1 ? this.setState({currentSlide: this.state.currentSlide + 1}) : this.setState({currentSlide: 0});
-}
+  }
+
+  nextDayDate() {
+    var today = new Date();
+    var tomorrow = new Date();
+    tomorrow.setDate(today.getDate()+1);
+    return tomorrow.toISOString().split('T')[0];
+  }
+
+  h24To12(h) {
+    return (h === 0 ? 12 :
+      h > 12 ? h - 12 : h) + ':00' +
+      (h > 11 && h < 24 ? 'pm' : 'am')
+  }
 
   render() {
     return (
@@ -186,15 +200,26 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                       <option value={service.service} key={i}>{service.title}</option>
                     ))}
                   </select>
+
                   <select id="enq-area" name="area" data-default-value="" className="dropdown">
                     <option value="">Select Area</option>
                     {this.state.areas.map((area, i) => (
                       <option value={area.name} disabled={!area.select} key={i}>{area.name}</option>
                     ))}
                   </select>
-                    <input type="date" id="date" name="date" placeholder="DATE" />
-                    <input type="time" id="time" name="time" placeholder="TIME" /> 
-                    <input type="submit" value="Instant Quotation" />
+
+                  <input type="date" id="date" name="date" placeholder="DATE" min={this.nextDayDate()} />
+                  
+                <select id="enq-service" name="time" data-default-value="" className="dropdown">
+                    <option value="">Select time period</option>
+                  {[...new Array(this.state.allServices.hourEnd - this.state.allServices.hourStart + 1)].map((_, i) => (
+                      <option value={this.state.allServices.hourStart + i} key={i}>
+                        {this.h24To12((this.state.allServices.hourStart + i))} - {this.h24To12(this.state.allServices.hourStart + i + 3) + '(3 hours)'}
+                      </option>
+                    ))}
+                  </select>
+
+                  <input type="submit" value="Instant Quotation" />
                 </form>
             </section>
             

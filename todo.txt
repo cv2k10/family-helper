@@ -4,8 +4,8 @@ DONE: * FAQ not clickable
 DONE: * add Order our service now menu item
 
 main page
-* change anchor a tag to Link tag
-* add extra 4 services
+DONE: * change anchor a tag to Link tag
+DONE: * add extra 4 services
 
 instant quotation 
 DONE: * add select service, select area, date and time only
@@ -18,11 +18,16 @@ DONE: * selected service passing to orderForm
 
 DONE: correction followed Kaw's whatsapp messages
 
+Term and Condition
+DONE: * all items
+
+
 OrderForm
-* limit max and min time input
-* limit date to tomorrow date onwards
+DONE: * change to time period according to no of hours selected
+DONE: * limit date to tomorrow date onwards
 
 * set express status and extra charge RM50 for order date less or equal to 7 days
+
 * extra hour, 1, 2, 3 hours selected, each extra hour add rm35 charge.
 * time period start to finished time
 
@@ -32,12 +37,11 @@ at post req, total price and period
 nodemailer
 * add order notify to admin email
 
-Term and Condition
-DONE: * all items
-
 Contact Us
 * add contact and email link
-* add contact form
+* add contact form, name, email, phone contact, enquiry
+
+
 
 Admin page
 * login page

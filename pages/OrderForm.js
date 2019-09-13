@@ -57,13 +57,26 @@ const Order = () => {
     areas: areas.klangValley,
   }
 
+const nextDayDate =() => {
+    var today = new Date();
+    var tomorrow = new Date();
+    tomorrow.setDate(today.getDate()+1);
+    return tomorrow.toISOString().split('T')[0];
+  }
 
-  
 const inputHealthStatus = useRef();
 const inputOtherService = useRef();
 const [selection] = useState(initSelection);
 const [queryInput, setQueryInput] = useState({});
 const router = useRouter();
+
+const [price, setPrice] = useState(3);
+
+const h24To12 = (h) => {
+    return (h === 0 ? 12 :
+    h > 12 ? h - 12 : h) + ':00' +
+    (h > 11 && h < 24 ? 'pm' : 'am')
+}
 
 useEffect(
   () => {
@@ -140,7 +153,7 @@ return (
         <select id="enq-service" name="service" 
         value={queryInput.service || ""}
         className="dropdown"
-        onChange={e=>{
+        onInput={e=>{
           console.log('e: ' + e.target.value)
           inputOtherService.current.className = e.target.value==='OtherService'? 'disp-block': 'disp-none';
           setQueryInput({ ...queryInput, service: e.target.value});
@@ -151,12 +164,13 @@ return (
             <option value={service.service} key={i}>{service.title}</option>
           ))}
         </select>
-        <input type="text" id="other" name="otherservice" placeholder="Please specify other service" 
+        <input type="text" id="other" name="otherservice" className="disp-none" placeholder="Please specify other service" 
         ref={inputOtherService}
         />
 
         <input type="date" id="date" name="date" placeholder="Date Service Needed" 
           value={queryInput.date || ""}
+          min={nextDayDate()}
           onChange={e => setQueryInput({ ...queryInput, date: e.target.value })}
         />
 
@@ -164,24 +178,26 @@ return (
           value={queryInput.time || ""}
           onChange={e => setQueryInput({ ...queryInput, time: e.target.value })}
           className="dropdown">
-          <option value="">Select start time</option>
+          <option value="">Select time period</option>
           {[...new Array(services.hourEnd - services.hourStart + 1)].map((_, i) => (
-            <option value={ (services.hourStart + i).toString() + ':00' } key={i}>{ (services.hourStart  + i).toString() + ':00' }</option>
+            <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i))} - {h24To12(services.hourStart + i + +price) + ' (' + price + ' hours)'}</option>
           ))}
         </select>
 
         <p style={{marginBottom: 0}}>Price: </p>
-        <div style={{flex: 1}}>
-          <input type="radio" id="price1" name="price" value="price1" defaultChecked />
-            <label htmlFor="price1">3 Hours Services: Rm150.00</label>
-        </div>
-        <div style={{flex: 1}}>              
-            <input type="radio" id="price2" name="price" value="price2" />
-          <label htmlFor="price2">4 Hours Services: Rm175.00</label>
-        </div>
-        <div style={{flex: 1}}>              
-            <input type="radio" id="price3" name="price" value="price3" />
-          <label htmlFor="price3">5 Hours Services: Rm195.00</label>
+        <div onChange={(e)=>setPrice(e.target.value)}>
+          <div style={{flex: 1}}>
+            <input type="radio" id="price1" name="price" value="3" defaultChecked />
+              <label htmlFor="price1">3 Hours Services: Rm150.00</label>
+          </div>
+          <div style={{flex: 1}}>              
+              <input type="radio" id="price2" name="price" value="4" />
+            <label htmlFor="price2">4 Hours Services: Rm175.00</label>
+          </div>
+          <div style={{flex: 1}}>              
+              <input type="radio" id="price3" name="price" value="5" />
+            <label htmlFor="price3">5 Hours Services: Rm195.00</label>
+          </div>
         </div>
 
         <select id="enq-area" name="area" 
