@@ -67,6 +67,7 @@ const nextDayDate =() => {
 const inputHealthStatus = useRef();
 const inputOtherService = useRef();
 const [selection] = useState(initSelection);
+const [totalPrice, setTotalPrice] = useState(150);
 const [queryInput, setQueryInput] = useState({});
 const router = useRouter();
 
@@ -174,16 +175,6 @@ return (
           onChange={e => setQueryInput({ ...queryInput, date: e.target.value })}
         />
 
-        <select id="enq-service" name="time"
-          value={queryInput.time || ""}
-          onChange={e => setQueryInput({ ...queryInput, time: e.target.value })}
-          className="dropdown">
-          <option value="">Select time period</option>
-          {[...new Array(services.hourEnd - services.hourStart + 1)].map((_, i) => (
-            <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i))} - {h24To12(services.hourStart + i + +price) + ' (' + price + ' hours)'}</option>
-          ))}
-        </select>
-
         <p style={{marginBottom: 0}}>Price: </p>
         <div onChange={(e)=>setPrice(e.target.value)}>
           <div style={{flex: 1}}>
@@ -200,6 +191,16 @@ return (
           </div>
         </div>
 
+        <select id="enq-service" name="time"
+          value={queryInput.time || ""}
+          onChange={e => setQueryInput({ ...queryInput, time: e.target.value })}
+          className="dropdown">
+          <option value="">Select time period</option>
+          {[...new Array(services.hourEnd - services.hourStart + 1)].map((_, i) => (
+            <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i))} - {h24To12(services.hourStart + i + +price) + ' (' + price + ' hours)'}</option>
+          ))}
+        </select>        
+
         <select id="enq-area" name="area" 
         value={queryInput.area || ""}
         onChange={e => setQueryInput({ ...queryInput, area: e.target.value })}
@@ -211,7 +212,8 @@ return (
         </select>
         <textarea id="pickup" name="pickup" placeholder="Pickup Location"></textarea>
         <textarea id="visit" name="visit" placeholder="Visit Location"></textarea>
-
+        
+        <h2>Total Price: RM{totalPrice}.00</h2>
         <input type="submit" value="Order" />
       </form>
     </section>
