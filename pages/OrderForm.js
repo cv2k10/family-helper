@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import areas from '../components/areas.js';
 import services from '../components/items.js';
 import Layout from '../components/Layout';
+import prices from '../components/prices.js';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
@@ -78,6 +79,16 @@ const h24To12 = (h) => {
     h > 12 ? h - 12 : h) + ':00' +
     (h > 11 && h < 24 ? 'pm' : 'am')
 }
+
+const isExpress = (dateString, days) => {
+  console.log("days: " + days)
+    const date = new Date(dateString);
+    const todayString = new Date().toISOString().split('T')[0];
+    const today = new Date(todayString);
+    const oneWeek = today.getTime() + days * 24 * 60 * 60 * 1000;
+    return date.getTime() < oneWeek;
+}
+
 
 useEffect(
   () => {
@@ -172,23 +183,23 @@ return (
         <input type="date" id="date" name="date" placeholder="Date Service Needed" 
           value={queryInput.date || ""}
           min={nextDayDate()}
-          onChange={e => setQueryInput({ ...queryInput, date: e.target.value })}
+          onChange={e => {
+            setQueryInput({ ...queryInput, date: e.target.value });
+            setTotalPrice(totalPrice+50);          
+          }}
         />
+        <p>{isExpress(queryInput.date, prices.common.expressPeriod) ? 'Express service (RM'  +  prices.common.expressFee + '.00)': null}</p>
 
         <p style={{marginBottom: 0}}>Price: </p>
         <div onChange={(e)=>setPrice(e.target.value)}>
-          <div style={{flex: 1}}>
-            <input type="radio" id="price1" name="price" value="3" defaultChecked />
-              <label htmlFor="price1">3 Hours Services: Rm150.00</label>
-          </div>
-          <div style={{flex: 1}}>              
-              <input type="radio" id="price2" name="price" value="4" />
-            <label htmlFor="price2">4 Hours Services: Rm175.00</label>
-          </div>
-          <div style={{flex: 1}}>              
-              <input type="radio" id="price3" name="price" value="5" />
-            <label htmlFor="price3">5 Hours Services: Rm195.00</label>
-          </div>
+          
+            { prices.common.periods.map((p,i) => (
+            <div>
+              <input type="radio" id={'price' + p.hour} name="price" value={p.hour} defaultChecked={i===0} />
+              <label htmlFor={'price' + p.hour}>{p.hour + ' Hours Services: Rm' + p.price + '.00'}</label> 
+            </div>             
+            )) }
+          
         </div>
 
         <select id="enq-service" name="time"

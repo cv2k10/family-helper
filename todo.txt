@@ -26,8 +26,8 @@ OrderForm
 DONE: * change to time period according to no of hours selected
 DONE: * limit date to tomorrow date onwards
 
-* add total price before submit button
-* set express status and extra charge RM50 for order date less or equal to 7 days
+DONE: * add total price before submit button
+DONE: * set express status and extra charge RM50 for order date less or equal to 7 days
 
 * extra hour, 1, 2, 3 hours selected, each extra hour add rm35 charge.
 
