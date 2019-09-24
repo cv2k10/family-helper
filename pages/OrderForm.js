@@ -9,7 +9,7 @@ import prices from '../components/prices.js';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
-const submitForm = formData => {
+const submitForm = formData => { /* onSubmit event with input param, e.target (form) */
 
   const data = {
     form: {
@@ -20,13 +20,14 @@ const submitForm = formData => {
       health: formData.health.value,
       healthstatus: formData.healthstatus.value,
       phone: formData.phone.value,
+      phonehome: formData.phonehome.value,
       fulladdress: formData.fulladdress.value,
       urgent: formData.urgent.value,
       service: formData.service.value,
       otherservice: formData.otherservice.value,
       date: formData.date.value,
-      timefrom: formData.timefrom.value,
-      price: formData.price.value,
+      period: formData.period.value,
+      time: formData.time.value,
       area: formData.area.value,
       pickup: formData.pickup.value,
       visit: formData.visit.value,
@@ -178,6 +179,7 @@ return (
             <option value={service.service} key={i}>{service.title}</option>
           ))}
         </select>
+
         <input type="text" id="other" name="otherservice" className="disp-none" placeholder="Please specify other service" 
         ref={inputOtherService}
         />
