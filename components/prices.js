@@ -2,7 +2,7 @@ const prices = {
   common: {
     periods: [
       {
-        price: 130,
+        price: 150,
         hour: 3,
       },
       {

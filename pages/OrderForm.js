@@ -53,9 +53,11 @@ const submitForm = formData => {
 }
 
 const Order = () => {
+
   const initSelection = {
     services: services.items,
     areas: areas.klangValley,
+    period: prices.common.periods[0].hour
   }
 
 const nextDayDate =() => {
@@ -67,21 +69,20 @@ const nextDayDate =() => {
 
 const inputHealthStatus = useRef();
 const inputOtherService = useRef();
-const [selection] = useState(initSelection);
-const [totalPrice, setTotalPrice] = useState(150);
+const [selection, setSelection] = useState(initSelection);
+const [totalPrice, setTotalPrice] = useState(prices.common.periods[0].price);
 const [queryInput, setQueryInput] = useState({});
 const router = useRouter();
 
-const [price, setPrice] = useState(3);
+const [period, setPeriod] = useState(prices.common.periods[0].hour);
 
 const h24To12 = (h) => {
-    return (h === 0 ? 12 :
-    h > 12 ? h - 12 : h) + ':00' +
-    (h > 11 && h < 24 ? 'pm' : 'am')
+    return h === 0 || h === 24  ? '12:00am' :
+    h === 12 ? '12:00pm' :
+    h%12 + ':00' + (h > 11 && h < 24 ? 'pm' : 'am')
 }
 
 const isExpress = (dateString, days) => {
-  console.log("days: " + days)
     const date = new Date(dateString);
     const todayString = new Date().toISOString().split('T')[0];
     const today = new Date(todayString);
@@ -104,8 +105,8 @@ useEffect(
 );
 
 
-const title = 'Contact Page'
-  console.log("Service: " + queryInput.service)
+const title = 'Contact Page';
+
 return (
   <Layout>
     <Head>
@@ -185,18 +186,31 @@ return (
           min={nextDayDate()}
           onChange={e => {
             setQueryInput({ ...queryInput, date: e.target.value });
-            setTotalPrice(totalPrice+50);          
+            const selected = prices.common.periods.find(p => p.hour === +selection.period);
+            var tp = selected.price + (isExpress(e.target.value, prices.common.expressPeriod) ? prices.common.expressFee : 0);
+            setTotalPrice(tp);     
           }}
         />
-        <p>{isExpress(queryInput.date, prices.common.expressPeriod) ? 'Express service (RM'  +  prices.common.expressFee + '.00)': null}</p>
+        <p>{isExpress(queryInput.date, prices.common.expressPeriod) ? <i className="mt-0">Express service selected (RM{prices.common.expressFee}.00)</i>: null}</p>
 
-        <p style={{marginBottom: 0}}>Price: </p>
-        <div onChange={(e)=>setPrice(e.target.value)}>
+        <p style={{marginBottom: 0}}>Period: </p>
+        <div onChange={(e)=>{
+          const period = e.target.value;
+          console.log("period: "+ period)
+          setSelection({...selection, period});
+
+          const selected = prices.common.periods.find(p=> p.hour === +period);
+
+          console.log("Period/ selected: " + JSON.stringify(selected))
+          setTotalPrice(selected.price + (isExpress(queryInput.date, prices.common.expressPeriod) ? prices.common.expressFee: 0))
+          }}
+          value = {period}
+        >
           
             { prices.common.periods.map((p,i) => (
             <div>
-              <input type="radio" id={'price' + p.hour} name="price" value={p.hour} defaultChecked={i===0} />
-              <label htmlFor={'price' + p.hour}>{p.hour + ' Hours Services: Rm' + p.price + '.00'}</label> 
+              <input type="radio" id={'period' + p.hour} name="period" value={p.hour} defaultChecked={i===0} />
+              <label htmlFor={'period' + p.hour}>{p.hour + ' Hours Services: Rm' + p.price + '.00'}</label> 
             </div>             
             )) }
           
@@ -208,7 +222,8 @@ return (
           className="dropdown">
           <option value="">Select time period</option>
           {[...new Array(services.hourEnd - services.hourStart + 1)].map((_, i) => (
-            <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i))} - {h24To12(services.hourStart + i + +price) + ' (' + price + ' hours)'}</option>
+            <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i))} - {h24To12(services.hourStart + i + +selection.period) + ' (' + selection.period + ' hours)'} 
+            </option>
           ))}
         </select>        
 
