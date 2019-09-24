@@ -157,7 +157,7 @@ return (
 
         <input type="tel" id="phone" name="phonehome" placeholder="House Phone Contact"/>
 
-        <textarea id="fulladdress" name="fulladdress" placeholder="Full Address"></textarea>
+        <textarea id="fulladdress" name="fulladdress" placeholder="Full Address" required></textarea>
 
         <input type="text" id="urgent" name="urgent" placeholder="Urgent Phone Contact" required/>
         
@@ -166,6 +166,7 @@ return (
         <select id="enq-service" name="service" 
         value={queryInput.service || ""}
         className="dropdown"
+        required
         onInput={e=>{
           console.log('e: ' + e.target.value)
           inputOtherService.current.className = e.target.value==='OtherService'? 'disp-block': 'disp-none';
@@ -181,42 +182,39 @@ return (
         ref={inputOtherService}
         />
 
-        <input type="date" id="date" name="date" placeholder="Date Service Needed" 
+        <input type="date" id="date" name="date" placeholder="Date Service Needed" required
           value={queryInput.date || ""}
           min={nextDayDate()}
           onChange={e => {
-            setQueryInput({ ...queryInput, date: e.target.value });
-            const selected = prices.common.periods.find(p => p.hour === +selection.period);
-            var tp = selected.price + (isExpress(e.target.value, prices.common.expressPeriod) ? prices.common.expressFee : 0);
-            setTotalPrice(tp);     
+            setQueryInput({ ...queryInput, date: e.target.value }); /* set current date string from datepicker */
+            const selected = prices.common.periods.find(p => p.hour === +selection.period); /* get {price, period} object of selected period */
+            var tp = selected.price + (isExpress(e.target.value, prices.common.expressPeriod) ? prices.common.expressFee : 0); /*  total price = sum of priod of selected period + express fee (if less than 7 days)*/
+            setTotalPrice(tp); /* set total price */    
           }}
         />
         <p>{isExpress(queryInput.date, prices.common.expressPeriod) ? <i className="mt-0">Express service selected (RM{prices.common.expressFee}.00)</i>: null}</p>
 
         <p style={{marginBottom: 0}}>Period: </p>
         <div onChange={(e)=>{
-          const period = e.target.value;
-          console.log("period: "+ period)
-          setSelection({...selection, period});
+          const period = e.target.value; /* current select hour: '3','4' or '5' (string) (hours) */
+          setSelection({ ...selection, period }); /* update period to state selection, {services,areas,period}  */
 
-          const selected = prices.common.periods.find(p=> p.hour === +period);
-
-          console.log("Period/ selected: " + JSON.stringify(selected))
+          const selected = prices.common.periods.find(p=> p.hour === +period); /* get selected {price,period} of current period */
           setTotalPrice(selected.price + (isExpress(queryInput.date, prices.common.expressPeriod) ? prices.common.expressFee: 0))
-          }}
-          value = {period}
+          }} /* update total price = period price + express fee (if less than 7 days) */
+          value = {period} /* value sync with onChange */
         >
           
-            { prices.common.periods.map((p,i) => (
+            { prices.common.periods.map((p,i) => ( /* loop prices.js object */
             <div>
-              <input type="radio" id={'period' + p.hour} name="period" value={p.hour} defaultChecked={i===0} />
+                <input type="radio" id={'period' + p.hour} name="period" value={p.hour} defaultChecked={i === 0} required />
               <label htmlFor={'period' + p.hour}>{p.hour + ' Hours Services: Rm' + p.price + '.00'}</label> 
             </div>             
             )) }
           
         </div>
 
-        <select id="enq-service" name="time"
+        <select id="enq-service" name="time" required
           value={queryInput.time || ""}
           onChange={e => setQueryInput({ ...queryInput, time: e.target.value })}
           className="dropdown">
@@ -227,7 +225,7 @@ return (
           ))}
         </select>        
 
-        <select id="enq-area" name="area" 
+        <select id="enq-area" name="area" required 
         value={queryInput.area || ""}
         onChange={e => setQueryInput({ ...queryInput, area: e.target.value })}
         className="dropdown">
@@ -236,8 +234,8 @@ return (
             <option value={area.name} disabled={!area.select} key={i}>{area.name}</option>
           ))}
         </select>
-        <textarea id="pickup" name="pickup" placeholder="Pickup Location"></textarea>
-        <textarea id="visit" name="visit" placeholder="Visit Location"></textarea>
+        <textarea id="pickup" name="pickup" placeholder="Pickup Location" required></textarea>
+        <textarea id="visit" name="visit" placeholder="Visit Location" required></textarea>
         
         <h2>Total Price: RM{totalPrice}.00</h2>
         <input type="submit" value="Order" />
