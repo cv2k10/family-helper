@@ -41,7 +41,14 @@ Contact Us
 * add contact and email link
 * add contact form, name, email, phone contact, enquiry
 
+OrderForm
+* handel error connection page
 
+DONE: All pages:
+Why
+import HeaderWithBg from '../components/HeaderWithBg';
+disturb css layout on dev, not on production now?
+(Solved by shifted to css from HeaderWithBg to page.scss)
 
 Admin page
 * login page
