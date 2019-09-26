@@ -11,10 +11,10 @@ class TermsAndConditions extends React.Component {
     super(props);
     this.state = {
       tnc: [
-        'By accessing,browsing ,down loading using our platform service,you knowledge that you are liable comply with and bound by company Terms and Regulation .You must immediately discontinue your access use the services if disagree any part of term.',
-        'Our company have absolute right suspend ,discontinue,and restrict you access to our platform services temporarily or permanently without notice to you or liability to us. Our platform may revise,update even change this terms anytime,you are binding acceptance any updated or change terms.',
+        'By accessing, browsing, down loading using our platform service, you knowledge that you are liable comply with and bound by company Terms and Regulation.  You must immediately discontinue your access use the services if disagree any part of term.',
+        'Our company have absolute right suspend, discontinue,and restrict you access to our platform services temporarily or permanently without notice to you or liability to us. Our platform may revise,update even change this terms anytime,you are binding acceptance any updated or change terms.',
         'When dealing with our company,you must provide accurate,completed or current information,all the time comply any instruction to use our services. You solely responsible for all cost and expenses may incur access to this platform.',
-      'We may immediately terminate or suspend your access to our services,if you breach these Terms or Regulation ,like provide false information or do direct negotiation price with our companion person.',
+      'We may immediately terminate or suspend your access to our services,if you breach these Terms or Regulation,like provide false information or do direct negotiation price with our companion person.',
       'We are not responsible nor liable for any direct,indirect,economic,consequential loss,damage,expenses that you may suffer of or in connection with the"Act",omission or negligence of this companion person. We make no warranties of the quality,sustantability ,safety or ability of this companion people.',
       'You are in your own risk by using our platform services. Any form of risk shall pass to yourself,we merely performed  a service delivery,and not liable of any lost,damage or casualties due to untoward incident happened.',
       'You agreed to indemnify our platform and companion people against all cost ,losses,damages,expenses and liabilities,and any claims arising from your own action in anywhere connection with the services,or breach your obligation as set in these terms and conditions.',

@@ -7,7 +7,7 @@ import "../scss/style.scss";
 import "../scss/page.scss";
 import "../scss/page_faq.scss";
 
-class Faq extends React.Component {
+class FrequentlyAskQuestions extends React.Component {
   state = {
     faqs: [
       {
@@ -148,4 +148,4 @@ class Faq extends React.Component {
   }
 }
 
-export default Faq; 
+export default FrequentlyAskQuestions; 

@@ -22,13 +22,13 @@ class ExcellentCompanionshipServices extends React.Component {
               <p> We will provide trusted,reliable senior companionship service  ensured you or your senior live with sense of dignity and positive mindset.</p>
               <p>Services offered:</p>
               <ul>
-                <li>doctor appointment</li>
-                <li>grocery shopping</li>
-                <li>rehabilitation centre</li>
-                <li>relative/friend visit</li>
-                <li>city tour</li>
-                <li>tachi practising</li>
-                <li>dialyses centre</li>
+                <li>Doctor appointment</li>
+                <li>Grocery shopping</li>
+                <li>Rehabilitation centre</li>
+                <li>Relative/friend visit</li>
+                <li>City tour</li>
+                <li>Tachi practising</li>
+                <li>Dialyses centre</li>
                 <li>And more</li>   
               </ul>
             </section>

@@ -28,12 +28,12 @@ class WhyFamilyHelper extends React.Component {
 
           <h2>Safety and Security</h2>
             <section className="content">
-            <p>Our companionship work will carry out with safely,securely and professionally. This companion people are through stringent process selection like back ground check,personal interview,driving behavior test,car inspection,driving lessen and car insurance validity. You are safe and secured with our  companion care services.</p>
+            <p>Our companionship work will carry out with safely, securely and professionally. This companion people are through stringent process selection like back ground check,personal interview, driving behavior test,car inspection, driving lessen and car insurance validity. You are safe and secured with our  companion care services.</p>
             </section> 
 
           <h2>Save Time, Efficient and Reliable</h2>
             <section className="content">
-            <p>Our companion people will wait you in front your house on day of appointment(15 minutes waiting time). Prior a day of appointment ,our staff will call and remind you this important appointment. Our companion people make sure missing seniors will not happened.</p>
+            <p>Our companion people will wait you in front your house on day of appointment(15 minutes waiting time). Prior a day of appointment, our staff will call and remind you this important appointment. Our companion people make sure missing seniors will not happened.</p>
             </section> 
             
           </div>

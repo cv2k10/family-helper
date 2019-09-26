@@ -41,19 +41,20 @@ class Layout extends React.Component {
       <div className="overlay" onClick={() => this.setState({ burgerMenuOpen: false })}></div>
       <div className="sidebar-nav">
         <ul className="smenu">
-          <li className="sitem"><Link href={"/"}><a className="stitle">Home</a></Link></li>
-          <li className="sitem"><Link href={"/OrderForm"}><a className="stitle"><strong>Order our service now!</strong></a></Link></li>
-          <li className="sitem"><Link href={"/WhatIsFamilyHelper"}><a className="stitle">What is Family Helper</a></Link></li>
-          <li className="sitem"><Link href={"/HowWeHelpYou"}><a className="stitle">How We Could Help You</a></Link></li>          
-          <li className="sitem"><Link href={"/ExcellentCompanionshipServices"}><a className="stitle">Excellent Companionship Services</a></Link></li>  
-          <li className="sitem"><Link href={"/HowItWorks"}><a className="stitle">How It Works</a></Link></li>        
-          <li className="sitem"><Link href={"/WhyFamilyHelper"}><a className="stitle">Why Family Helper</a></Link></li>
-          <li className="sitem"><Link href={"/CustomerComments"}><a className="stitle">Customer Comments About Our Services</a></Link></li>          
-          <li className="sitem"><Link href={"/Pricing"}><a className="stitle">Pricing</a></Link></li>
-          <li className="sitem"><Link href={"/Faq"}><a className="stitle">FAQ</a></Link></li>
-          <li className="sitem"><Link href={"/ContactUs"}><a className="stitle">Contact Us</a></Link></li>
-          <li className="sitem"><Link href={"/AboutUs"}><a className="stitle">About Us</a></Link></li>
-          <li className="sitem"><Link href={"/TermsAndConditions"}><a className="stitle">Terms And Conditions</a></Link></li>
+          <Link href={"/"}><li className="sitem"><a className="stitle">Home</a></li></Link>
+          <Link href={"/OrderForm"}><li className="sitem"><a className="stitle"><strong>Order our service now!</strong></a></li></Link>
+          <Link href={"/WhatIsFamilyHelper"}><li className="sitem"><a className="stitle">What is Family Helper</a></li></Link>
+          <Link href={"/HowWeHelpYou"}><li className="sitem"><a className="stitle">How We Could Help You</a></li></Link>          
+          <Link href={"/ExcellentCompanionshipServices"}><li className="sitem"><a className="stitle">Excellent Companionship Services</a></li></Link>  
+          <Link href={"/HowItWorks"}><li className="sitem"><a className="stitle">How It Works</a></li></Link>        
+          <Link href={"/WhyFamilyHelper"}><li className="sitem"><a className="stitle">Why Family Helper</a></li></Link>
+          <Link href={"/CustomerComments"}><li className="sitem"><a className="stitle">Customer Comments About Our Services</a></li></Link>         
+          <Link href={"/Pricing"}><li className="sitem"><a className="stitle">Pricing</a></li></Link>
+
+          <Link href={"/ContactUs"}><li className="sitem"><a className="stitle">Contact Us</a></li></Link>
+          <Link href={"/AboutUs"}><li className="sitem"><a className="stitle">About Us</a></li></Link>          
+          <Link href={"/FrequentlyAskQuestions"}><li className="sitem"><a className="stitle">FAQ</a></li></Link>
+          <Link href={"/TermsAndConditions"}><li className="sitem"><a className="stitle">Terms And Conditions</a></li></Link>
         </ul>
       </div>
     </section>
