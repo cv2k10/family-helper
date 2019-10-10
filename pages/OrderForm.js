@@ -77,10 +77,11 @@ const router = useRouter();
 
 const [period, setPeriod] = useState(prices.common.periods[0].hour);
 
-const h24To12 = (h) => {
-    return h === 0 || h === 24  ? '12:00am' :
-    h === 12 ? '12:00pm' :
-    h%12 + ':00' + (h > 11 && h < 24 ? 'pm' : 'am')
+const h24To12 = (h,m) => {
+  const minutesStr = ('0' + m).slice(-2); //slice method for extract last 2 digits
+  return h === 0 || h === 24  ? `12:${minutesStr}am` :
+    h === 12 ? `12:${minutesStr}pm` :
+    h%12 + `:${minutesStr}` + (h > 11 && h < 24 ? 'pm' : 'am')
 }
 
 const isExpress = (dateString, days) => {
@@ -242,8 +243,14 @@ return (
           className="dropdown">
           <option value="">Select time period</option>
           {[...new Array(services.hourEnd - services.hourStart + 1)].map((_, i) => (
-            <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i))} - {h24To12(services.hourStart + i + +selection.period) + ' (' + selection.period + ' hours)'} 
-            </option>
+            <React.Fragment>
+              {i>0? 
+                <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i-1), 30)} - {h24To12(services.hourStart + i-1 + +selection.period, 30) + ' (' + selection.period + ' hours)'} 
+              </option>
+              :null}              
+              <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i), 0)} - {h24To12(services.hourStart + i + +selection.period, 0) + ' (' + selection.period + ' hours)'} 
+              </option>
+            </React.Fragment>
           ))}
         </select>        
 

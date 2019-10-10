@@ -40,9 +40,9 @@ DONE: Age in range:
 80 or above
 
 DONE: * only using one phone number with message (for admin or urgent use)
-* pickup location: home address / other location
+DONE: * pickup location: home address / other location
 
-* 30min interval for periods
+DONE: * 30min interval for periods
 * Other information, if any
 
 
