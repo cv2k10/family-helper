@@ -134,7 +134,27 @@ return (
           <label htmlFor="female">Female</label>
         </span>
 
-        <input type="number" id="age" name="age" min="18" max="120" placeholder="Age" required/>
+        <p style={{marginBottom: 0}}>Age: </p>
+        <p style={{marginTop: 0, marginBottom: 0}}>
+          <input type="radio" id="age50below" name="age" value="49 or below" />
+          <label htmlFor="male">49 or below</label>
+        </p>
+        <p style={{marginTop: 0, marginBottom: 0}}>
+          <input type="radio" id="age50-59" name="age" value="50 - 59" />
+          <label htmlFor="male">50- 59</label>
+        </p> 
+        <p style={{marginTop: 0, marginBottom: 0}}>
+          <input type="radio" id="age60-69" name="age" value="60 - 69" />
+          <label htmlFor="male">60 -69</label>
+        </p>
+        <p style={{marginTop: 0, marginBottom: 0}}>
+          <input type="radio" id="age70-79" name="age" value="70 - 79" />
+          <label htmlFor="male">70 - 79</label>
+        </p>               
+        <p style={{marginTop: 0}}>
+          <input type="radio" id="age80above" name="age" value="80 or above" />
+          <label htmlFor="male">80 or above</label>
+        </p>     
 
         <p style={{marginBottom: 0}}>Health Status: </p>
         <span style={{flex: 1}}>
@@ -154,13 +174,13 @@ return (
         ref={inputHealthStatus}
         />
 
-        <input type="tel" id="phone" name="phone" placeholder="Hand Phone Contact" required/>
+        <input type="tel" id="phone" name="phone" placeholder="Hand Phone Contact (for urgent used)" required/>
 
-        <input type="tel" id="phone" name="phonehome" placeholder="House Phone Contact"/>
+        {/* <input type="tel" id="phone" name="phonehome" placeholder="House Phone Contact"/> */}
 
-        <textarea id="fulladdress" name="fulladdress" placeholder="Full Address" required></textarea>
+        <textarea id="fulladdress" name="fulladdress" placeholder="Home Address" required></textarea>
 
-        <input type="text" id="urgent" name="urgent" placeholder="Urgent Phone Contact" required/>
+        {/* <input type="text" id="urgent" name="urgent" placeholder="Urgent Phone Contact" required/> */}
         
         <div className="form-title">Service Details</div>
 
@@ -236,7 +256,8 @@ return (
             <option value={area.name} disabled={!area.select} key={i}>{area.name}</option>
           ))}
         </select>
-        <textarea id="pickup" name="pickup" placeholder="Pickup Location" required></textarea>
+     
+        <textarea id="pickup" name="pickup" placeholder="Pickup Location (please specify if different from home address)" required></textarea>
         <textarea id="visit" name="visit" placeholder="Visit Location" required></textarea>
         
         <h2>Total Price: RM{totalPrice}.00</h2>

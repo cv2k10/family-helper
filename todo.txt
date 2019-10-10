@@ -29,7 +29,22 @@ DONE: * limit date to tomorrow date onwards
 DONE: * add total price before submit button
 DONE: * set express status and extra charge RM50 for order date less or equal to 7 days
 
-* extra hour, 1, 2, 3 hours selected, each extra hour add rm35 charge.
+DONE offline * extra hour, 1, 2, 3 hours selected, each extra hour add rm35 charge.
+
+* streamline OrderForm after meeting
+DONE: Age in range:
+50 or below
+51 to 59
+61 to 69
+71 to 79
+80 or above
+
+DONE: * only using one phone number with message (for admin or urgent use)
+* pickup location: home address / other location
+
+* 30min interval for periods
+* Other information, if any
+
 
 * orderComplated: item missing
 at post req, total price and period
@@ -51,6 +66,7 @@ disturb css layout on dev, not on production now?
 (Solved by shifted to css from HeaderWithBg to page.scss)
 
 Admin page
+* explore headless cms - strapi.io
 * login page
 * order list
 * user page, 3 roles: admin, worker, customer roles.
