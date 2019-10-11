@@ -10,9 +10,10 @@ import "../scss/style.scss";
 
 const OrderCompleted = () => {
   const router = useRouter()
-  const { fullname, email, gender, age, health, healthstatus, phone, fulladdress, urgent, service, otherservice, date, timefrom, price, area, pickup, visit } = router.query;
+  const { fullname, email, gender, age, health, healthstatus, phone, /* phonehome, */ fulladdress, /* urgent,*/ service, otherservice, date, period, time, area, pickup, visit, price} = router.query;
 
   console.log(JSON.stringify(router.query))
+  console.log('otherservice: ' + (otherservice == ''))
 
   const title = 'Order Completed'
   return (
@@ -30,8 +31,13 @@ const OrderCompleted = () => {
     </div>
     <div>Order Date: <b>30 Aug 2019</b></div>
     <div>Order Id: <b>203001</b></div>
-    <div>Service Name:&nbsp;<b>{service}</b><b><br/></b></div>
-    <div>Total price:<b>{price}</b></div>
+    <div>Service Name: <b>{service}</b></div>
+    {otherservice!==''?
+      <div>Other service: <b>{otherservice}</b></div>
+      : null }
+    <div>Area: <b>{area}</b></div>
+
+    <div>Total price: <b>{price}</b></div>
     <div>
         <br/>
     </div>
@@ -42,21 +48,27 @@ const OrderCompleted = () => {
     <div>
         <br/>
     </div>
-    <div>Health Status: <b>{health}</b></div>
+    <div>Health: <b>{health}</b></div>
+    {healthstatus!==''?
+      <div>Health Status: <b>{healthstatus}</b></div>
+      : null }
+
     <div>Phone&nbsp;Number: <b>{phone}</b></div>
     <div><b><br/></b></div>
-    <div>Full Address:&nbsp;</div>
+    <div>home Address:&nbsp;</div>
     <div><b>{fulladdress}</b></div>
     <div>
         <br/>
     </div>
-    <div>Urgent Phone Number: <b>{urgent}</b></div>
+    {/* <div>Urgent Phone Number: <b>{urgent}</b></div> */}
     <div>Date: <b>{date}</b></div>
-    <div>Start Time: <b>{timefrom}</b></div>
-    <div>Period: <b>{price}</b></div>
+    {/* <div>Start Time: <b>{timefrom}</b></div> */}
+    <div>Period: <b>{period} Hours Services</b></div>
+    <div>Time: <b>{time}</b></div>
     <div>
         <br/>
     </div>
+    
     <div>Pickup Location:&nbsp;</div>
     <div><b>{pickup}</b></div>
     <div>

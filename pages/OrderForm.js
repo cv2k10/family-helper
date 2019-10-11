@@ -20,9 +20,9 @@ const submitForm = formData => { /* onSubmit event with input param, e.target (f
       health: formData.health.value,
       healthstatus: formData.healthstatus.value,
       phone: formData.phone.value,
-      phonehome: formData.phonehome.value,
+      // phonehome: formData.phonehome.value,
       fulladdress: formData.fulladdress.value,
-      urgent: formData.urgent.value,
+      // urgent: formData.urgent.value,
       service: formData.service.value,
       otherservice: formData.otherservice.value,
       date: formData.date.value,
@@ -31,6 +31,7 @@ const submitForm = formData => { /* onSubmit event with input param, e.target (f
       area: formData.area.value,
       pickup: formData.pickup.value,
       visit: formData.visit.value,
+      price: formData.price.value,
     }
   }
 
@@ -138,23 +139,23 @@ return (
         <p style={{marginBottom: 0}}>Age: </p>
         <p style={{marginTop: 0, marginBottom: 0}}>
           <input type="radio" id="age50below" name="age" value="49 or below" />
-          <label htmlFor="male">49 or below</label>
+          <label htmlFor="age50below">49 or below</label>
         </p>
         <p style={{marginTop: 0, marginBottom: 0}}>
           <input type="radio" id="age50-59" name="age" value="50 - 59" />
-          <label htmlFor="male">50- 59</label>
+          <label htmlFor="age50-59">50- 59</label>
         </p> 
         <p style={{marginTop: 0, marginBottom: 0}}>
           <input type="radio" id="age60-69" name="age" value="60 - 69" />
-          <label htmlFor="male">60 -69</label>
+          <label htmlFor="age60-69">60 -69</label>
         </p>
         <p style={{marginTop: 0, marginBottom: 0}}>
           <input type="radio" id="age70-79" name="age" value="70 - 79" />
-          <label htmlFor="male">70 - 79</label>
+          <label htmlFor="age70-79">70 - 79</label>
         </p>               
         <p style={{marginTop: 0}}>
           <input type="radio" id="age80above" name="age" value="80 or above" />
-          <label htmlFor="male">80 or above</label>
+          <label htmlFor="age80above">80 or above</label>
         </p>     
 
         <p style={{marginBottom: 0}}>Health Status: </p>
@@ -162,7 +163,7 @@ return (
           <input type="radio" id="health-good" name="health" value="good" defaultChecked={true} 
           onChange={()=>inputHealthStatus.current.className = 'disp-none'} 
           />
-            <label htmlFor="health-good">Good</label>
+          <label htmlFor="health-good">Good</label>
         </span>
         <span style={{flex: 1}}>              
             <input type="radio" id="health-poor" name="health" value="poor" 
@@ -264,9 +265,10 @@ return (
           ))}
         </select>
      
-        <textarea id="pickup" name="pickup" placeholder="Pickup Location (please specify if different from home address)" required></textarea>
+        <textarea id="pickup" name="pickup" placeholder="Pickup Location (please specify if different from home address)"></textarea>
         <textarea id="visit" name="visit" placeholder="Visit Location" required></textarea>
         
+        <input type="hidden" name="price" value={'RM' + totalPrice + '.00'} />
         <h2>Total Price: RM{totalPrice}.00</h2>
         <input type="submit" value="Order" />
       </form>
