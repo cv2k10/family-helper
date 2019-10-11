@@ -46,11 +46,14 @@ const submitForm = formData => { /* onSubmit event with input param, e.target (f
     body: JSON.stringify(data)
   }).then((res) => {
     // res.status === 200 ? this.setState({ submitted: true }) : ''
-    if(res.status === 200) 
+    if(res.status === 200) { 
       Router.push({
         pathname: '/OrderCompleted',
         query: data.form
       })
+    } else throw new Error('Error: response status is ' + res.status);
+  }).catch( e => {
+    console.error(e.message);
   })
 }
 
@@ -246,10 +249,10 @@ return (
           {[...new Array(services.hourEnd - services.hourStart + 1)].map((_, i) => (
             <React.Fragment>
               {i>0? 
-                <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i-1), 30)} - {h24To12(services.hourStart + i-1 + +selection.period, 30) + ' (' + selection.period + ' hours)'} 
+                <option key={i-.5}>{h24To12((services.hourStart + i-1), 30)} - {h24To12(services.hourStart + i-1 + +selection.period, 30) + ' (' + selection.period + ' hours)'} 
               </option>
               :null}              
-              <option value={services.hourStart + i} key={i}>{h24To12((services.hourStart + i), 0)} - {h24To12(services.hourStart + i + +selection.period, 0) + ' (' + selection.period + ' hours)'} 
+              <option key={i}>{h24To12((services.hourStart + i), 0)} - {h24To12(services.hourStart + i + +selection.period, 0) + ' (' + selection.period + ' hours)'} 
               </option>
             </React.Fragment>
           ))}

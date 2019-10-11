@@ -4,6 +4,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
+import prices from '../components/prices.js';
 
 
 // import services from '../services/items.js';
@@ -70,7 +71,11 @@ const OrderCompleted = () => {
     </div>
     
     <div>Pickup Location:&nbsp;</div>
-    <div><b>{pickup}</b></div>
+    {pickup!==''? 
+      <div><b>{pickup}</b></div>
+      : 
+      <div><b>(same as home address)</b></div>
+    }
     <div>
         <br/>
     </div>

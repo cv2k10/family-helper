@@ -47,34 +47,33 @@ app.prepare().then(() => {
       // let testAccount = await nodemailer.createTestAccount();
 
       // create reusable transporter object using the default SMTP transport
+      // let transporter = nodemailer.createTransport({
+      //   host: 'smtp.gmail.com',
+      //   port: 465,
+      //   secure: true,
+      //   // secure: 'gmail', // true for 465, false for other ports
+      //   auth: {
+      //     user: 'lfei2k@gmail.com', // generated ethereal user
+      //     pass: 'k2iBS1' // generated ethereal password
+      //   },
+      //   tls: {
+      //     rejectUnauthorized: false
+      //   }       
+      // });
+
       let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
+        host: 'mail.deltaweb.com.my',
+        port: 587,
+        secure: false,
         // secure: 'gmail', // true for 465, false for other ports
         auth: {
-          user: 'lfei2k@gmail.com', // generated ethereal user
-          pass: 'k2iBtrSc1' // generated ethereal password
+          user: 'webtest@deltaweb.com.my', // generated ethereal user
+          pass: 'btrsc1' // generated ethereal password
         },
         tls: {
           rejectUnauthorized: false
         }       
       });
-
-      // async function main() {
-      // let transporter = nodemailer.createTransport({
-      //   host: 'mail.deltaweb.com.my',
-      //   port: 587,
-      //   secure: false,
-      //   // secure: 'gmail', // true for 465, false for other ports
-      //   auth: {
-      //     user: 'webtest@deltaweb.com.my', // generated ethereal user
-      //     pass: 'btrsc1' // generated ethereal password
-      //   },
-      //   tls: {
-      //     rejectUnauthorized: true
-      //   }       
-      // });
       
       // send mail with defined transport object
       let info = await transporter.sendMail(
