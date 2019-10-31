@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import Link from 'next/link';
 import HeaderWithBg from '../components/HeaderWithBg';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
@@ -21,22 +22,32 @@ class Pricing extends React.Component {
               <p>Our servicing price are transparent, calculated based on per-trip basis.</p>
               <p>We offer three categories of pricing.</p>
               <ul>
-                <li>Three hours of companionship service: Rm150.00</li>
-                <li>Four hours of companionship service: Rm175.00</li>
-                <li>Five hours of companionship service: Rm195.00</li>
+                <li>3 hours service charge: Rm 145, </li>
+                <li>4 hours service charge: Rm 165, </li>
+                <li>5 hours service charge: Rm 185. </li>
               </ul>
               <p>Each booking service only include one pick up and one location visit. Extra charge for additional time and location visit.</p>
+              
+              <p>Additional service:</p>
               <ul>
-                <li>Additional: one hour charge: Rm35.00</li>
-                <li>Additional: two hour charge: Rm60.00</li>
-                <li>Additional: one location visit: Rm50.00</li>
-                <li>Additional: one hour and one location visit: Rm70.00</li>
+                <li>1 hour: Rm 35, </li>
+                <li>2 hours: Rm 60,</li>
+                <li>One visit location: Rm 50,</li>
+                <li>One hour and one location visit: Rm 70, </li>
+                <li>Express booking: Rm 50. (Appear when additional service requested). </li>
               </ul>
               <p>Important: Book service must with payment done 7 days advance prior date service.</p>
               <ul>
                 <li>Company bank account: 6677651328</li>
                 <li>Email or Whatsapp bank slip to us.</li>
               </ul>
+
+              <Link href="./OrderForm">
+                <div className="btn-full">
+                  <a>Order Our Services Now</a>
+                </div>
+              </Link>
+
             </section>
           </div>
         </Layout>

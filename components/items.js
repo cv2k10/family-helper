@@ -56,8 +56,8 @@ const services = {
 
     {
       service: 'RehabililationCenter',
-      title: 'Rehabilitation Center',
-      stitle: 'Rehabilitation Centre',
+      title: 'Physiotherapy Treatment',
+      stitle: 'Physiotherapy Treatment',
       icon: 'physical-therapy.png',
       main: 'You or your senior have regular treatment at rehabilitation centre, fear of trouble working children, no problem, contact us, we deliver you ti the destination centre. We pick you to from your home, drive you to the rehabilitation center, accompany you until treatment finished, send you back home.',
       details: [
