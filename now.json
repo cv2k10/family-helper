@@ -4,5 +4,17 @@
   "name": "family-helper",
   "builds": [
     { "src": "package.json", "use": "@now/next" }
+  ],
+  "routes": [
+    {
+         "src": "/api/order",
+         "dest": "server/index.js",
+         "methods": ["POST"]
+    },
+    {
+         "src": "/test",
+         "dest": "server/index.js",
+         "methods": ["GET"]
+    }   
   ]
 }

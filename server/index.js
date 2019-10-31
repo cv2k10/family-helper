@@ -28,6 +28,10 @@ app.prepare().then(() => {
     console.log('in acao')
   });
 
+  server.get('/test', (req, res) => {
+    res.send('Test okay.')
+  });
+
   server.post('/api/order', (req, res) => {
     if (!req.body) {
       return res.status(400).send({
@@ -64,16 +68,13 @@ app.prepare().then(() => {
       // async function main() {
       // let transporter = nodemailer.createTransport({
       //   host: 'mail.deltaweb.com.my',
-      //   port: 587,
-      //   secure: false,
+      //   port: 465,
+      //   secure: true,
       //   // secure: 'gmail', // true for 465, false for other ports
       //   auth: {
       //     user: 'webtest@deltaweb.com.my', // generated ethereal user
       //     pass: 'btrsc1' // generated ethereal password
-      //   },
-      //   tls: {
-      //     rejectUnauthorized: true
-      //   }       
+      //   }     
       // });
       
       // send mail with defined transport object
