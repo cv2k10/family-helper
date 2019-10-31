@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon server/index.js",
     "start": "NODE_ENV=production node server/index.js",
-    "build": "node build"
+    "build": "next build"
   },
   "author": "cv",
   "license": "MIT",
