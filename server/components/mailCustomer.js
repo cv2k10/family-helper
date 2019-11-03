@@ -113,8 +113,8 @@ Family Helper <https://familyhelper.com.com> | admin@familyhelper.com.my |
 6012-765 3400`;
 
   return {
-    from: '"Family Helper" <lfei2k@gmail.com>', // sender address
-      to: `${email}`, // list of receivers
+    from: '"Family Helper" <webtest@deltaweb.com.my>', // sender address
+    to: `${email}`, // list of receivers
     subject: "Order invoice from Family Helper", // Subject line
     text, // plain text body
     html // html body      
