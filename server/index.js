@@ -68,8 +68,8 @@ app.prepare().then(() => {
       async function main() {
       let transporter = nodemailer.createTransport({
         host: 'mail.deltaweb.com.my',
-        port: 465,
-        secure: true,
+        port: 587, // 465,
+        secure: false, // true,
         // secure: 'gmail', // true for 465, false for other ports
         auth: {
           user: 'webtest@deltaweb.com.my', // generated ethereal user
