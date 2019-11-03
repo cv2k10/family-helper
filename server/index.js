@@ -25,7 +25,7 @@ app.prepare().then(() => {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
-    console.log('in acao')
+    console.log('after server setHeader');
   });
 
   server.get('/test', (req, res) => {
@@ -39,7 +39,7 @@ app.prepare().then(() => {
       });
     }
 
-    console.log('received post order data: ' + req.body.form.name)
+    console.log('received post order data: ' + JSON.stringify(req.body.form));
 
     const nodemailer = require("nodemailer");
 
