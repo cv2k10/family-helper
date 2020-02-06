@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -371,52 +371,52 @@ var areas = {
     select: true
   }, {
     name: 'Petaling Jaya',
-    select: false
+    select: true
   }, {
     name: 'Subang Jaya',
-    select: false
+    select: true
   }, {
     name: 'Damansara',
-    select: false
+    select: true
   }, {
     name: 'Kepong',
-    select: false
+    select: true
   }, {
     name: 'Wangsa Maju',
-    select: false
+    select: true
   }, {
     name: 'Kajang',
-    select: false
+    select: true
   }, {
     name: 'Serdang',
-    select: false
+    select: true
   }, {
     name: 'Puchong',
-    select: false
+    select: true
   }, {
     name: 'Brickfield',
-    select: false
+    select: true
   }, {
     name: 'Mont Kiara',
-    select: false
+    select: true
   }, {
     name: 'Shah Alam',
-    select: false
+    select: true
   }, {
     name: 'Klang',
-    select: false
+    select: true
   }, {
     name: 'Kota Kemumting',
-    select: false
+    select: true
   }, {
     name: 'Putrajaya',
-    select: false
+    select: true
   }, {
     name: 'Bangi',
-    select: false
+    select: true
   }, {
     name: 'Selayang',
-    select: false
+    select: true
   }]
 };
 /* harmony default export */ __webpack_exports__["default"] = (areas);
@@ -2930,14 +2930,14 @@ var Order = function Order() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 9:
 /*!**********************************!*\
   !*** multi ./pages/OrderForm.js ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/calvin/cv-works/coding/family-helper/pages/OrderForm.js */"./pages/OrderForm.js");
+module.exports = __webpack_require__(/*! C:\cv-works\deltaweb-works\family-helper\family-helper-2020\family-helper\pages\OrderForm.js */"./pages/OrderForm.js");
 
 
 /***/ }),

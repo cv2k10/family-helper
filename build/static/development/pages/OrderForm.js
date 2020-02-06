@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/OrderForm.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\OrderForm.js"],{
 
 /***/ "./components/Layout.js":
 /*!******************************!*\
@@ -278,52 +278,52 @@ var areas = {
     select: true
   }, {
     name: 'Petaling Jaya',
-    select: false
+    select: true
   }, {
     name: 'Subang Jaya',
-    select: false
+    select: true
   }, {
     name: 'Damansara',
-    select: false
+    select: true
   }, {
     name: 'Kepong',
-    select: false
+    select: true
   }, {
     name: 'Wangsa Maju',
-    select: false
+    select: true
   }, {
     name: 'Kajang',
-    select: false
+    select: true
   }, {
     name: 'Serdang',
-    select: false
+    select: true
   }, {
     name: 'Puchong',
-    select: false
+    select: true
   }, {
     name: 'Brickfield',
-    select: false
+    select: true
   }, {
     name: 'Mont Kiara',
-    select: false
+    select: true
   }, {
     name: 'Shah Alam',
-    select: false
+    select: true
   }, {
     name: 'Klang',
-    select: false
+    select: true
   }, {
     name: 'Kota Kemumting',
-    select: false
+    select: true
   }, {
     name: 'Putrajaya',
-    select: false
+    select: true
   }, {
     name: 'Bangi',
-    select: false
+    select: true
   }, {
     name: 'Selayang',
-    select: false
+    select: true
   }]
 };
 /* harmony default export */ __webpack_exports__["default"] = (areas);
@@ -7459,10 +7459,10 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FOrderForm&absolutePagePath=%2Fhome%2Fcalvin%2Fcv-works%2Fcoding%2Ffamily-helper%2Fpages%2FOrderForm.js!./":
-/*!*************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FOrderForm&absolutePagePath=%2Fhome%2Fcalvin%2Fcv-works%2Fcoding%2Ffamily-helper%2Fpages%2FOrderForm.js ***!
-  \*************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FOrderForm&absolutePagePath=C%3A%5Ccv-works%5Cdeltaweb-works%5Cfamily-helper%5Cfamily-helper-2020%5Cfamily-helper%5Cpages%5COrderForm.js!./":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FOrderForm&absolutePagePath=C%3A%5Ccv-works%5Cdeltaweb-works%5Cfamily-helper%5Cfamily-helper-2020%5Cfamily-helper%5Cpages%5COrderForm.js ***!
+  \**********************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12776,14 +12776,14 @@ var Order = function Order() {
 
 /***/ }),
 
-/***/ 0:
-/*!*****************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2FOrderForm&absolutePagePath=%2Fhome%2Fcalvin%2Fcv-works%2Fcoding%2Ffamily-helper%2Fpages%2FOrderForm.js ***!
-  \*****************************************************************************************************************************************************/
+/***/ 11:
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2FOrderForm&absolutePagePath=C%3A%5Ccv-works%5Cdeltaweb-works%5Cfamily-helper%5Cfamily-helper-2020%5Cfamily-helper%5Cpages%5COrderForm.js ***!
+  \**************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2FOrderForm&absolutePagePath=%2Fhome%2Fcalvin%2Fcv-works%2Fcoding%2Ffamily-helper%2Fpages%2FOrderForm.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FOrderForm&absolutePagePath=%2Fhome%2Fcalvin%2Fcv-works%2Fcoding%2Ffamily-helper%2Fpages%2FOrderForm.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2FOrderForm&absolutePagePath=C%3A%5Ccv-works%5Cdeltaweb-works%5Cfamily-helper%5Cfamily-helper-2020%5Cfamily-helper%5Cpages%5COrderForm.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FOrderForm&absolutePagePath=C%3A%5Ccv-works%5Cdeltaweb-works%5Cfamily-helper%5Cfamily-helper-2020%5Cfamily-helper%5Cpages%5COrderForm.js!./");
 
 
 /***/ }),
@@ -12799,5 +12799,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[11,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=OrderForm.js.map

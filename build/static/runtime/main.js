@@ -6765,7 +6765,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/home/calvin/cv-works/coding/family-helper/build");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "C:\\cv-works\\deltaweb-works\\family-helper\\family-helper-2020\\family-helper\\build");
       return error;
     }
   };

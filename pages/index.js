@@ -69,7 +69,7 @@ class Index extends React.Component {
                     <Link href="#all-services">
                      <a className="cta-btn">Book Our Services Within Minutes, from RM150 only</a>
                     </Link>
-                    <div className="cta-pro">or <a href="#" className="cta-pro-link">Join as a Pro</a></div>
+                    {/* <div className="cta-pro">or <a href="#" className="cta-pro-link">Join as a Pro</a></div> */}
                 </div>                
             </section>
             <section className="card">
@@ -209,15 +209,19 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                   </select>
 
                   <input type="date" id="date" name="date" placeholder="DATE" min={this.nextDayDate()} />
-                  
+
+                {/*                   
                 <select id="enq-service" name="time" data-default-value="" className="dropdown">
-                    <option value="">Select time period</option>
+
+                  <option value="">Select time period</option>
                   {[...new Array(this.state.allServices.hourEnd - this.state.allServices.hourStart + 1)].map((_, i) => (
                       <option value={this.state.allServices.hourStart + i} key={i}>
                         {this.h24To12((this.state.allServices.hourStart + i))} - {this.h24To12(this.state.allServices.hourStart + i + 3) + '(3 hours)'}
                       </option>
+
                     ))}
-                  </select>
+                  </select> */}
+
 
                   <input type="submit" value="Instant Quotation" />
                 </form>
@@ -236,6 +240,20 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                 </Link>
 
             </section>
+
+            <section className="our-services section">
+              <header className="srv-header">How It Works</header>
+              <p>Need assistant seniors companionship services , contact us.</p>
+
+              <ol>
+                <li>call for more info and discuss how we can assist you. </li>
+                <li>choose senior need service ,submit your application.</li>
+                <li>we call you back for detail verification.</li>
+                <li>whatspp or email your bank slip to us.</li>
+              </ol>  
+
+              <p>Call us at <a href="tel:0172678123">017-267 8123</a></p>
+            </section>            
 
             <section id="all-services" className="all-services section">
                 <div className="header">
