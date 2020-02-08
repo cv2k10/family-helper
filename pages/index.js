@@ -233,6 +233,15 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                     We provides companion work for seniors to carry out their daily living activities like doctor appointment,city tour,saloon,massage centre,market walk,friend visit,grocery shopping,having meal and more.we are not a healthcare provider. Our services merely provide accompanying assistant work for senior and did not include any medical consultation. We pick you or your senior from home,drives you to destination appointment,accompany and wait you until your appointment finished,send you back home.
                 </p> */}
                 <p>Amazing companionship services for seniors carry out daily activities or just hang out. We pick senior from home, drives them to appointment, accompany senior until appointment finished, send senior back home.</p>
+
+                <div className="overall-icons">
+                <img src={'./static/img/people-in-car-side-view-50.png'} />
+                  <img src={'./static/img/arrow-right-100.png'} />
+                  <img src={'./static/img/meeting1-100.png'} />
+                  <img src={'./static/img/arrow-right-100.png'} />
+                  <img src={'./static/img/person-at-home-100.png'} />
+                </div>
+
                 <Link href="#all-services">
                   <div className="btn-full">
                     <a>Order Our Services Now</a>
