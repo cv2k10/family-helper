@@ -245,14 +245,14 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
               <header className="srv-header">How It Works</header>
               <p>Need assistant seniors companionship services , contact us.</p>
 
-              <ol>
-                <li>call for more info and discuss how we can assist you. </li>
-                <li>choose senior need service ,submit your application.</li>
-                <li>we call you back for detail verification.</li>
-                <li>whatspp or email your bank slip to us.</li>
+              <ol className="work-items">
+                <div><img src={'./static/img/communication-100.png'} /><li>Call for more info and discuss how we can assist you.</li></div>
+                <div><img src={'./static/img/submit-resume-100.png'} /><li>Choose senior need service ,submit your application.</li></div>
+                <div><img src={'./static/img/checked-checkbox-100.png'} /><li>We call you back for detail verification.</li></div>
+                <div><img src={'./static/img/business-e-mail-100.png'} /><li>Whatspp or email your bank slip to us.</li></div>
               </ol>  
 
-              <p>Call us at <a href="tel:0172678123">017-267 8123</a></p>
+              <p className="tel" ><img src={'./static/img/phone-50.png'} /><span>Call us at <a href="tel:0172678123">017-267 8123</a></span></p>
             </section>            
 
             <section id="all-services" className="all-services section">

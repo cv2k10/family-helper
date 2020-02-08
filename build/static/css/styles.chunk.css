@@ -104,7 +104,6 @@ header.header {
   background: transparent;
   z-index: 5;
   /* lower than .header (10) higher than the rest*/
-  xdisplay: none;
   width: 0;
   transition: width .01s; }
 
@@ -408,6 +407,21 @@ article#main-centent {
   border-color: #4dbc15; }
 
 /*Enquiry*/
+.work-items img {
+  width: 4rem;
+  height: auto; }
+
+.work-items li {
+  margin-left: 1rem;
+  vertical-align: 100%;
+  display: inline; }
+
+.tel a {
+  color: #3498db; }
+
+.tel span {
+  vertical-align: 100%; }
+
 .our-services {
   display: flex;
   flex-direction: column;
@@ -513,56 +527,6 @@ article#main-centent {
 
 .m-2 {
   margin: 0.5rem; }
-
-.container {
-  background: #fff; }
-
-.container h2 {
-  font-family: 'Museo Sans Cyrl 300';
-  font-size: 1.2em;
-  text-align: center;
-  color: #333;
-  margin: 30px 20px 20px; }
-
-.container .content {
-  font-size: 1em;
-  margin: 0 0 24px;
-  padding: 0 20px;
-  padding-bottom: 20px; }
-
-blockquote {
-  color: #333;
-  font-style: italic;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 5px;
-  background: #fff;
-  margin: 10px 5px 30px 5px; }
-
-blockquote p:before {
-  content: '"';
-  font-size: 30px;
-  color: #aaa; }
-
-blockquote p:after {
-  content: '"';
-  font-size: 30px;
-  color: #aaa; }
-
-blockquote footer {
-  float: right;
-  font-style: normal;
-  font-weight: 600; }
-
-.header-bg {
-  height: 8.4em;
-  display: flex; }
-
-.header-bg h1 {
-  font-size: 1.5em;
-  text-align: center;
-  text-shadow: 0 2px 9px rgba(0, 0, 0, 0.43);
-  margin: auto;
-  color: #fff; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
