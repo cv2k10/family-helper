@@ -407,6 +407,23 @@ article#main-centent {
   border-color: #4dbc15; }
 
 /*Enquiry*/
+.overall-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.overall-icons img {
+  width: 18%;
+  height: auto; }
+
+.work-items {
+  padding: 0 !important; }
+
+.work-items div {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
 .work-items img {
   width: 4rem;
   height: auto; }
@@ -415,6 +432,9 @@ article#main-centent {
   margin-left: 1rem;
   vertical-align: 100%;
   display: inline; }
+
+.tel {
+  margin: 0; }
 
 .tel a {
   color: #3498db; }
