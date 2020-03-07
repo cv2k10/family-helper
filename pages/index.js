@@ -189,7 +189,7 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                         service: form.service.value,
                         area: form.area.value,
                         date: form.date.value,
-                        time: form.time.value
+                        /* time: form.time.value */
                       }
                     }
                   );

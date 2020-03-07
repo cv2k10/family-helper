@@ -41,7 +41,23 @@ app.prepare().then(() => {
 
     console.log('received post order data: ' + JSON.stringify(req.body.form));
 
-    const nodemailer = require("nodemailer");
+    require("dotenv").config();
+
+    const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    // const msg = {
+    //   to: 'cv2k10@gmail.com',
+    //   from: 'test@example.com',
+    //   subject: 'Sending with Twilio SendGrid is Fun',
+    //   text: 'and easy to do anywhere, even with Node.js',
+    //   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    // };
+    //ES6
+    sgMail
+      .send(mailCustomer(req.body.form))
+      .then(() => { }, console.error);
+
+    // const nodemailer = require("nodemailer");
 
     // // async..await is not allowed in global scope, must use a wrapper
     // // async function main() {
@@ -65,22 +81,22 @@ app.prepare().then(() => {
     //     }       
     //   });
 
-      async function main() {
-      let transporter = nodemailer.createTransport({
-        host: 'mail.deltaweb.com.my',
-        port: 25, //  587, // 465,
-        secure: false, // true,
-        // secure: 'gmail', // true for 465, false for other ports
-        auth: {
-          user: 'webtest@deltaweb.com.my', // generated ethereal user
-          pass: 'btrsc1' // generated ethereal password
-        }     
-      });
+      // async function main() {
+      // let transporter = nodemailer.createTransport({
+      //   host: 'mail.deltaweb.com.my',
+      //   port: 25, //  587, // 465,
+      //   secure: false, // true,
+      //   // secure: 'gmail', // true for 465, false for other ports
+      //   auth: {
+      //     user: 'webtest@deltaweb.com.my', // generated ethereal user
+      //     pass: 'btrsc1' // generated ethereal password
+      //   }     
+      // });
       
       // send mail with defined transport object
-      let info = await transporter.sendMail(
-        mailCustomer(req.body.form)
-      );
+      // let info = await transporter.sendMail(
+      //   mailCustomer(req.body.form)
+      // );
 
       // console.log("Message sent: %s", info.messageId);
       // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
@@ -91,9 +107,9 @@ app.prepare().then(() => {
 
       res.send('Mail succcesully sent.')
       // res.redirect('/');
-    }
+    // }
 
-    main().catch(console.error);
+    // main().catch(console.error);
   })
 
   server.get('*', (req, res) => {
