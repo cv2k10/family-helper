@@ -3,12 +3,11 @@ import React from 'react';
 import HeaderWithBg from '../components/HeaderWithBg';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
-import "../scss/style.scss";
 import "../scss/page.scss";
 import "../scss/page_faq.scss";
+import "../scss/style.scss";
 
-class FrequentlyAskQuestions extends React.Component {
-  state = {
+const state = {
     faqs: [
       {
         q: "What Family Helper doing?",
@@ -110,42 +109,41 @@ class FrequentlyAskQuestions extends React.Component {
     ]
   };
 
-  handleToggle = e => {
+const handleToggle = e => {
     const { classList: c } = e.currentTarget;
     c.contains("visible") ? c.remove("visible") : c.add("visible");
-  }
+}
 
-  render() {
-    return (
-      <div>
-        <Head>
-          <title>FAQ</title>
-        </Head>
-        <Layout>
-          <div className="container">
-            <HeaderWithBg title="FAQ" bgimg="/static/img/bg.jpg"></HeaderWithBg>
-            <h2>Refer to our FAQ or contact us</h2>
-            <section className="content">
-              <ul id="faq" className="cd-faq__group">
-                {/* <li className="title">
-                  <h2>FAQ</h2>
-                </li> */}
+const FrequentlyAskQuestions = () => {
+  return (
+    <div>
+      <Head>
+        <title>FAQ</title>
+      </Head>
+      <Layout>
+        <div className="container">
+          <HeaderWithBg title="FAQ" bgimg="/static/img/bg.jpg"></HeaderWithBg>
+          <h2>Refer to our FAQ or contact us</h2>
+          <section className="content">
+            <ul id="faq" className="cd-faq__group">
+              {/* <li className="title">
+                <h2>FAQ</h2>
+              </li> */}
 
-                {this.state.faqs.map((a, i) =>
-                  <li className="item" key={i} onClick={e => this.handleToggle(e)}>
-                    <a><span>{a.q}</span></a>
-                    <div className="content">
-                      <p>{a.a}</p>
-                    </div>
-                  </li>
-                )}
-              </ul>           
-            </section>
-          </div>
-        </Layout>
-      </div>
-    );
-  }
+              {state.faqs.map((a, i) =>
+                <li className="item" key={i} onClick={e => handleToggle(e)}>
+                  <a><span>{a.q}</span></a>
+                  <div className="content">
+                    <p>{a.a}</p>
+                  </div>
+                </li>
+              )}
+            </ul>           
+          </section>
+        </div>
+      </Layout>
+    </div>
+  );
 }
 
 export default FrequentlyAskQuestions; 

@@ -1,6 +1,115 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:700&display=swap);
 
 
+.container {
+  background: #fff; }
+
+.container h2 {
+  font-family: 'Museo Sans Cyrl 300';
+  font-size: 1.2em;
+  text-align: center;
+  color: #333;
+  margin: 30px 20px 20px; }
+
+.container .content {
+  font-size: 1em;
+  margin: 0 0 24px;
+  padding: 0 20px;
+  padding-bottom: 20px; }
+
+blockquote {
+  color: #333;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px;
+  background: #fff;
+  margin: 10px 5px 30px 5px; }
+
+blockquote p:before {
+  content: '"';
+  font-size: 30px;
+  color: #aaa; }
+
+blockquote p:after {
+  content: '"';
+  font-size: 30px;
+  color: #aaa; }
+
+blockquote footer {
+  float: right;
+  font-style: normal;
+  font-weight: 600; }
+
+.header-bg {
+  height: 8.4em;
+  display: flex; }
+
+.header-bg h1 {
+  font-size: 1.5em;
+  text-align: center;
+  text-shadow: 0 2px 9px rgba(0, 0, 0, 0.43);
+  margin: auto;
+  color: #fff; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: open sans,sans-serif;
+  background: #f2f2f2;
+  background: #f2f2f2; }
+
+ul#faq {
+  margin: 5%;
+  width: 90%; }
+
+ul#faq li {
+  list-style: none;
+  background: white;
+  margin: 0;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: box-shadow .2s; }
+
+ul#faq li.title {
+  background: transparent;
+  box-shadow: none; }
+
+ul#faq li a {
+  color: #AAC157;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  width: 100%;
+  outline: none;
+  padding: 1em; }
+
+ul#faq li a span:after {
+  content: "^";
+  font-size: 1.5em;
+  position: absolute;
+  right: 0; }
+
+ul#faq li .content {
+  color: #333;
+  padding: 0 1em 1em 1em;
+  margin-top: -1em;
+  transition: max-height 0.3s ease-out; }
+
+ul#faq li .content {
+  /*display: none;*/
+  max-height: 0px;
+  overflow: hidden; }
+
+ul#faq li.visible .content {
+  max-height: 500px; }
+
+ul#faq li.visible a span:after {
+  transform-origin: 50% 50%;
+  transform: rotate(180deg); }
+
 * {
   box-sizing: border-box;
   color: #333; }
