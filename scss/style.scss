@@ -641,3 +641,40 @@ article#main-centent {
 .m-1 { margin: 0.25rem; }
 .m-2 { margin: 0.5rem; }
 
+// for form post-submit loader
+.full-screen-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0, 0.2); 
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.full-screen-loader img {
+    width: 80px;
+    height: 80px;
+    transform-origin: 50% 50%;
+    animation: rotate 2s 0s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }    
+    
+}
+
+.full-screen-loader p {
+    color: #4E7AB5;
+} 
+
