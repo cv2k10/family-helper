@@ -74,20 +74,30 @@ const nextDayDate =() => {
   }
 
   const initGoogleMapsPlaces = () => {
-    var input = document.getElementById("pickup");
+    var inputs = document.querySelectorAll(".autocomplete-places");
     var klangValleyBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(2.866906, 101.291133),
       new google.maps.LatLng(3.370500, 101.794044)
     );
 
-    var autocomplete = new google.maps.places.Autocomplete(input, {
+    var autocomplete1 = new google.maps.places.Autocomplete(inputs[0], {
       bounds: klangValleyBounds,
       strictBounds: true,
     });
 
+    var autocomplete2 = new google.maps.places.Autocomplete(inputs[1], {
+      bounds: klangValleyBounds,
+      strictBounds: true,
+    });    
+
     // Set initial restrict to the greater list of countries.
-    autocomplete.setComponentRestrictions(
-      { 'country': 'my' });
+    autocomplete1.setComponentRestrictions(
+      { 'country': 'my' }
+    );
+
+    autocomplete2.setComponentRestrictions(
+      { 'country': 'my' }
+    );    
   };
 
 const inputHealthStatus = useRef();
@@ -407,22 +417,25 @@ return (
             </option>
           ))}
         </select>
-
+        
+        <Script
+          url="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgMtwTndB-h2263JpeNlXD20kCO2W1eSQ&libraries=places&callback=initGogleMapsPlacesAutocomplete"
+          onLoad={initGoogleMapsPlaces}
+        />
         <textarea
           id="pickup"
+          className="autocomplete-places"
           name="pickup"
           placeholder="Pickup Location (please specify if different from home address)"
         ></textarea>
         <textarea
           id="visit"
+          className="autocomplete-places"
           name="visit"
           placeholder="Visit Location"
           required
         ></textarea>
-        <Script
-          url="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgMtwTndB-h2263JpeNlXD20kCO2W1eSQ&libraries=places&callback=initGogleMapsPlacesAutocomplete"
-          onLoad={initGoogleMapsPlaces}
-        />
+
         <input type="hidden" name="price" value={"RM" + totalPrice + ".00"} />
         <h2>Total Price: RM{totalPrice}.00</h2>
         <input type="submit" value="Order" />
