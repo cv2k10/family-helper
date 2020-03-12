@@ -1,6 +1,7 @@
 const express = require('express');
 const next = require('next');
 const logger = require('morgan');
+const layouts = require('express-ejs-layouts');
 require("dotenv").config();
 
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -15,6 +16,13 @@ app.prepare().then(() => {
   server.use(logger('dev'));
   server.use(express.urlencoded({ extended: false }));
   server.use(express.json());
+
+  server.set('view engine', 'ejs');
+  server.use(layouts);
+
+  server.get('/login', (req, res) => {
+    res.render('login');
+  })
 
   server.post('/api/order', (req, res) => {
     if (!req.body) {
