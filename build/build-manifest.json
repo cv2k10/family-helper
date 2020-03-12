@@ -4,19 +4,19 @@
     "static/development/dll/dll_92fa9139568d8c3d8f78.js.map"
   ],
   "pages": {
-    "/ExcellentCompanionshipServices": [
+    "/AboutUs": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
-    "/FrequentlyAskQuestions": [
+    "/OrderCompleted": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
-    "/HowWeHelpYou": [
+    "/OrderForm": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
@@ -27,6 +27,10 @@
       "static/runtime/main.js"
     ],
     "/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
