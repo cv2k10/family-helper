@@ -5,13 +5,14 @@ const logger = require('morgan');
 const layouts = require('express-ejs-layouts');
 require("dotenv").config();
 
+const apiRoute = require('./routes/api');
+const usersRoute = require('./routes/users')
+
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-
-const mailCustomer = require('./components/mailCustomer');
 
 app.prepare().then(() => {
   const server = express();
@@ -22,26 +23,9 @@ app.prepare().then(() => {
   server.set('views', path.join(__dirname, 'views'));
   server.set('view engine', 'ejs');
   server.use(layouts);
-
-  server.get('/login', (req, res) => {
-    res.render('login');
-  })
-
-  server.post('/api/order', (req, res) => {
-    if (!req.body) {
-      return res.status(400).send({
-        message: "Order form data can not be empty"
-      });
-    }
-
-    const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    sgMail
-      .send(mailCustomer(req.body.form))
-      .then(() => { }, console.error);
-
-      res.send('Mail succcesully sent.')
-  })
+  
+  server.use('/api', apiRoute);
+  server.use('/users', usersRoute);
 
   server.get('*', (req, res) => {
     return handle(req, res)
