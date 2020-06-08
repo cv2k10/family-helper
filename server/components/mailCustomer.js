@@ -1,4 +1,7 @@
-const mailCustomer = ({fullname, email, gender, age, health, healthstatus, phone, fulladdress, urgent, service, otherservice, date, timefrom, price, area, pickup, visit}) => {
+const moment = require('moment');
+
+const mailCustomer = ({created, fullname, email, gender, age, health, healthstatus, phone, fulladdress, urgent, service, otherservice, date, timefrom, price, area, pickup, visit}) => {
+    const createdDate = moment(created).format("ddd, DD MMM YYYY");
   const html = `
     <div dir="ltr">
     <div><font size="6" style="font-family:garamond,&quot;times new roman&quot;,serif;font-style:italic;color:rgb(61,133,198)">Family Helper&nbsp; </font><font color="#000000" face="trebuchet ms, sans-serif">Find the helps you've always wanted</font></div>
@@ -19,8 +22,8 @@ const mailCustomer = ({fullname, email, gender, age, health, healthstatus, phone
     <div>
         <br>
     </div>
-    <div>Order Date: <b>30 Aug 2019</b></div>
-    <div>Order Id: <b>203001</b></div>
+    <div>Order Date: <b>${createdDate}</b></div>
+    <div>Order Id: <b>203002</b></div>
     <div>Service Name:&nbsp;<b>${service}</b><b><br></b></div>
     <div>Total price:<b>${price}</b></div>
     <div>

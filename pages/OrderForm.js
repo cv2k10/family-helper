@@ -10,12 +10,14 @@ import Layout from '../components/Layout';
 import prices from '../components/prices.js';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
+import moment from 'moment';
 
 
 const submitForm = formData => { /* onSubmit event with input param, e.target (form) */
   
   const data = {
     form: {
+      created: moment().format(),
       fullname: formData.fullname.value,
       email: formData.email.value,
       gender: formData.gender.value,        
@@ -162,6 +164,7 @@ return (
           submitForm(e.target);
         }}
       >
+        
         <input
           type="text"
           id="fullname"

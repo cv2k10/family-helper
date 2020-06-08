@@ -19,6 +19,7 @@
     "http-errors": "^1.7.3",
     "isomorphic-fetch": "^2.2.1",
     "micro-form": "^2.0.5",
+    "moment": "^2.26.0",
     "morgan": "^1.9.1",
     "next": "^9.0.0",
     "node-sass": "^4.12.0",
