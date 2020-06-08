@@ -101,7 +101,7 @@ const OrderCompleted = () => {
         </div>
         {/* <div>Urgent Phone Number: <b>{urgent}</b></div> */}
         <div>
-          Date: <b>{date}</b>
+          Date: <b>{moment(date).format("ddd, DD MMM YYYY")}</b>
         </div>
         {/* <div>Start Time: <b>{timefrom}</b></div> */}
         <div>
