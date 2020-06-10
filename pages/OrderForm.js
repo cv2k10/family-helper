@@ -421,7 +421,7 @@ return (
           ))}
         </select>
         
-        {/* Temperary remove autocomplete fill addresses due to page error on production  */}
+        {/* Temperary remove autocomplete due to page error from production */}
         {/* <Script
           url="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgMtwTndB-h2263JpeNlXD20kCO2W1eSQ&libraries=places&callback=initGogleMapsPlacesAutocomplete"
           onLoad={initGoogleMapsPlaces}
