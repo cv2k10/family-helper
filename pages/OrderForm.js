@@ -421,10 +421,12 @@ return (
           ))}
         </select>
         
-        <Script
+        {/* Temperary remove autocomplete fill addresses due to page error on production  */}
+        {/* <Script
           url="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgMtwTndB-h2263JpeNlXD20kCO2W1eSQ&libraries=places&callback=initGogleMapsPlacesAutocomplete"
           onLoad={initGoogleMapsPlaces}
-        />
+        /> */}
+
         <textarea
           id="pickup"
           className="autocomplete-places"
