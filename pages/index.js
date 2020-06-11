@@ -8,7 +8,7 @@ import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 
-const Index = (props) => {
+const Home = (props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   console.log("props: " + JSON.stringify(props));
 
@@ -273,4 +273,13 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
   );
 }
 
-export default Index; 
+  Home.getInitialProps = (ctx) => {
+    if (ctx.req) {
+      if (ctx.req.user) {
+        return { user: ctx.req.user };
+      }
+    }
+    return { user: null };
+  };
+
+export default Home; 
