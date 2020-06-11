@@ -4,7 +4,7 @@
     "static/development/dll/dll_92fa9139568d8c3d8f78.js.map"
   ],
   "pages": {
-    "/OrderForm": [
+    "/": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
@@ -18,7 +18,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/services/[service]": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",

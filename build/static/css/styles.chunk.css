@@ -1,56 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:700&display=swap);
 
 
-.container {
-  background: #fff; }
-
-.container h2 {
-  font-family: 'Museo Sans Cyrl 300';
-  font-size: 1.2em;
-  text-align: center;
-  color: #333;
-  margin: 30px 20px 20px; }
-
-.container .content {
-  font-size: 1em;
-  margin: 0 0 24px;
-  padding: 0 20px;
-  padding-bottom: 20px; }
-
-blockquote {
-  color: #333;
-  font-style: italic;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 5px;
-  background: #fff;
-  margin: 10px 5px 30px 5px; }
-
-blockquote p:before {
-  content: '"';
-  font-size: 30px;
-  color: #aaa; }
-
-blockquote p:after {
-  content: '"';
-  font-size: 30px;
-  color: #aaa; }
-
-blockquote footer {
-  float: right;
-  font-style: normal;
-  font-weight: 600; }
-
-.header-bg {
-  height: 8.4em;
-  display: flex; }
-
-.header-bg h1 {
-  font-size: 1.5em;
-  text-align: center;
-  text-shadow: 0 2px 9px rgba(0, 0, 0, 0.43);
-  margin: auto;
-  color: #fff; }
-
 * {
   box-sizing: border-box;
   color: #333; }
