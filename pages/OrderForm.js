@@ -60,7 +60,7 @@ const submitForm = formData => { /* onSubmit event with input param, e.target (f
   })
 }
 
-const Order = () => {
+const Order = (props) => {
 
   const initSelection = {
     services: services.items,
@@ -147,6 +147,7 @@ useEffect(
 
 
 const title = 'Contact Page';
+console.log("props: " + JSON.stringify(props));
 
 return (
   <Layout>

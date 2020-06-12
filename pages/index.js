@@ -273,13 +273,4 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
   );
 }
 
-  Home.getInitialProps = (ctx) => {
-    if (ctx.req) {
-      if (ctx.req.user) {
-        return { user: ctx.req.user };
-      }
-    }
-    return { user: null };
-  };
-
 export default Home; 
