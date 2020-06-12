@@ -8,11 +8,7 @@ import "../../scss/fonts.scss";
 import "../../scss/page.scss";
 import "../../scss/style.scss";
 
-
-
-
-
-const Service = function() {
+const Service = (props) => {
   const def = { // default contents
     title: 'Default title',
     main: 'Deault main content',
@@ -42,7 +38,7 @@ const Service = function() {
       <Head>
         <title>{serviceContent.title}</title>
       </Head>
-      <Layout>
+      <Layout pageProps={props}>
         <div className="container">
           <HeaderWithBg title={serviceContent.title} bgimg="/static/img/bg.jpg"></HeaderWithBg>
           <h2>{serviceContent.title}</h2>

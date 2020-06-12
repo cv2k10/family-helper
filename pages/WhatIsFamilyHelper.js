@@ -7,14 +7,13 @@ import "../scss/fonts.scss";
 import "../scss/page.scss";
 import "../scss/style.scss";
 
-class WhatIsFamilyHelper extends React.Component {
-  render() {
+const WhatIsFamilyHelper = props => {
     return (
       <div>
         <Head>
           <title>What Is Family Helper</title>
         </Head>
-        <Layout>
+        <Layout pageProps={props}>
           <div className="container">
             <HeaderWithBg title="What Is Family Helper" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>Companion Works Services</h2>
@@ -48,7 +47,6 @@ class WhatIsFamilyHelper extends React.Component {
 
       </div>
     );
-  }
 }
 
 export default WhatIsFamilyHelper; 

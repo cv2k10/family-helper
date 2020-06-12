@@ -7,14 +7,13 @@ import "../scss/fonts.scss";
 import "../scss/page.scss";
 import "../scss/style.scss";
 
-class HowWeHelpYou extends React.Component {
-  render() {
+const HowWeHelpYou = props => {
     return (
       <div>
         <Head>
           <title>How We Help You</title>
         </Head>
-        <Layout>
+        <Layout pageProps={props}>
           <div className="container">
             <HeaderWithBg title="How We Help You" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>Family Care Giver</h2>
@@ -35,7 +34,6 @@ class HowWeHelpYou extends React.Component {
 
       </div>
     );
-  }
 }
 
 export default HowWeHelpYou; 

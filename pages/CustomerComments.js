@@ -6,14 +6,13 @@ import "../scss/fonts.scss";
 import "../scss/style.scss";
 import "../scss/page.scss";
 
-class CustomerComments extends React.Component {
-  render() {
+const CustomerComments = (props) => {
     return (
       <div>
         <Head>
           <title>What Our Customer Comments About Family Helper</title>
         </Head>
-        <Layout>
+        <Layout pageProps={props}>
           <div className="container">
             <HeaderWithBg title="What Our Customer Comments About Family Helper" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>100% Customer Satisfaction Guarantee</h2>
@@ -37,7 +36,6 @@ class CustomerComments extends React.Component {
 
       </div>
     );
-  }
 }
 
 export default CustomerComments; 

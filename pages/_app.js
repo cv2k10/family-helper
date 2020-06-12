@@ -1,14 +1,25 @@
-// import App from 'next/app'
+// import "../styles/custom.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+import { createStore, applyMiddleware, compose } from "redux";
+import allReducer from "../redux/reducers";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+
+const composeEnhancers = (typeof window != 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
+
+const store = createStore(allReducer, composeEnhancers(applyMiddleware(thunk)));
+
+const MyApp = ({ Component, pageProps }) => {
+
+  return (
+    <>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
+  );
 }
 
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
 MyApp.getInitialProps = async ({ Component, ctx }) => {
   let pageProps = {};
   if (Component.getInitialProps) {
@@ -16,12 +27,14 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
   }
 
   if (ctx.req) {
-    if (ctx.req.user) { // if auth user exist, add props.user (on ssr)
+    if (ctx.req.user) { // if auth user exists (fr passport-facebook), add props.user (on ssr, server side rendering)
       pageProps = { ...pageProps, user: ctx.req.user };
     }
   }   
 
   return { pageProps };
 };
+
+
 
 export default MyApp;

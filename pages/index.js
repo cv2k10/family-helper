@@ -46,7 +46,7 @@ const Home = (props) => {
       <Head>
         <title>Home</title>
       </Head>
-      <Layout>    
+      <Layout pageProps={props}>    
       
       <div id="main-centent">
           <section className="main-slider">

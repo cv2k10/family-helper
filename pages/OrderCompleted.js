@@ -10,7 +10,7 @@ import moment from 'moment';
 
 // import services from '../services/items.js';
 
-const OrderCompleted = () => {
+const OrderCompleted = (props) => {
   const router = useRouter()
   const { created, fullname, email, gender, age, health, healthstatus, phone, /* phonehome, */ fulladdress, /* urgent,*/ service, otherservice, date, period, time, area, pickup, visit, price} = router.query;
 
@@ -19,7 +19,7 @@ const OrderCompleted = () => {
 
   const title = 'Order Completed'
   return (
-    <Layout>
+    <Layout pageProps={props}>
       <Head>
         <title>{title}</title>
       </Head>

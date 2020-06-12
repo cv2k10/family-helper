@@ -6,10 +6,8 @@ import "../scss/fonts.scss";
 import "../scss/page.scss";
 import "../scss/style.scss";
 
-class TermsAndConditions extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+const TermsAndConditions = props => { 
+  const doc = {
       tnc: [
         'By accessing, browsing, down loading using our platform service, you knowledge that you are liable comply with and bound by company Terms and Regulation.  You must immediately discontinue your access use the services if disagree any part of term.',
         'Our company have absolute right suspend, discontinue,and restrict you access to our platform services temporarily or permanently without notice to you or liability to us. Our platform may revise,update even change this terms anytime,you are binding acceptance any updated or change terms.',
@@ -30,34 +28,30 @@ class TermsAndConditions extends React.Component {
     'These terms and our privacy policy constitute entire agreement between you and our company,it supersedes any prior agreement,statement and understanding between you and our company. These terms shall be governed by the laws of Malaysia and each party agrees to submit to the non exclusion jurisdiction of court Malaysia.',  
       ]
     }
-  }
 
-  render() {
-    return (
-      <div>
-        <Head>
-          <title>Pricing</title>
-        </Head>
-        <Layout>
-          <div className="container">
-            <HeaderWithBg title="Terms And Conditions" bgimg="/static/img/bg.jpg"></HeaderWithBg>
-            <h2>Terms And Conditions</h2>
-            <section className="content">
-              <ol>
-                {this.state.tnc.map(t=><li>{t}</li>)}
-              </ol>
-              <style jsx>{`
-                li {
-                  margin-top: 1em;
-                }
-              `}</style>
-            </section>
-          </div>
-        </Layout>
-
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Head>
+        <title>Pricing</title>
+      </Head>
+      <Layout pageProps={props}>
+        <div className="container">
+          <HeaderWithBg title="Terms And Conditions" bgimg="/static/img/bg.jpg"></HeaderWithBg>
+          <h2>Terms And Conditions</h2>
+          <section className="content">
+            <ol>
+              {doc.tnc.map(t=><li>{t}</li>)}
+            </ol>
+            <style jsx>{`
+              li {
+                margin-top: 1em;
+              }
+            `}</style>
+          </section>
+        </div>
+      </Layout>
+    </div>
+  );
 }
 
 export default TermsAndConditions; 

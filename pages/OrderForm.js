@@ -150,7 +150,7 @@ const title = 'Contact Page';
 console.log("props: " + JSON.stringify(props));
 
 return (
-  <Layout>
+  <Layout pageProps={props}>
     <Head>
       <title>{title}</title>
     </Head>

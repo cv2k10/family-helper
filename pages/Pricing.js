@@ -7,14 +7,13 @@ import "../scss/fonts.scss";
 import "../scss/style.scss";
 import "../scss/page.scss";
 
-class Pricing extends React.Component {
-  render() {
+const Pricing = props => {
     return (
       <div>
         <Head>
           <title>Pricing</title>
         </Head>
-        <Layout>
+        <Layout pageProps={props}>
           <div className="container">
             <HeaderWithBg title="Pricing" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>Pricing of Our Services</h2>
@@ -54,7 +53,6 @@ class Pricing extends React.Component {
 
       </div>
     );
-  }
 }
 
 export default Pricing; 

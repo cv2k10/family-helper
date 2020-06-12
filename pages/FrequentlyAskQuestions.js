@@ -114,13 +114,13 @@ const handleToggle = e => {
     c.contains("visible") ? c.remove("visible") : c.add("visible");
 }
 
-const FrequentlyAskQuestions = () => {
+const FrequentlyAskQuestions = (props) => {
   return (
     <div>
       <Head>
         <title>FAQ</title>
       </Head>
-      <Layout>
+      <Layout pageProps={props}>
         <div className="container">
           <HeaderWithBg title="FAQ" bgimg="/static/img/bg.jpg"></HeaderWithBg>
           <h2>Refer to our FAQ or contact us</h2>

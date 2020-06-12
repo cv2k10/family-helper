@@ -7,14 +7,13 @@ import "../scss/fonts.scss";
 import "../scss/style.scss";
 import "../scss/page.scss";
 
-class ExcellentCompanionshipServices extends React.Component {
-  render() {
+const ExcellentCompanionshipServices = (props) => {
     return (
       <div>
         <Head>
           <title>Excellent Companionship Services</title>
         </Head>
-        <Layout>
+        <Layout pageProps={props}>
           <div className="container">
             <HeaderWithBg title="Excellent Companionship Services" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>Match our services with your needs</h2>
@@ -55,7 +54,6 @@ class ExcellentCompanionshipServices extends React.Component {
 
       </div>
     );
-  }
 }
 
 export default ExcellentCompanionshipServices; 

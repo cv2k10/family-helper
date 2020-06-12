@@ -6,14 +6,13 @@ import "../scss/fonts.scss";
 import "../scss/style.scss";
 import "../scss/page.scss";
 
-class WhyFamilyHelper extends React.Component {
-  render() {
+const WhyFamilyHelper = props => {
     return (
       <div>
         <Head>
           <title>Why Family Helper</title>
         </Head>
-        <Layout>
+        <Layout pageProps={props}>
           <div className="container">
             <HeaderWithBg title="Why Family Helper" bgimg="/static/img/bg.jpg"></HeaderWithBg>
             <h2>Customer First Policy</h2>
@@ -41,7 +40,6 @@ class WhyFamilyHelper extends React.Component {
 
       </div>
     );
-  }
 }
 
 export default WhyFamilyHelper; 
