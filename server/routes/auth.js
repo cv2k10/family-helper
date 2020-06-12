@@ -4,7 +4,7 @@ const passport = require("passport");
 
 router.get("/logout", (req, res) => {
   req.logout();
-  res.render("index", { title: "Auth App" });
+  res.redirect('/');
 });
 
 // Redirect the user to Facebook for authentication.  When complete,
