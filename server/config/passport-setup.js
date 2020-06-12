@@ -13,12 +13,19 @@ passport.deserializeUser((id, done) => {
   });
 });
 
+// To cwitch mode, go to https://developers.facebook.com/apps/239709653809070/fb-login/settings/
+// for development, set "In development" mode
+// for production, set "In Production" mode
+const dev = process.env.NODE_ENV !== 'production';
+const callbackURL = dev? "http://localhost:3000/auth/facebook/redirect": "https://familyhelper.simplytechinfo.com/auth/facebook/redirect";
+console.log('callbackURL: ' + callbackURL);
+
 passport.use(
   new FacebookStrategy(
     {
       clientID: keys.facebook.appID,
       clientSecret: keys.facebook.appSecret,
-      callbackURL: "http://localhost:3000/auth/facebook/redirect",
+      callbackURL: callbackURL,
       profileFields: ["id", "displayName", "photos", "email", "gender", "name"],
     },
     (accessToken, refreshToken, profile, done) => {
