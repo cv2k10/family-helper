@@ -9,6 +9,9 @@ import {
   setAuthFb
 } from "../redux/actions";
 
+import MenuList from './MenuList';
+import MenuItem from './MenuItem';
+
 const Layout = ({pageProps, children}) => {
   const authFb = useSelector(state => state.authFb);
   const dispatch = useDispatch();
@@ -90,74 +93,9 @@ const Layout = ({pageProps, children}) => {
         ></div>
         <div className="sidebar-nav">
           <ul className="smenu">
-            <Link href={"/"}>
-              <li className="sitem">
-                <a className="stitle">Home</a>
-              </li>
-            </Link>
-            <Link href={"/OrderForm"}>
-              <li className="sitem">
-                <a className="stitle">
-                  <strong>Order our service now!</strong>
-                </a>
-              </li>
-            </Link>
-            <Link href={"/WhatIsFamilyHelper"}>
-              <li className="sitem">
-                <a className="stitle">What is Family Helper</a>
-              </li>
-            </Link>
-            <Link href={"/HowWeHelpYou"}>
-              <li className="sitem">
-                <a className="stitle">How We Could Help You</a>
-              </li>
-            </Link>
-            <Link href={"/ExcellentCompanionshipServices"}>
-              <li className="sitem">
-                <a className="stitle">Excellent Companionship Services</a>
-              </li>
-            </Link>
-            <Link href={"/HowItWorks"}>
-              <li className="sitem">
-                <a className="stitle">How It Works</a>
-              </li>
-            </Link>
-            <Link href={"/WhyFamilyHelper"}>
-              <li className="sitem">
-                <a className="stitle">Why Family Helper</a>
-              </li>
-            </Link>
-            <Link href={"/CustomerComments"}>
-              <li className="sitem">
-                <a className="stitle">Customer Comments About Our Services</a>
-              </li>
-            </Link>
-            <Link href={"/Pricing"}>
-              <li className="sitem">
-                <a className="stitle">Pricing</a>
-              </li>
-            </Link>
-
-            <Link href={"/ContactUs"}>
-              <li className="sitem">
-                <a className="stitle">Contact Us</a>
-              </li>
-            </Link>
-            <Link href={"/AboutUs"}>
-              <li className="sitem">
-                <a className="stitle">About Us</a>
-              </li>
-            </Link>
-            <Link href={"/FrequentlyAskQuestions"}>
-              <li className="sitem">
-                <a className="stitle">FAQ</a>
-              </li>
-            </Link>
-            <Link href={"/TermsAndConditions"}>
-              <li className="sitem">
-                <a className="stitle">Terms And Conditions</a>
-              </li>
-            </Link>
+            {MenuList.map((list, i) => (
+              <MenuItem href={i} href={list.href} title={list.title} />               
+            ))}
           </ul>
         </div>
       </section>

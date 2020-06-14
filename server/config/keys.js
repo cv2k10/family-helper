@@ -17,7 +17,7 @@ const keysDevelopment = {
     appSecret: "8fa2869b8793ff4b4ab031552a5eb7a7",
   },
   mongodb: {
-    dbURI: "mongodb://cv2k10:btrsc1@ds115340.mlab.com:15340/family-helper1",
+    dbURI: "mongodb://cv2k10:btrsc1@ds029486.mlab.com:29486/family-helper1-dev",
   },
   session: {
     cookieKey: "everybodylivesinawonderfulworld",
