@@ -12,55 +12,53 @@ import "../scss/fonts.scss";
 import "../scss/style.scss";
 import moment from 'moment';
 
-
-const submitForm = formData => { /* onSubmit event with input param, e.target (form) */
-  
-  const data = {
-    form: {
-      created: moment().format(),
-      fullname: formData.fullname.value,
-      email: formData.email.value,
-      gender: formData.gender.value,        
-      age: formData.age.value,
-      health: formData.health.value,
-      healthstatus: formData.healthstatus.value,
-      phone: formData.phone.value,
-      // phonehome: formData.phonehome.value,
-      fulladdress: formData.fulladdress.value,
-      // urgent: formData.urgent.value,
-      service: formData.service.value,
-      otherservice: formData.otherservice.value,
-      date: formData.date.value,
-      period: formData.period.value,
-      time: formData.time.value,
-      area: formData.area.value,
-      pickup: formData.pickup.value,
-      visit: formData.visit.value,
-      price: formData.price.value,
-    }
-  }
-
-  fetch('/api/order', {
-    method: 'post',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  }).then((res) => {
-    // res.status === 200 ? this.setState({ submitted: true }) : ''
-    if(res.status === 200) { 
-      Router.push({
-        pathname: '/OrderCompleted',
-        query: data.form
-      })
-    } else throw new Error('Error: response status is ' + res.status);
-  }).catch( e => {
-    console.error(e.message);
-  })
-}
-
 const Order = (props) => {
+  const submitForm = (formData) => { /* onSubmit event with input param, e.target (form) */
+    
+    const data = {
+      form: {
+        created: moment().format(),
+        fullname: formData.fullname.value,
+        email: formData.email.value,
+        gender: formData.gender.value,        
+        age: formData.age.value,
+        health: formData.health.value,
+        healthstatus: formData.healthstatus.value,
+        phone: formData.phone.value,
+        // phonehome: formData.phonehome.value,
+        fulladdress: formData.fulladdress.value,
+        // urgent: formData.urgent.value,
+        service: formData.service.value,
+        otherservice: formData.otherservice.value,
+        date: formData.date.value,
+        period: formData.period.value,
+        time: formData.time.value,
+        area: formData.area.value,
+        pickup: formData.pickup.value,
+        visit: formData.visit.value,
+        price: formData.price.value,
+      }
+    }
+
+    fetch('/api/order', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      // res.status === 200 ? this.setState({ submitted: true }) : ''
+      if(res.status === 200) { 
+        Router.push({
+          pathname: '/OrderCompleted',
+          query: data.form
+        })
+      } else throw new Error('Error: response status is ' + res.status);
+    }).catch( e => {
+      console.error(e.message);
+    })
+  }
 
   const initSelection = {
     services: services.items,

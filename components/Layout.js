@@ -94,7 +94,7 @@ const Layout = ({pageProps, children}) => {
         <div className="sidebar-nav">
           <ul className="smenu">
             {MenuList.map((list, i) => (
-              <MenuItem href={i} href={list.href} title={list.title} />               
+              <MenuItem href={i} href={list.href} title={list.title} textStyle={list.style} />               
             ))}
           </ul>
         </div>

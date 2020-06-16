@@ -6,7 +6,7 @@ const MenuList = [
   },
   {
     href: "/OrderForm",
-    title: "Order our service now!",
+    title: "Order our service now !",
     style: "strong",
   },
   {
@@ -21,7 +21,7 @@ const MenuList = [
   },
   {
     href: "/ExcellentCompanionshipServices",
-    title: ">Excellent Companionship Services",
+    title: "Excellent Companionship Services",
     style: "normal",
   },
   {
@@ -57,6 +57,11 @@ const MenuList = [
   {
     href: "/FrequentlyAskQuestions",
     title: "FAQ",
+    style: "normal",
+  },
+  {
+    href: "/TermsAndConditions",
+    title: "Terms And Conditions",
     style: "normal",
   },
 ];
