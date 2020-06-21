@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import React from 'react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import "../scss/fonts.scss";
 import "../scss/style.scss";
@@ -23,33 +23,11 @@ const MessageCompleted = (props) => {
         <title>{title}</title>
       </Head>
       <section className="section">
-        <h2>Message sent to Family Helper</h2>
-        <h4>Thank you for message</h4>
+        <p>Message sent to Family Helper</p>
+        <h2 className="font-weight-100 text-center">Thank you</h2>
 
-        <div>Message information:</div>
-        <div>
-          <br />
-        </div>
-
-        <div>
-          Full&nbsp;Name: <b>{fullname}</b>
-        </div>
-        <div>
-          Email Address:{" "}
-          <b>
-            <a href="mailto:${email}" target="_blank">
-              {email}
-            </a>
-          </b>
-        </div>
-        <div>
-          <br />
-        </div>
-
-        <div>Message: </div>
-        <div>
-          <b>{message}</b>
-        </div>
+        <p>Thank you for your enquiry! We will be in touch as soon as possible. In the meantime, use <Link href="/FrequentlyAskQuestions"><a>FAQ</a></Link> page for quick answers to your questions.</p>
+        <p>The Family Helper Team</p>
       </section>
     </Layout>
   );
