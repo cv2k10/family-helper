@@ -134,7 +134,9 @@ header.header {
 .header-right {
     display: flex;
     flex-direction: row;
-    align-items: center;    
+    align-items: center; 
+    
+    margin-right: 10px;
 }
 
 .header-right .profile,
