@@ -1,18 +1,22 @@
 import Link from 'next/link';
 
+import { useSelector, useDispatch } from "react-redux";
+
 const NoUser = () => {  
+  const fbRedirectPath = useSelector((state) => state.control.fbRedirectPath);
+  
   return (
-    <Link href="/auth/facebook/">
+    <Link href={"/auth/facebook?redirect=" + encodeURIComponent(fbRedirectPath)}>
       <a>
         <svg
-        className="profile"
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        width="50"
-        height="50"
-        viewBox="0 0 192 192"
-        style={{ fill: "#000000" }}
+          className="profile"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          viewBox="0 0 192 192"
+          style={{ fill: "#000000" }}
         >
           <g
             fill="none"
@@ -37,7 +41,7 @@ const NoUser = () => {
           </g>
         </svg>
       </a>
-    </Link>    
+    </Link>
   );
 }
 

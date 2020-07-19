@@ -5,9 +5,10 @@ import Avatar from "react-avatar";
 
 const LoginUser = () => { 
   const authFb = useSelector(state => state.authFb);
+  const fbRedirectPath = useSelector((state) => state.control.fbRedirectPath);
 
   return (
-    <Link href="/auth/logout/">
+    <Link href={"/auth/logout?redirect=" + encodeURIComponent(fbRedirectPath)}>
       {/* <a><img style={{width:"40px", height:"40px", borderRadius: "50%"}} src={authFb.pictureUrl} /></a> */}
       <Avatar
         name={authFb.name}
@@ -18,7 +19,7 @@ const LoginUser = () => {
         color={Avatar.getRandomColor("sitebase", [
           "#0077b6",
           "#e9c46a",
-          "#006d77"
+          "#006d77",
         ])}
       />
     </Link>

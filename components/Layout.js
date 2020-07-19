@@ -6,7 +6,8 @@ import UserProfile from './UserProfile';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import {
-  setAuthFb
+  setAuthFb,
+  setFbRedirectPath
 } from "../redux/actions";
 
 import MenuList from './MenuList';
@@ -16,8 +17,10 @@ const Layout = ({pageProps, children}) => {
   const authFb = useSelector(state => state.authFb);
   const dispatch = useDispatch();
 
-  useEffect(() => { // set props.user to redux state, authFb on react render (csr, client side rendering)
-    if(pageProps.user) dispatch(setAuthFb({ isAuth: true, ...pageProps.user }));
+  useEffect(() => {
+    // set props.user to redux state, authFb on react render (csr, client side rendering)
+    if (pageProps.user) dispatch(setAuthFb({ isAuth: true, ...pageProps.user }));
+    dispatch(setFbRedirectPath(window.location.pathname)); // keep track of redirectPath to current page when page start
   }, []);
 
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);

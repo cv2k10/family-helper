@@ -4,3 +4,10 @@ export const setAuthFb = fbData => {
     payload: fbData,
   };
 };
+
+export const setFbRedirectPath = (path) => {
+  return {
+    type: "SET_FB_REDIRECT_PATH",
+    payload: path,
+  };
+};
