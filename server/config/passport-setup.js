@@ -3,6 +3,8 @@ const FacebookStrategy = require("passport-facebook").Strategy;
 const keys = require("./keys");
 const UserFb = require("../models/user-fb");
 
+require("dotenv").config(); 
+
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
@@ -17,7 +19,9 @@ passport.deserializeUser((id, done) => {
 // for development, set "In development" mode
 // for production, set "In Production" mode
 const dev = process.env.NODE_ENV !== 'production';
-const callbackURL = dev? "http://localhost:3000/auth/facebook/redirect": "https://familyhelper.simplytechinfo.com/auth/facebook/redirect";
+const callbackURL = dev
+  ? process.env.CALLBACK_URL_FACEBOOK_DEV
+  : process.env.CALLBACK_URL_FACEBOOK;
 console.log('callbackURL: ' + callbackURL);
 
 passport.use(

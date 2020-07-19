@@ -77,6 +77,8 @@ Admin page
 
 * page loader while posting form
 
+* profile inage gone again, https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10158588708869448&height=50&width=50&ext=1594614397&hash=AeQB4VlLODWmxEPo
+
 
 
 
