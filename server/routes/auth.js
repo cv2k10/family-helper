@@ -6,7 +6,6 @@ router.get("/logout", (req, res) => {
   const redirectSent = req.query.redirect;
   console.log(redirectSent);
   req.logout();
-  res.redirect("/");
   res.redirect(redirectSent); // redirect back to current page after logout
 });
 

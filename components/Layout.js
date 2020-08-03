@@ -35,9 +35,7 @@ const Layout = ({pageProps, children}) => {
         <div className="header-left">
           <div id="menu-burger" onClick={() => onClickMenuBurger()}>
             <div
-              className={
-                burgerMenuOpen ? "burger burger-cross" : "burger"
-              }
+              className={burgerMenuOpen ? "burger burger-cross" : "burger"}
             ></div>
           </div>
           <svg
@@ -82,7 +80,7 @@ const Layout = ({pageProps, children}) => {
             className="search"
             src="https://img.icons8.com/ios/50/000000/search-filled.png"
           />
-          <UserProfile />          
+          <UserProfile />
         </div>
       </header>
 
@@ -90,20 +88,24 @@ const Layout = ({pageProps, children}) => {
         id="menu-mobile"
         className={burgerMenuOpen ? "display-on" : null}
       >
-        <div
-          className="overlay"
-          onClick={() => setBurgerMenuOpen(false)}
-        ></div>
+        <div className="overlay" onClick={() => setBurgerMenuOpen(false)}></div>
         <div className="sidebar-nav">
           <ul className="smenu">
             {MenuList.map((list, i) => (
-              <MenuItem href={i} href={list.href} title={list.title} textStyle={list.style} />               
+              <MenuItem
+                href={i}
+                href={list.href}
+                title={list.title}
+                textStyle={list.style}
+              />
             ))}
           </ul>
         </div>
       </section>
 
       {children}
+
+      {/* {modals.fbSignin && <ConnectFbModal />} */}
 
       <section className="footer">
         <div className="copyright">© 2019 Family Helper Sdn Bhd</div>
@@ -112,7 +114,7 @@ const Layout = ({pageProps, children}) => {
         </div>
       </section>
     </div>
-  )
+  );
   }
 
 export default Layout;
