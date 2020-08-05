@@ -80,7 +80,7 @@ const Layout = ({pageProps, children}) => {
             className="search"
             src="https://img.icons8.com/ios/50/000000/search-filled.png"
           />
-          <UserProfile />
+          <UserProfile pageProps={pageProps} />
         </div>
       </header>
 

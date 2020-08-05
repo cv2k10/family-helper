@@ -4,12 +4,12 @@ import Link from 'next/link';
 import NoUser from './NoUser';
 import LoginUser from './LoginUser';
 
-const UserProfile = () => {
+const UserProfile = ({pageProps}) => {
   const authFb = useSelector(state => state.authFb);
 
   return (
     <>
-    {authFb.isAuth ? <LoginUser />: <NoUser />}
+    {pageProps.user || authFb.isAuth ? <LoginUser />: <NoUser />}
     </>
   );
 }
