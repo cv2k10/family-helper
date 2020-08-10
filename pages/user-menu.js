@@ -35,20 +35,20 @@ const MenuList = [
 
 const Menu = () => {
   return (
-    <section className="content">
-      <div className="user-nav">
-        <ul className="smenu">
-          {MenuList.map((list, i) => (
-            <MenuItem
-              href={i}
-              href={list.href}
-              title={list.title}
-              textStyle={list.style}
-            />
-          ))}
-        </ul>
-      </div>
-    </section>
+    <div className="container">
+        <div className="user-nav">
+          <ul className="smenu">
+            {MenuList.map((list, i) => (
+              <MenuItem
+                href={i}
+                href={list.href}
+                title={list.title}
+                textStyle={list.style}
+              />
+            ))}
+          </ul>
+        </div>
+    </div>
   );
 }
 
