@@ -6,7 +6,7 @@ const NoUser = () => {
   const fbRedirectPath = useSelector((state) => state.control.fbRedirectPath);
   
   return (
-    <Link href={"/auth/facebook?redirect=" + encodeURIComponent(fbRedirectPath)}>
+    <Link href="/user-menu">
       <a>
         <svg
           className="profile"

@@ -10,29 +10,13 @@ import services from '../components/items.js';
 import HeaderWithBg from "../components/HeaderWithBg";
 import Layout from '../components/Layout';
 import prices from '../components/prices.js';
+import Signin from '../components/Signin.js';
+
 import "../scss/fonts.scss";
 import "../scss/style.scss";
 import moment from 'moment';
 
 import { useSelector, useDispatch } from "react-redux";
-
-const Signin = () => {
-  return (
-    <div className="container">
-      <HeaderWithBg title="Sign in" bgimg="/static/img/bg.jpg"></HeaderWithBg>
-      <h2>Sign In to Family Helper</h2>
-      <section className="content">
-        <div className="btn-full fb-btn">
-          <Link
-            href={"/auth/facebook?redirect=" + encodeURIComponent("/OrderForm")}
-          >
-            <a>Continue With Facebook</a>
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
-};
 
 const ShowOrderForm = () => {  
   const router = useRouter();
@@ -493,7 +477,7 @@ const Order = (props) => {
   const authFb = useSelector((state) => state.authFb);
   return (
     <Layout pageProps={props}>
-      {props.user || authFb.isAuth ?  <ShowOrderForm />: <Signin />}
+      {props.user || authFb.isAuth ?  <ShowOrderForm />: <Signin redirect="OrderForm" />}
     </Layout>
   );
 }

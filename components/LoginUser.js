@@ -8,7 +8,7 @@ const LoginUser = () => {
   const fbRedirectPath = useSelector((state) => state.control.fbRedirectPath);
 
   return (
-    <Link href={"/auth/logout?redirect=" + encodeURIComponent(fbRedirectPath)}>
+    <Link href="/user-menu">
       {/* <a><img style={{width:"40px", height:"40px", borderRadius: "50%"}} src={authFb.pictureUrl} /></a> */}
       <Avatar
         name={authFb.name}
