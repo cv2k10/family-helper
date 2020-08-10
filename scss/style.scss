@@ -2,6 +2,9 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
     
     // color: #333;
 }
@@ -154,6 +157,19 @@ header.header {
     margin-right: 1em;
 }
 
+.user-nav {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 3.4em;
+    padding-bottom: 55px;
+    border-bottom: 1px solid #e6e6e6;
+    background: #fff;
+    z-index: 5;
+}
+
 
 .sidebar-nav {
     overflow-y: auto;
@@ -168,11 +184,11 @@ header.header {
     z-index: 5;
 }
 
-.sidebar-nav .sitem {
+.sidebar-nav .sitem, .user-nav .sitem {
      border-bottom: 1px solid #e6e6e6;
  }
  
-.sidebar-nav .sitem .stitle {
+.sidebar-nav .sitem .stitle, .user-nav .sitem .stitle {
     display: block;
     font-size: 1em;
     color: #333;
@@ -404,7 +420,7 @@ article#main-centent {
 /*Enquiry*/
 .section {
     width: 100%;
-    margin: 1em 0;
+    // margin: 1em 0;
     background: #fff;
     border: 1px solid #d6d6d6;
     border-left: none;

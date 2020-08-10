@@ -3,10 +3,10 @@ const router = express.Router();
 const passport = require("passport");
 
 router.get("/logout", (req, res) => {
-  const redirectSent = req.query.redirect;
-  console.log(redirectSent);
+  // const redirectSent = req.query.redirect;
+  // console.log(redirectSent);
   req.logout();
-  res.redirect(redirectSent); // redirect back to current page after logout
+  res.redirect('/'); // redirect back to main page, not current page after logout
 });
 
 // Redirect the user to Facebook for authentication.  When complete,
