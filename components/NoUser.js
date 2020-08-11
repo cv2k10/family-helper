@@ -1,48 +1,26 @@
-import Link from 'next/link';
-
 import { useSelector, useDispatch } from "react-redux";
+import Link from "next/link";
 
-const NoUser = () => {  
+import Avatar from "react-avatar";
+
+const NoUser = () => {
+  const authFb = useSelector((state) => state.authFb);
   const fbRedirectPath = useSelector((state) => state.control.fbRedirectPath);
-  
+
   return (
     <Link href="/user-menu">
-      <a>
-        <svg
-          className="profile"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="50"
-          height="50"
-          viewBox="0 0 192 192"
-          style={{ fill: "#000000" }}
-        >
-          <g
-            fill="none"
-            fill-rule="nonzero"
-            stroke="none"
-            stroke-width="1"
-            stroke-linecap="butt"
-            stroke-linejoin="miter"
-            stroke-miterlimit="10"
-            stroke-dasharray=""
-            stroke-dashoffset="0"
-            font-family="none"
-            font-weight="none"
-            font-size="none"
-            text-anchor="none"
-            style={{ mixBlendMode: "normal" }}
-          >
-            <path d="M0,192v-192h192v192z" fill="none"></path>
-            <g fill="#aaaaaa">
-              <path d="M96,7.71c-48.7323,0 -88.32,39.58769 -88.32,88.32c0,46.48109 36.02423,84.61587 81.6375,88.0425c0.08993,0.00731 0.17989,0.01547 0.27,0.0225c2.12094,0.15283 4.253,0.255 6.4125,0.255c2.1595,0 4.29156,-0.10217 6.4125,-0.255c0.09011,-0.00703 0.18007,-0.01519 0.27,-0.0225c45.61327,-3.42663 81.6375,-41.56141 81.6375,-88.0425c0,-48.7323 -39.5877,-88.32 -88.32,-88.32zM96,15.39c44.58172,0 80.64,36.05827 80.64,80.64c0,22.00974 -8.81352,41.91844 -23.0775,56.46c-6.10237,-4.44372 -13.64367,-7.0946 -20.4,-9.465c-8.00256,-2.8032 -15.57336,-5.46048 -17.67,-10.08c-0.33024,-3.94368 -0.30072,-7.02336 -0.27,-10.56l0.0075,-1.5c3.40992,-3.2448 7.69812,-10.09302 9.165,-16.4175c2.5344,-1.35168 5.63322,-4.59186 6.5625,-12.3525c0.46464,-3.85152 -0.6315,-6.83436 -2.1675,-8.835c2.0736,-7.1232 6.19938,-25.15596 -1.0275,-36.795c-3.05664,-4.91904 -7.66914,-8.02254 -13.7325,-9.2475c-3.40608,-4.21632 -9.83358,-6.5175 -18.4275,-6.5175c-13.05984,0.24192 -22.63392,4.24206 -28.44,11.8875c-6.84672,9.024 -8.14044,22.65828 -3.855,40.545c-1.58592,2.00064 -2.72982,5.02668 -2.2575,8.955c0.93312,7.76064 4.0206,11.00082 6.555,12.3525c1.46688,6.33216 5.75124,13.1802 9.165,16.425l0.0075,1.4625c0.03072,3.552 0.06024,6.63846 -0.27,10.5975c-2.10432,4.63104 -9.71154,7.31724 -17.7525,10.155c-6.71576,2.37145 -14.21242,5.02641 -20.3025,9.4125c-14.27502,-14.54321 -23.0925,-34.46313 -23.0925,-56.4825c0,-44.58172 36.05828,-80.64 80.64,-80.64z"></path>
-            </g>
-          </g>
-        </svg>
-      </a>
+      {/* <a><img style={{width:"40px", height:"40px", borderRadius: "50%"}} src={authFb.pictureUrl} /></a> */}
+      <Avatar
+        facebookId={"000000000000000000"}
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAFOklEQVRoge2aWWxVRRjHf22jUWiVSnGrFFppAVu0hsTgisbtVUFEXIpL4oMxmpBYcUN9kAcrPmB8kKASVxJDQowSEx8gMWKISjAN1taQoFFcWhNqF6Hc3uvD901m7uX0nJlzDvrSf3Lz3Zz5f8vcM/PNzDcXpjGNU4KqnO3NA5YDHUAbMAeYqW1jwCDQDxwE9gA/5+w/E5qB54EBoBT4+QHYAMzPGkSWN9IOPAPcCdTos++B3cB+oA/4AxjWtrOB84FFwFLgBmCxtk0C24GXVO8/QS2wCTiB/KpDGsDCFLYWARvVRgmYAHqww/GUoRMZ4yXgb6Ab6VhW1AJPAiNquw+4NAe7kVgB/KOOPgEaPQOcr9zTPPiNwKfqYxy4LU2gcXgAKCBjuZv4uXU18CbwE+UTewzYCVyW4KsKWK++CsDaLIG7WKEGjwN3xfBmAR9hAy8CR4CvgX3AX9hfegOSLOKwRn0WyOHNdCLDaRJYHcObCXyrgQ4ADyMdc1EN3IEdnkVgG3BmjN016nucDHOmFrs2dCdwNytvDyd3oBKdwDrgF9X5IIH/FHbNSZVYNmEndtycmIUMgRFgboD9ucCv6uPKGF4VsEt5PQH2ARm/J5AUe2ECd7U6eSfUCfJmSsArCbyLkB9qAll7vPGhOnjCg2veXJrs0qm6n3twzRB7z9d4C5IpBvFbYbepg1t8HTioV92DHtxaZAdQIGJvVh2h0IXsnd5Acn8SzlA57sGdyr/Pnm8U2ILE1jWVIRf3qPQd80MqZ3vyXZynctCT/67KuysbKjvSDCxAXvWAp/HfVV7gyXfRpvKQJ79PPwuBJrehsiPLVe4OCOY7lZ0BOgbXqNwboGNiu959WNmRDpXfBBjer/KKAB2D61R+GaBjYutwH1Z2xLzq/gDDN6o8K8JeHE4HGvT70gA9E1ub+7DSsTH8W4DhW1U+juyffDEBPKbfrw3QM7HNcR9WdqRO5WiA4SMqk3YAUTBnmuFYVjlGVNbFkXqRBSokld6sOocIW93Xqk4JuClAr0F1euNIe5U0L8AwyEGqmGS8Ar2qszXQVzMSY2yC+FhJywKNg5xHiuooCRcrNyQ7GlyFxLjTfVg5R8wi2EY4diBbjec8uM8qd0cKPya22AX7fqS3m1M4qEe2K0VgVQxvlXKGVCcUryMxnrTfcmHGX8hYd3E7cjSdaog1a9skUgtIgz4kxqYk4o9KTFNwA5swWiPaWrUtZEviYjH22FuGqJXYnKFjX10MTP2q5MEJhYkp6ZwP2IPVEOlKlweQTkQtkI3adiCF3TqkpFTALzMCUlAuIWXMELQjh7HjwIyI9hnaNgZcEmj7aQKPuiYgU3zwLY2uA46qs5djuD3KOao6PiWe1MUHsEWFXUQfRauQ88QWZK9kim4bsdcMUahRThFbDN+KbOmj/FQDn5GyHATlBbr1zvMGZNEz+6QScAyZgCHVwCWqc8yxcxi5NHJ3tmZIpS7QQXnJ9D41OuY43gc8CpyT1oHqPgJ85dgdQy6RupA3l6lkarASyRTGibldWpLVcATakbc06fgrIAttLngI25m3iZ8DWVEDvIXtxIN5O1iJraR/QUAuD0ALsj031w+5vYlKXI5NAMPIPUeW+WEwG3gByWBmYiddCGVGHfAq9jJ0BClCL0hhqxVJ8+bu0FyG5nEv6Y12pNjtJoJe5AhwL3I4a0K26vX6fRmS/V7DHqvNXHgfe139v6AFeBG7aw759CNDKvN8y/svHM1ItbIdOQacix0mo8CflP+F43DO/qcxjbzxL3VBcDMQW6Z7AAAAAElFTkSuQmCC"
+        size={"30"}
+        round={true}
+        textSizeRatio={2.5}
+        fgColor={"#FFFFFF"}
+        color={"#AAAAAA"}
+      />
     </Link>
   );
-}
+};
 
 export default NoUser;
