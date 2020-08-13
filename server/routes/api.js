@@ -4,9 +4,11 @@ const router = express.Router();
 const mailCustomer = require("../components/mailCustomer");
 const mailMessangeToStore = require("../components/mailMessangeToStore");
 
+const clientOrderController = require("../components/clientOrderController");
+
 
 // /api/order POST (order form submit)
-router.post("/order", (req, res) => {
+router.post("/order", (req, res, next) => {
   if (!req.body) {
     return res.status(400).send({
       message: "Order form data can not be empty"
@@ -18,7 +20,9 @@ router.post("/order", (req, res) => {
   sgMail.send(mailCustomer(req.body.form)).then(() => {}, console.error);
 
   res.send("Mail succcesully sent.");
-});
+
+  next();
+}, clientOrderController);
 
 // /api/message POST (order form submit)
 router.post("/message", (req, res) => {

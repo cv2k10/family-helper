@@ -1,4 +1,14 @@
 TODO:
+* convert components/items.js to reducer/items.js with item id
+* set actions for items reducer
+* modify pages/index.js to handle redux items, useSelector
+
+* handle order id with form submit
+* routes/api.js, create orderController
+* orderController (server) to handle order db update (write)
+* create my-orders page with order list from order db (read)
+
+
 Menu 
 DONE: * FAQ not clickable 
 DONE: * add Order our service now menu item

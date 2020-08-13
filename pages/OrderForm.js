@@ -20,6 +20,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const ShowOrderForm = () => {  
   const router = useRouter();
+  const authFb = useSelector((state) => state.authFb);
 
   // console.log("authFb.isAuth: " + authFb.isAuth);
   // if (!authFb.isAuth) {
@@ -51,8 +52,10 @@ const ShowOrderForm = () => {
         area: formData.area.value,
         pickup: formData.pickup.value,
         visit: formData.visit.value,
-        price: formData.price.value,
+        price: formData.price.value
       },
+      userType: 'facebook',
+      userId: authFb._id
     };
 
     fetch("/api/order", {
