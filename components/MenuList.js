@@ -56,7 +56,7 @@ const MenuList = [
   },
   {
     href: "/FrequentlyAskQuestions",
-    title: "FAQ",
+    title: "Frequently Ask Questions",
     style: "normal",
   },
   {

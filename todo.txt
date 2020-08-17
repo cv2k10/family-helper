@@ -3,9 +3,9 @@ TODO:
 * set actions for items reducer
 * modify pages/index.js to handle redux items, useSelector
 
-* handle order id with form submit
-* routes/api.js, create orderController
-* orderController (server) to handle order db update (write)
+DONE: handle order id with form submit
+DONE: routes/api.js, create orderController
+DONE: orderController (server) to handle order db update (write)
 * create my-orders page with order list from order db (read)
 
 
