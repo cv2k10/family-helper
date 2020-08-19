@@ -4,7 +4,7 @@ const ensureAuth = (req, res, next) => {
     console.log('req.isAuthenticated() = ' + req.isAuthenticated())
     return next();
   }
-  res.redirect("/sign-in");
+  res.redirect("/signin/user/");
 };
 
 module.exports = ensureAuth;

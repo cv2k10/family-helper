@@ -8,7 +8,7 @@ const NoUser = () => {
   const fbRedirectPath = useSelector((state) => state.control.fbRedirectPath);
 
   return (
-    <Link href="/user-menu">
+    <Link href="/user/">
       {/* <a><img style={{width:"40px", height:"40px", borderRadius: "50%"}} src={authFb.pictureUrl} /></a> */}
       <Avatar
         facebookId={"000000000000000000"}
