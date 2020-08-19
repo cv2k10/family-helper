@@ -15,7 +15,7 @@ require("dotenv").config();
 
 const authRoute = require('./routes/auth');
 const apiRoute = require('./routes/api');
-const usersRoute = require('./routes/users');
+const userRoute = require('./routes/user');
 
 
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -63,7 +63,7 @@ app.prepare().then(() => {
   
   server.use('/auth', authRoute);
   server.use('/api', apiRoute);
-  server.use('/users', usersRoute);
+  server.use("/user", userRoute);
 
   server.get('*', (req, res) => {
     return handle(req, res)
