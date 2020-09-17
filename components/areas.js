@@ -20,6 +20,7 @@ const areas = {
     { name: 'Putrajaya', select: true },
     { name: 'Bangi', select: true },
     { name: 'Selayang',select: true },
+    { name: 'Other areas (subject to confirmation)',select: true },
   ]};
 
 export default areas;

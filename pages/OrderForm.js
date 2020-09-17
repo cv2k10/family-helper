@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from 'react';
-// import Script from 'react-load-script';
 import Script from 'react-load-script';
 import areas from '../components/areas.js';
 import services from '../components/items.js';
@@ -193,7 +192,7 @@ const ShowOrderForm = () => {
             <label htmlFor="female">Female</label>
           </span>
 
-          <p style={{ marginBottom: 0 }}>Age: </p>
+          {/* <p style={{ marginBottom: 0 }}>Age: </p>
           <p style={{ marginTop: 0, marginBottom: 0 }}>
             <input
               type="radio"
@@ -223,7 +222,7 @@ const ShowOrderForm = () => {
               value="80 or above"
             />
             <label htmlFor="age80above">80 or above</label>
-          </p>
+          </p> */}
 
           <p style={{ marginBottom: 0 }}>Health Status: </p>
           <span style={{ flex: 1 }}>
@@ -271,12 +270,12 @@ const ShowOrderForm = () => {
 
           {/* <input type="tel" id="phone" name="phonehome" placeholder="House Phone Contact"/> */}
 
-          <textarea
+          {/* <textarea
             id="fulladdress"
             name="fulladdress"
             placeholder="Home Address"
             required
-          ></textarea>
+          ></textarea> */}
 
           {/* <input type="text" id="urgent" name="urgent" placeholder="Urgent Phone Contact" required/> */}
 
@@ -441,10 +440,10 @@ const ShowOrderForm = () => {
           </select>
 
           {/* Temperary remove autocomplete due to page error from production */}
-          {/* <Script
+          <Script
           url="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgMtwTndB-h2263JpeNlXD20kCO2W1eSQ&libraries=places&callback=initGogleMapsPlacesAutocomplete"
           onLoad={initGoogleMapsPlaces}
-        /> */}
+          />
 
           <textarea
             id="pickup"
