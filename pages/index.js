@@ -60,6 +60,7 @@ const Home = (props) => {
                   </span>
               </div>
               <div className="slider-cta">
+                  <div className="cta-text">Senior Companion Services</div>
                   <h1 className="cta-title">The Safe Way to Take Care Your Elderly</h1>
                   <div className="cta-text">Companion Care. Safety First. Trained Workers</div>
                   <Link href="#all-services">
@@ -178,17 +179,16 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                 var form = e.target;
 
                 e.preventDefault();
-                Router.push(
-                  {
-                    pathname: '/OrderForm',
-                    query: {
-                      service: form.service.value,
-                      area: form.area.value,
-                      date: form.date.value,
-                      /* time: form.time.value */
-                    }
-                  }
-                );
+                Router.push({
+                  pathname: "/OrderForm",
+                  query: {
+                    service: form.service.value,
+                    /* area: form.area.value, */
+                    phone: form.phone.value,
+                    date: form.date.value,
+                    /* time: form.time.value */
+                  },
+                });
               }}>
                 <select id="enq-service" name="service" data-default-value="" className="dropdown">
                   <option value="">Select Service</option>
@@ -197,14 +197,16 @@ style={{fill:'#000000'}}><g fill="none" fill-rule="nonzero" stroke="none" stroke
                   ))}
                 </select>
 
-                <select id="enq-area" name="area" data-default-value="" className="dropdown">
+                {/* <select id="enq-area" name="area" data-default-value="" className="dropdown">
                   <option value="">Select Area</option>
                   {areas.klangValley.map((area, i) => (
                     <option value={area.name} disabled={!area.select} key={i}>{area.name}</option>
                   ))}
-                </select>
+                </select> */}
 
                 <input type="date" id="date" name="date" placeholder="DATE" min={nextDayDate()} />
+
+                <input type="tel" id="phone" name="phone" placeholder="Phone" />
 
                 <input type="submit" value="Instant Quotation" />
               </form>
