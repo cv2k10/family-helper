@@ -23,10 +23,10 @@ const CustomerComments = (props) => {
               <blockquote><p>I am working employee always worry of my senior monthly rehabilatation treatmen, but now with Family Helper, I feel released and trust their professional work.</p>
                 <footer>Ramasy</footer>
               </blockquote> 
-              <blockquote><p>Thanks for Family Helper professional companion assistance work, my son always outstation of business, my daily living task and hang out activities. Fully take care by your guys, I feel safe and secure.</p>
+              <blockquote><p>My daily living task and hang out activities fully care by your guys,I feel safe and secured.  Sincerely thanks for your company companion person professional works.</p>
                 <footer>Mohd bin Sadin</footer>
               </blockquote>
-              <blockquote><p>I regular send my senior for acupuncture treatment, but due to busy work schedule, sometime my senior have to take public transport alone. But now with your companion work, I feel released and grateful to all yours worker.</p>
+              <blockquote><p>I regular send my senior to acupuncture centre, sometime he have to take public transport alone due to my busy work schedule, I always fear of his personal  safety.  But now with family helper, I feel great and grateful to your guys.</p>
                 <footer>John Leong</footer>
               </blockquote>               
                            

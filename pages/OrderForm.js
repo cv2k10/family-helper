@@ -449,7 +449,7 @@ const ShowOrderForm = () => {
             id="pickup"
             className="autocomplete-places"
             name="pickup"
-            placeholder="Pickup Location (please specify if different from home address)"
+            placeholder="Pickup Location"
           ></textarea>
           <textarea
             id="visit"

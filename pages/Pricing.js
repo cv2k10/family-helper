@@ -33,13 +33,17 @@ const Pricing = props => {
                 <li>2 hours: Rm 60,</li>
                 <li>One visit location: Rm 50,</li>
                 <li>One hour and one location visit: Rm 70, </li>
-                <li>Express booking: Rm 50. (Appear when additional service requested). </li>
               </ul>
-              <p>Important: Book service must with payment done 7 days advance prior date service.</p>
+              <ol>  
+                <li>Express booking (booking service less then 7 days): extra charge rm 50.</li>
+                <li>Confirmation of booking service must with payment done 7(seven) days advance prior date service.</li>
+                <li>Email or whatsapp payment slip attached with name,contact number and email to us.</li>
+              </ol>
+              {/* <p>Important: Book service must with payment done 7 days advance prior date service.</p>
               <ul>
                 <li>Company bank account: 6677651328</li>
                 <li>Email or Whatsapp bank slip to us.</li>
-              </ul>
+              </ul> */}
 
               <Link href="./OrderForm">
                 <div className="btn-full">

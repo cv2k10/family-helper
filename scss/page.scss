@@ -58,3 +58,16 @@ blockquote footer {
   margin: auto;
   color: #fff;
 }
+
+.content p, .content ul, .content ol {
+    margin-top: .5em;
+    margin-top: .5em;
+}
+
+.content ul li {
+  list-style: initial;
+}
+
+.content ul, .content ol{
+  margin-left: 1em;
+}
