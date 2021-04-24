@@ -479,7 +479,8 @@ const Order = (props) => {
   const authFb = useSelector((state) => state.authFb);
   return (
     <Layout pageProps={props}>
-      {props.user || authFb.isAuth ?  <ShowOrderForm />: <Signin redirect="OrderForm" />}
+      {/* props.user || authFb.isAuth ?  <ShowOrderForm />: <Signin redirect="OrderForm" /> */}
+      <ShowOrderForm />
     </Layout>
   );
 }
