@@ -9,6 +9,10 @@
   },
   "author": "cv",
   "license": "MIT",
+  "engines": {
+    "npm": "6.14.8",
+    "node": "14.15.0"
+  },
   "dependencies": {
     "@sendgrid/mail": "^6.5.3",
     "@zeit/next-sass": "^1.0.1",
